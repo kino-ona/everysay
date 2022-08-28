@@ -132,7 +132,7 @@ $sqrt_2: 1.41421356237;
 	}
 }
 
-@mixin desksm($max-width: 1240px) {
+@mixin desksm($max-width: 1340px) {
 	@media (max-width: $max-width) {
 			@content;
 	}

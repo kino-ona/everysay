@@ -1,0 +1,169 @@
+@use "mixins";
+
+.header  {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+}
+.container {
+  background-color: #ffffff;
+}
+.keyvisual {
+  position: relative;
+  padding-top: 50vw;
+  overflow: hidden;
+  .figure {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    @include mixins.translate(-50%, 0);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background: {
+      repeat: no-repeat;
+      position: center center;
+      size: cover;
+    };
+  }
+  .contents {
+    position: absolute;
+    left: 50%;
+    top: 19%;
+    @include mixins.translate(-50%, 0);
+    text-align: center;
+    h2 {
+      position: relative;
+      display: block;
+      font-weight: 700;
+      font-size: 50px;
+      color: #ffffff;
+      &:before {
+        content: '';
+        display: block;
+        width: 109px;
+        height: 70px;
+        margin: 0 auto 2px;
+        background: {
+          image: url('../images/icons/ico_visual.png');
+          size: cover;
+          position: no-repeat;
+          position: center bottom;
+        }
+      }
+    }
+    p {
+      margin-top: 35px;
+      font-size: 26px;
+      line-height: 1.3;
+      color: #ffffff;
+    }
+    .btn_cnts {
+      display: inline-flex;
+      height: 63px;
+      align-items: center;
+      justify-content: center;
+      background-color: #016241;
+      border-radius: 35px;
+      margin-top: 30px;
+      padding: 0 30px;
+      font-size: 20px;
+      font-weight: 500;
+      color:#ffffff;
+    }
+  }
+
+  @include mixins.desksm() {
+    .contents {
+      h2 {
+        font-size: 33px;
+      }
+      p {
+        margin-top: 25px;
+        font-size: 17px;
+      }
+      .btn_cnts {
+        height: 32px;
+        margin-top: 25px;
+        padding: 0 20px;
+        font-size: 12px;
+      }
+    }
+  }
+
+  @include mixins.mobile() {
+    .contents {
+      h2 {
+        font-size: 25px;
+      }
+      p {
+        font-size: 13px;
+      }
+    }
+  }
+}
+// keyvisual
+
+.section {
+  padding: 100px 0;
+  .sec_head {
+    margin-bottom: 30px;
+    text-align: center;
+    p {
+      font-size: 32px;
+      font-weight: 500;
+    }
+    span {
+      display: block;
+      margin-top: 25px;
+      font-size: 20px;
+    }
+  }
+  .sec_banner {
+    position: relative;
+    padding: 155px 0;
+    .bnr_list {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      @include mixins.translate(-50%, -50%);
+      display: flex;
+      gap: 60px;
+      width: 860px;
+      height: 100%;
+      li {
+        width: 100%;
+        a {
+          display: flex;
+          align-items: flex-end;
+          justify-content: flex-end;
+          position: relative;
+          width: 100%;
+          height: 100%;
+          img {
+            position: absolute;
+            left: 0;
+            top:0;
+          }
+        }
+        &:last-child {
+          a {
+            img {
+              position: absolute;
+              right: 0;
+              bottom:0;
+              top: inherit;
+            }
+          }
+        }
+      }
+      .contents {
+        position: relative;
+        text-align: right;
+      }
+
+    }
+  }
+}
+// section
