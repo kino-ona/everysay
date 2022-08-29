@@ -224,5 +224,10 @@ input::-ms-clear {
 	height: 280px;
 }
 
+// swiper
+.swiper-container {
+	height: 100%;
+}
+
 @include mixins.mobile() {
 }

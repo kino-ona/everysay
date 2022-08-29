@@ -73,9 +73,35 @@
         </div>
       </div>
 
+      <div class="section">
+        <div class="swipe_wrap">
+          <div id="qnaswipe" class="qnaswipe swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <p class="swipe_banner" style="background-image: url('./assets/images/@main_swipe01.png');"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
     @@include('./inc/footer.inc',{
       "webroot":"."
     })
   </div>
+  <script src="/assets/js/plugin/swiper-bundle.min.js" type="text/javascript"></script>
+  <script>
+    var swiper = new Swiper('#qnaswipe', {
+      slidesPerView: 1,
+      spaceBetween: 0,
+      paginationClickable: true,
+      keyboard: true,
+      speed: 400,
+      // pagination: {
+      //   el: '#eventkvSwipe .swiper-pagination',
+      //   type: 'fraction',
+      // },
+    });
+  </script>
 </body>
