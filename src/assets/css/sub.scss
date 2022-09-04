@@ -1,0 +1,160 @@
+@use "mixins";
+@use "swiper";
+
+.sub_container {
+	display: flex;
+	gap: 11%;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 80px 0 105px;
+	.aside {
+		padding-right: 36px;
+		.aside_tit {
+			position: relative;
+			padding-top: 5px;
+			margin-bottom: 20px;
+			padding-left: 14px;
+			font-size: 22px;
+			color: #016241;
+			&:before {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 0;
+				display: block;
+				width: 10px;
+				height: 10px;
+				border-radius: 100px;
+				background-color: #016241;
+			}
+		}
+		.aside_menu {
+			width: 165px;
+			li {
+				margin-bottom: 10px;
+				&:hover, &.active {
+					a {
+						border: 1px solid #888888;
+						color: #016241;
+					}
+				}
+			}
+			a {
+				display: flex;
+				width: calc(100% - 26px);
+				height: 30px;
+				align-items: center;
+				padding:0 13px;
+				border:1px solid #ffffff;
+				border-radius: 25px;
+				font-size: 18px;
+				color: #888888;
+			}
+		}
+	}
+  // .aside
+  .content {
+    width: 100%;
+    max-width: 660px;
+    .cont_head {
+      margin-bottom: 30px;
+      font-weight: 500;
+      font-size: 38px;
+      span {
+        font-size: inherit;
+        font-weight: inherit;
+        color:#016241;
+      }
+      .desc {
+        margin-top: 20px;
+        font-weight: 400;
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.form_box {
+  display: flex;
+  width: 100%;
+  .form_field {
+    width: 100%;
+    dt {
+      margin-bottom: 5px;
+    }
+    dd {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      margin-top: 20px;
+      &:first-of-type {
+        margin-top: 0;
+      }
+    }
+  }
+}
+.form_btn {
+  display: flex;
+  width: 100%;
+  padding: 60px 0;
+  justify-content: center;
+}
+.form_result {
+  .table_cnt {
+    margin-bottom:10px;
+  }
+  .btn_delete {
+    display: block;
+    width: 27px;
+    height: 27px;
+    background: {
+      image: url('../images/icons/ico_trash.png');
+      repeat: no-repeat;
+      position: center center;
+      size: cover;
+    }
+  }
+  .table_box {
+    margin-bottom: 12px;
+  }
+  .form_table {
+    width: 100%;
+    border-top:1px solid #b9b9ba;
+    border-bottom:1px solid #b9b9ba;
+    tr {
+      display: flex;
+      justify-content: space-between;
+      .td_del {
+        width: 60px;
+        justify-content: center;
+        border-left: 1px solid #b9b9ba;
+      }
+      th {
+        min-width: 80px;
+        padding:0 20px;
+        background-color: #eeeeee;
+      }
+      td {
+        width: 100%;
+        padding:0 20px;
+      }
+    }
+    th, td {
+      display: inline-flex;
+      align-items: center;
+      justify-content: flex-start;
+      height: 58px;
+    }
+  }
+}
+.btn_delete {
+  display: block;
+  width: 27px;
+  height: 27px;
+  background: {
+    image: url('../images/icons/ico_trash.png');
+    repeat: no-repeat;
+    position: center center;
+    size: cover;
+  }
+}
