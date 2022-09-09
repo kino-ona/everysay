@@ -162,6 +162,27 @@ input[type=number] {
 	background-color: #ffffff;
 }
 
+select {
+	display: inline-flex;
+	width: 100%;
+	min-width: 80px;
+	height:58px;
+	padding:0 15px;
+	border: 1px solid #b9b9ba;
+	border-radius: 5px;
+	background-color: #ffffff;
+}
+
+textarea {
+	display: inline-flex;
+	width: 100%;
+	min-height:80px;
+	padding:15px;
+	border: 1px solid #b9b9ba;
+	border-radius: 5px;
+	background-color: #ffffff;
+}
+
 // button 
 .btn {
 	display: inline-flex;
@@ -181,6 +202,26 @@ input[type=number] {
 		border-radius: 0;
 		background-color: #362515;
 		font-size: 22px;
+	}
+	&.btn_round {
+		border-radius: 50px;
+		background-color: #e6e2d9;
+		color:#888888;
+	}
+	&.btn_point {
+		background-color: #016241;
+		color:#ffffff;
+	}
+}
+.btn_wrap {
+	display: flex;
+	align-items: center;
+	padding: 80px 0;
+	&._right {
+		justify-content: flex-end;
+	}
+	&._left {
+		justify-content: flex-start;
 	}
 }
 

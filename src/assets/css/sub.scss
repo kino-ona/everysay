@@ -76,13 +76,25 @@
 
 .form_box {
   display: flex;
+  gap: 10px;
   width: 100%;
+  margin-top: 27px;
+  &:first-of-type {
+    margin-top: 0;
+  }
   .form_field {
     width: 100%;
     dt {
+      min-height: 19px;
       margin-bottom: 5px;
+      span {
+        font-weight: 400;
+        font-size: 15px;
+        color:#666666;
+      }
     }
     dd {
+      position: relative;
       display: flex;
       gap: 10px;
       align-items: center;
@@ -90,6 +102,18 @@
       &:first-of-type {
         margin-top: 0;
       }
+    }
+    .unit {
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      @include mixins.translate(0, -50%);
+    }
+  }
+  &._auto {
+    justify-content:space-between;
+    .form_field {
+      width: auto;
     }
   }
 }
@@ -122,28 +146,43 @@
     border-top:1px solid #b9b9ba;
     border-bottom:1px solid #b9b9ba;
     tr {
-      display: flex;
-      justify-content: space-between;
+      // display: flex;
+      // justify-content: space-between;
       .td_del {
         width: 60px;
-        justify-content: center;
-        border-left: 1px solid #b9b9ba;
+        padding-left: 10px;
+        padding-right: 10px;
+        text-align: center;
       }
       th {
         min-width: 80px;
         padding:0 20px;
         background-color: #eeeeee;
+        border-left: 1px solid #b9b9ba;
+        &:first-child {
+          border-left: 0;
+        }
       }
       td {
-        width: 100%;
+        // width: 100%;
         padding:0 20px;
+        border-left: 1px solid #b9b9ba;
+        &:first-child {
+          border-left: 0;
+        }
       }
     }
     th, td {
-      display: inline-flex;
-      align-items: center;
-      justify-content: flex-start;
+      // display: inline-flex;
+      // align-items: center;
+      // justify-content: flex-start;
       height: 58px;
+      vertical-align: middle;
+    }
+    .center {
+      th, td  {
+        text-align: center;
+      }
     }
   }
 }
@@ -151,6 +190,7 @@
   display: block;
   width: 27px;
   height: 27px;
+  margin: 0 auto;
   background: {
     image: url('../images/icons/ico_trash.png');
     repeat: no-repeat;

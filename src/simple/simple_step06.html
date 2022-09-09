@@ -1,5 +1,5 @@
 @@include('../inc/pagehead.inc',{
-  "pagetitle":"- 간편유언장 - 부동산",
+  "pagetitle":"- 간편유언장 - 재산 상속",
   "webroot":".."
 })
 <link rel="stylesheet" href="../assets/css/sub.css">
@@ -18,12 +18,12 @@
         <div class="aside">
           <h2 class="aside_tit">간편 유언장</h2>
           <ul class="aside_menu">
-            <li class="active"><a href="simple_step01.html">부동산</a></li>
+            <li><a href="simple_step01.html">부동산</a></li>
             <li><a href="simple_step02.html">보험금</a></li>
             <li><a href="simple_step03.html">임대차 보증금</a></li>
             <li><a href="simple_step04.html">기타 재산</a></li>
             <li><a href="simple_step05.html">온라인 기록</a></li>
-            <li><a href="simple_step06.html">재산 상속</a></li>
+            <li class="active"><a href="simple_step06.html">재산 상속</a></li>
             <li><a href="simple_step07.html">기부</a></li>
             <li><a href="simple_step08.html">후견인</a></li>
             <li><a href="simple_step09.html">유언 집행인</a></li>
@@ -34,19 +34,45 @@
         </div>
         <div class="content">
           <div class="cont_head">
-            자신의 명의로 보유하신<br><span>부동산 정보</span>를 입력하세요.
-            <p class="desc">부동산 정보는 복수 입력이 가능합니다.</p>
+            재산을 남겨줄<br><span>상속인 정보</span>를 입력하세요.
+            <p class="desc">상속인 정보는 복수 입력이 가능합니다.</p>
           </div>
 
+          <div class="form_box _auto">
+            <dl class="form_field" style="width:80%;">
+              <dt>상속인 이름</dt>
+              <dd>
+                <input type="text" placeholder="이름을 입력하세요." />
+              </dd>
+            </dl>
+            <dl class="form_field">
+              <dt>관계</dt>
+              <dd>
+                <input type="text" placeholder="" />
+              </dd>
+            </dl>
+            <dl class="form_field">
+              <dt>상속 순위</dt>
+              <dd>
+                <select>
+                  <option>1</option>
+                  <option>2</option>
+                </select>
+              </dd>
+            </dl>
+            <dl class="form_field">
+              <dt>상속 비율</dt>
+              <dd>
+                <input type="text" maxlength="4" />
+                <span class="unit">&</span>
+              </dd>
+            </dl>
+          </div>
           <div class="form_box">
             <dl class="form_field">
-              <dt>부동산 주소</dt>
+              <dt>상속대상 재산 지정</dt>
               <dd>
-                <input type="text" placeholder="도로명, 건물명, 번지" />
-                <a href="#" class="btn btn_grey">주소검색</a>
-              </dd>
-              <dd>
-                <input type="text" placeholder="상세 주소 입력" />
+                <input type="text" placeholder="상속대상의 재산 지정을 입력하세요." />
               </dd>
             </dl>
           </div>
@@ -59,28 +85,31 @@
             <!-- loop s -->
             <div class="table_box">
               <table class="form_table">
-                <tbody>
+                <tbody class="center">
                   <tr>
-                    <th>부동산 주소</th>
-                    <td>서울시 강남구 도곡동 345 레미안 3차 2022동 1305호</td>
-                    <td class="td_del"><a href="#" class="btn_delete"><span class="a11y">삭제</span></a></td>
+                    <th>이름</th>
+                    <th>관계</th>
+                    <th>상속 순위</th>
+                    <th>상속 비율</th>
+                    <td class="td_del" rowspan="4"><a href="#" class="btn_delete"><span class="a11y">삭제</span></a></td>
+                  </tr>
+                  <tr>
+                    <td>김나라</td>
+                    <td>아내</td>
+                    <td>1</td>
+                    <td>60%</td>
+                  </tr>
+                  <tr>
+                    <th colspan="4">상속대상 재산 지정</th>
+                  </tr>
+                  <tr>
+                    <td colspan="4">상속대상 재산을 보여줍니다.</td>
                   </tr>
                 </tbody>
               </table>
             </div>
             <!-- loop e -->
 
-            <div class="table_box">
-              <table class="form_table">
-                <tbody>
-                  <tr>
-                    <th>부동산 주소</th>
-                    <td>서울시 강남구 도곡동 345 레미안 3차 2022동 1305호</td>
-                    <td class="td_del"><a href="#" class="btn_delete"><span class="a11y">삭제</span></a></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
           </div>
 
           <div class="btn_wrap _right">
