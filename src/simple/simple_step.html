@@ -1,0 +1,395 @@
+@@include('../inc/pagehead.inc',{
+  "pagetitle":"- 간편유언장 - 부동산",
+  "webroot":".."
+})
+<link rel="stylesheet" href="../assets/css/sub.css">
+</head>
+
+<body>
+  <div class="skipnavigation"><a href="#container">skip to container</a></div>
+  <div id="wrap">
+    @@include('../inc/header.inc',{
+      "webroot":"..",
+      "headertype":""
+    })
+
+    <div id="container" class="container">
+      <div class="sub_container simple_wrap">
+
+        <!-- step layer -->
+        <div class="layer_body step_layer">
+          <div class="layer_wrap">
+            <div class="step_head">
+              <div class="step_bar">
+                <!-- 
+                  12% : 1단계
+                  24% : 2단계
+                  36% : 3딘계
+                  ..
+                  108% : 9단계
+                 -->
+                <p style="width: 12%;"></p>
+              </div>
+              <div class="step_cnt">
+                step 
+                <p><span>1</span>/9</p>
+              </div>
+              <div>
+                <a href="#" class="btn_save">저장 후 나가기</a>
+              </div>
+            </div>
+            <div class="layer_box">
+              <!-- step 01 -->
+              <div class="step_content displaynone">
+                <div class="step_q">
+                  <strong>Q</strong>
+                  <p>자신의 명의로 소유한<br><span>부동산이 있나요?</span></p>
+                </div>
+                <div class="step_cont">
+                  <ul class="chk_list">
+                    <li>
+                      <p class="chkwrap">
+                        <label>
+                          <input type="radio" name="step01">
+                          <span>네.</span> 부동산 정보를 입력할게요.
+                        </label>
+                      </p>
+                    </li>
+                    <li>
+                      <p class="chkwrap">
+                        <label>
+                          <input type="radio" name="step01">
+                          <span>아니요.</span> 다음 단계로 넘어갈게요.
+                        </label>
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- step 02 -->
+              <div class="step_content displaynone">
+                <div class="step_q">
+                  <strong>Q</strong>
+                  <p><span>가입되어 있는 보험상품</span>을<br>입력해 보시겠어요?</p>
+                </div>
+                <div class="step_cont">
+                  <ul class="chk_list">
+                    <li>
+                      <p class="chkwrap">
+                        <label>
+                          <input type="radio" name="step02">
+                          <span>네.</span> 보험상품 정보를 입력할게요.
+                        </label>
+                      </p>
+                    </li>
+                    <li>
+                      <p class="chkwrap">
+                        <label>
+                          <input type="radio" name="step02">
+                          <span>아니요.</span> 다음 단계로 넘어갈게요.
+                        </label>
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- step 03 -->
+              <div class="step_content displaynone">
+                <div class="step_q">
+                  <strong>Q</strong>
+                  <p>
+                    또다른 <span>재산이 될 정보</span>가<br>있을까요?
+                    <i>두가지 다 해당되면 둘다 선택해 주세요.</i>
+                  </p>
+                </div>
+                <div class="step_cont">
+                  <ul class="chk_list">
+                    <li>
+                      <p class="chkwrap">
+                        <label>
+                          <input type="checkbox">
+                          <span>임대차 보증금</span>
+                        </label>
+                      </p>
+                    </li>
+                    <li>
+                      <p class="chkwrap">
+                        <label>
+                          <input type="checkbox">
+                          <span>보석이나 작품, 상속시 고가가 될 수 있는 기타 재산</span>
+                        </label>
+                      </p>
+                    </li>
+                    <li>
+                      <p class="chkwrap">
+                        <label>
+                          <input type="checkbox">
+                          <span>아니요.</span> 다음 단계로 넘어갈게요.
+                        </label>
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- step 04 -->
+              <div class="step_content displaynone">
+                <div class="step_q">
+                  <strong>Q</strong>
+                  <p>
+                    비공개로 정리하고 싶은<br><span>온라인 기록</span>이 있으면 선택해 주세요.
+                    <i>중복으로 선택 가능합니다.</i>
+                  </p>
+                </div>
+                <div class="step_cont">
+                  <ul class="chk_list multi_line">
+                    <li>
+                      <p class="chkwrap type2">
+                        <label>
+                          <input type="checkbox">
+                          <span>네이버</span>
+                        </label>
+                      </p>
+                    </li>
+                    <li>
+                      <p class="chkwrap type2">
+                        <label>
+                          <input type="checkbox">
+                          <span>카카오</span>
+                        </label>
+                      </p>
+                    </li>
+                    <li>
+                      <p class="chkwrap type2">
+                        <label>
+                          <input type="checkbox">
+                          <span>유튜브</span>
+                        </label>
+                      </p>
+                    </li>
+                  </ul>
+                  <ul class="chk_list multi_line">
+                    <li>
+                      <p class="chkwrap type2">
+                        <label>
+                          <input type="checkbox">
+                          <span>페이스북</span>
+                        </label>
+                      </p>
+                    </li>
+                    <li>
+                      <p class="chkwrap type2">
+                        <label>
+                          <input type="checkbox">
+                          <span>인스타그램</span>
+                        </label>
+                      </p>
+                    </li>
+                    <li>
+                      <p class="chkwrap type2">
+                        <label>
+                          <input type="checkbox">
+                          <span>구글</span>
+                        </label>
+                      </p>
+                    </li>
+                  </ul>
+                  <ul class="chk_list multi_line">
+                    <li>
+                      <p class="chkwrap type2">
+                        <label>
+                          <input type="checkbox">
+                          <span>기타</span>
+                        </label>
+                      </p>
+                      <input type="text" placeholder="사이트 명 또는 도메인 주소" />
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- step 05 -->
+              <div class="step_content displaynone">
+                <div class="step_q">
+                  <strong>Q</strong>
+                  <p>
+                    재산을<br><span>어떻게 상속</span>하시겠어요?
+                    <i>상속, 기부를 둘 다 선택하실 수 있어요.</i>
+                  </p>
+                </div>
+                <div class="step_cont">
+                  <ul class="chk_list">
+                    <li>
+                      <p class="chkwrap">
+                        <label>
+                          <input type="checkbox">
+                          <span>가족이나 지인에게 상속할게요.</span>
+                        </label>
+                      </p>
+                    </li>
+                    <li>
+                      <p class="chkwrap">
+                        <label>
+                          <input type="checkbox">
+                          <span>사회에 기부하고 싶어요.</span>
+                        </label>
+                      </p>
+                    </li>
+                    <li>
+                      <p class="chkwrap">
+                        <label>
+                          <input type="checkbox">
+                          <span>아니요.</span> 다음 단계로 넘어갈게요.
+                        </label>
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- step 06 -->
+              <div class="step_content displaynone">
+                <div class="step_q">
+                  <strong>Q</strong>
+                  <p>
+                    <span>돕고싶은 후견인</span>이나<br>
+                    <span>유언을 집행할 사람</span>을 생각해 두셨나요?
+                    <i>후견인과 유언 집행인을 둘 다 선택하실 수 있어요.</i>
+                  </p>
+                </div>
+                <div class="step_cont">
+                  <ul class="chk_list">
+                    <li>
+                      <p class="chkwrap">
+                        <label>
+                          <input type="checkbox">
+                          <span>생각해둔 후견인이 있어요.</span>
+                        </label>
+                      </p>
+                    </li>
+                    <li>
+                      <p class="chkwrap">
+                        <label>
+                          <input type="checkbox">
+                          <span>유언을 집행해줄 사람이 있어요.</span>
+                        </label>
+                      </p>
+                    </li>
+                    <li>
+                      <p class="chkwrap">
+                        <label>
+                          <input type="checkbox">
+                          <span>변호사에게 의뢰하고 싶어요.</span>
+                        </label>
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- step 07 -->
+              <div class="step_content displaynone">
+                <div class="step_q">
+                  <strong>Q</strong>
+                  <p>
+                    가족이나 친구에게<br>
+                    <span>남기고 싶은 말</span>을 적어보세요.
+                  </p>
+                </div>
+                <div class="step_cont">
+                  <textarea style="height:200px;" placeholder="유언장을 통해 남기고 싶으신 말씀을 입력해주세요.&#13;(ex : 남기고 싶은 내용이나 꼭 하고 싶은 이야기, 안하면 두고두고 후회할 말 등">
+                  </textarea>
+                </div>
+              </div>
+
+              <!-- step 08 -->
+              <div class="step_content displaynone">
+                <div class="step_q">
+                  <strong>Q</strong>
+                  <p>
+                    <span>유언장을 작성한 장소</span>는<br>어디인가요?
+                  </p>
+                </div>
+                <div class="step_cont">
+                  <div class="form_box">
+                    <dl class="form_field">
+                      <dt>유언장을 작성한 장소를 입력하세요.</dt>
+                      <dd>
+                        <input type="text" placeholder="도로명, 건물명, 번지" />
+                        <a href="#" class="btn btn_grey">주소검색</a>
+                      </dd>
+                      <dd>
+                        <input type="text" placeholder="상세 주소 입력" />
+                      </dd>
+                    </dl>
+                  </div>
+                </div>
+              </div>
+
+              <!-- step 09 -->
+              <div class="step_content">
+                <div class="step_q">
+                  <strong>Q</strong>
+                  <p>
+                    <span>정확한 인적사항</span>으로<br>유언장을 마무리 해주세요.
+                  </p>
+                </div>
+                <div class="step_cont">
+                  <div class="form_box">
+                    <dl class="form_field">
+                      <dt>이름</dt>
+                      <dd>
+                        <input type="text" placeholder="이름을 입력하세요." />
+                      </dd>
+                    </dl>
+                    <dl class="form_field">
+                      <dt>주민등록번호</dt>
+                      <dd>
+                        <input type="text" placeholder="- 없이 숫자만 입력하세요." />
+                      </dd>
+                    </dl>
+                  </div>
+                  <div class="form_box">
+                    <dl class="form_field">
+                      <dt>주소</dt>
+                      <dd>
+                        <input type="text" placeholder="도로명, 건물명, 번지" />
+                        <a href="#" class="btn btn_grey">주소검색</a>
+                      </dd>
+                      <dd>
+                        <input type="text" placeholder="상세 주소 입력" />
+                      </dd>
+                    </dl>
+                  </div>
+                  <div class="form_box">
+                    <dl class="form_field">
+                      <dt>등록 기준지</dt>
+                      <dd>
+                        <input type="text" placeholder="도로명, 건물명, 번지" />
+                        <a href="#" class="btn btn_grey">주소검색</a>
+                      </dd>
+                      <dd>
+                        <input type="text" placeholder="상세 주소 입력" />
+                      </dd>
+                    </dl>
+                  </div>
+                </div>
+              </div>
+
+              <div class="layer_foo">
+                <a href="#" class="btn_confirm">완료</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- step layer -->
+
+      </div>
+    </div>
+    @@include('../inc/footer.inc',{
+      "webroot":".."
+    })
+  </div>
+</body>

@@ -1,5 +1,6 @@
 @charset "utf-8";
 @use "mixins";
+@import url('https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css');
 
 /* font family */
 @font-face {
@@ -71,7 +72,6 @@ input[readonly] { cursor: default; }
 label {cursor: pointer;}
 textarea {
 	display:block;
-	width:100%;
 	padding:10px;
 	min-height:120px;
 	background-color:#ffffff;
@@ -176,6 +176,7 @@ select {
 textarea {
 	display: inline-flex;
 	width: 100%;
+	width:calc(100% - 32px);
 	min-height:80px;
 	padding:15px;
 	border: 1px solid #b9b9ba;
@@ -321,6 +322,111 @@ textarea {
 // swiper
 .swiper-container {
 	height: 100%;
+}
+
+// layer
+.layer_body {
+	position: fixed;
+	left:0;
+	right: 0;
+	top:0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0, 0.7);
+	z-index: 10;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	.layer_wrap {
+		width: 100%;
+		max-width: 800px;
+	}
+	.layer_box {
+		background-color: #ffffff;
+		border-radius: 45px;
+		overflow: hidden;
+	}
+	.layer_foo {
+		height: 75px;
+	}
+}
+
+// checkbox, radio
+
+.chkwrap {
+	position:relative;
+	min-height:45px;
+	margin-right:40px;
+	label {
+		display: flex;
+		min-height:45px;
+		align-items: center;
+		font-size:22px;
+		color:#888888;
+		cursor: pointer;
+		input[type=checkbox], input[type=radio] {
+			position: relative;
+			margin-right:40px;
+			border: 0;
+			&:before {
+				content: '';
+				position: absolute;
+				left:-5px;
+				top:-18px;
+				display: block;
+				width:46px;
+				height:46px;
+				border-radius: 100%;
+				background: {
+					color:#fff;
+					image: url('../images/icons/ico_check_off.png');
+					repeat: no-repeat;
+					size:26px;
+					position: center center;
+				}
+			}
+			vertical-align: middle;
+			+ span {
+				margin-right: 3px;
+				color:#666666;
+				font-size: 26px;
+			}
+			&:checked{
+				&:before {
+					background-image: url('../images/icons/ico_check_on.png');
+					background-size: 46px;
+				}
+				+ span {
+					color:#016241;
+					font-size: 28px;
+				}
+			}
+		}
+	}
+	&.type2 {
+		label {
+			input[type=checkbox], input[type=radio] {
+				+ span {
+					font-size: 26px;
+					color:#016241;
+				}
+				&:before {
+					width: 47px;
+					background-image: url('../images/icons/ico_check2_off.png');
+					background-size: 47px;
+				}
+				&:checked{
+					&:before {
+						background-image: url('../images/icons/ico_check2_on.png');
+						background-size: 47px;
+					}
+					+ span {
+						font-size: 26px;
+					}
+				}
+			}
+		}
+	}
 }
 
 @include mixins.mobile() {
