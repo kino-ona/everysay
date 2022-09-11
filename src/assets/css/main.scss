@@ -11,19 +11,23 @@
   background-color: #ffffff;
 }
 .section {
+  // position: relative;
 	max-width: 1200px;
 	height: 100%;
 	margin: 0 auto;
 }
 .keyvisual {
   position: relative;
-  padding-top: 50vw;
+  padding-top: 60vw;
   overflow: hidden;
-  .figure {
+  .swiper-wrapper {
     position: absolute;
-    left: 50%;
+    left: 0;
     top: 0;
-    @include mixins.translate(-50%, 0);
+    width: 100%;
+    height: 100%;
+  }
+  .figure {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -39,6 +43,7 @@
     top: 19%;
     @include mixins.translate(-50%, 0);
     text-align: center;
+    z-index: 9;
     h2 {
       position: relative;
       display: block;
@@ -271,6 +276,7 @@
       height: 80.8%;
       overflow: hidden;
     }
+    .swiper-wrapper {}
     .swipe_banner {
       height: 100%;
       background: {
@@ -283,14 +289,16 @@
   // swipe_wrap
 
   &.sec_qna {
+    position: relative;
+    max-width: 100%;
     &:before {
       content: '';
       position: absolute;
       left:0;
       display: block;
       width: 100%;
-      height: 835px;
-      margin-top: 300px;
+      height: 100%;
+      margin-top: 380px;
       background: {
         image: url('../images/main/faq_bg.png');
         size: cover;
@@ -298,6 +306,34 @@
         position: center top;
       }
     } 
+    .swiper-pagination {
+      bottom: 5px;
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+      width: 50px;
+      height: 50px;
+      background: {
+        size: cover;
+        repeat: no-repeat;
+        position: 0 0;
+      };
+      &::after {
+        display: none;
+      }
+    }
+    .swiper-button-next {
+      background-image: url('../images/icons/swipe_next.png');
+    }
+    .swiper-button-prev {
+      background-image: url('../images/icons/swipe_prev.png');
+    }
+    .swiper-pagination-bullet {
+      background-color: #626262;
+    }
+    .swiper-pagination-bullet-active {
+      background-color: #016241;
+    }
   }
 
   &.sec_faq {

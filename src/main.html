@@ -9,18 +9,24 @@
 <body>
   <div class="skipnavigation"><a href="#container">skip to container</a></div>
   <div id="wrap">
+    <!-- header -->
     @@include('./inc/header.inc',{
       "webroot":".",
       "headertype":""
     })
+    <!--// header -->
 
-    <div id="container" class="container">
-      <div class="keyvisual">
-        <p class="figure" style="background-image: url('./assets/images/main/visual.png')"></p>
+    <div id="container" class="container main_container">
+      <div id="keyvisual" class="keyvisual swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide figure" style="background-image: url('./assets/images/main/visual01.png')"></div>
+          <div class="swiper-slide figure" style="background-image: url('./assets/images/main/visual02.png')"></div>
+          <div class="swiper-slide figure" style="background-image: url('./assets/images/main/visual03.png')"></div>
+        </div>
         <div class="contents">
-          <h2>당신의 이야기를 남기세요.</h2>
-          <p>꼭 남기고 싶은 말이 있으신가요?<br>모두의 유언에서 가족과 친구들에게 이야기를 남길 수 있어요.</p>
-          <a href="#" class="btn_cnts">서비스 자세히 보기</a>
+          <h2 class="animate">당신의 이야기를 남기세요.</h2>
+          <p class="animate slideInUp">꼭 남기고 싶은 말이 있으신가요?<br>모두의 유언에서 가족과 친구들에게 이야기를 남길 수 있어요.</p>
+          <a href="#" class="btn_cnts animate slideInUp2">서비스 자세히 보기</a>
         </div>
       </div>
 
@@ -32,7 +38,7 @@
         <div class="sec_banner">
           <p><img src="./assets/images/main/banner_bg.png"></p>
           <ul class="bnr_list">
-            <li>
+            <li class="animate slideInDown">
               <img src="./assets/images/main/banner01.png">
               <div class="contents">
                 <a href="#">
@@ -42,7 +48,7 @@
                 </a>
               </div>
             </li>
-            <li>
+            <li class="animate slideInUp2">
               <img src="./assets/images/main/banner02.png">
               <div class="contents">
                 <a href="#">
@@ -58,15 +64,15 @@
 
       <div class="section">
         <div class="sec_infoIco">
-          <div class="item">
+          <div class="item animate slideInUp">
             <p><img src="./assets/images/icons/ico_info01.png"></p>
             <span>소유하고 있는 재산들을<br>정리해보세요.</span>
           </div>
-          <div class="item">
+          <div class="item animate slideInUp2">
             <p><img src="./assets/images/icons/ico_info02.png"></p>
             <span>가족과 친구들에게<br>말하고 싶은 이야기를<br>남길 수 있어요.</span>
           </div>
-          <div class="item">
+          <div class="item animate slideInUp3">
             <p><img src="./assets/images/icons/ico_info03.png"></p>
             <span>소유하고 있는 재산들을<br>정리해보세요.</span>
           </div>
@@ -85,6 +91,11 @@
                 <p class="swipe_banner" style="background-image: url('./assets/images/@main_swipe01.png');"></p>
               </div>
             </div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swipe_navi">
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
           </div>
         </div>
       </div>
@@ -116,33 +127,12 @@
       </div>
 
     </div>
+
+    <!-- footer -->
     @@include('./inc/footer.inc',{
       "webroot":"."
     })
+    <!--// footer -->
   </div>
-  <script src="/assets/js/swiper-bundle.min.js" type="text/javascript"></script>
-  <script>
-    var qnaSwiper = new Swiper('#qnaswipe', {
-      slidesPerView: 1,
-      spaceBetween: 0,
-      paginationClickable: true,
-      keyboard: true,
-      speed: 400,
-      // pagination: {
-      //   el: '#qnaswipe .swiper-pagination',
-      //   type: 'fraction',
-      // },
-    });
-    var faqwiper = new Swiper('#faqswipe', {
-      slidesPerView: 3,
-      spaceBetween: 79,
-      paginationClickable: true,
-      keyboard: true,
-      speed: 400,
-      // pagination: {
-      //   el: '#qnaswipe .swiper-pagination',
-      //   type: 'fraction',
-      // },
-    });
-  </script>
+  <script src="/assets/js/main.js"></script>
 </body>

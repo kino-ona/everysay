@@ -226,6 +226,86 @@ textarea {
 	}
 }
 
+.animate {
+	// visibility: hidden;
+	-webkit-transition: 0.9s ease-in-out;
+	-moz-transition: 0.9s ease-in-out;
+	-o-transition: 0.9s ease-in-out;
+	transition: 0.9s ease-in-out;
+	opacity: 0;
+	&.slideInUp{
+		-webkit-transition: 0.6s ease-in-out;
+		-moz-transition: 0.6s ease-in-out;
+		-o-transition: 0.6s ease-in-out;
+		transition: 0.6s ease-in-out;
+		-webkit-transform: (translate3d(0, 80px, 0));
+		-moz-transform: (translate3d(0, 80px, 0));
+		-o-transform: (translate3d(0, 80px, 0));
+		-ms-transform: (translate3d(0, 80px, 0));
+		transform: (translate3d(0, 80px, 0));
+	}
+	&.slideInUp2{
+		-webkit-transition: 0.9s ease-in-out;
+		-moz-transition: 0.9s ease-in-out;
+		-o-transition: 0.9s ease-in-out;
+		transition: 0.9s ease-in-out;
+		-webkit-transform: (translate3d(0, 110px, 0));
+		-moz-transform: (translate3d(0, 110px, 0));
+		-o-transform: (translate3d(0, 110px, 0));
+		-ms-transform: (translate3d(0, 110px, 0));
+		transform: (translate3d(0, 110px, 0));
+	}
+	&.slideInUp3{
+		-webkit-transition: 1.2s ease-in-out;
+		-moz-transition: 1.2s ease-in-out;
+		-o-transition: 1.2s ease-in-out;
+		transition: 1.2s ease-in-out;
+		-webkit-transform: (translate3d(0, 150px, 0));
+		-moz-transform: (translate3d(0, 150px, 0));
+		-o-transform: (translate3d(0, 150px, 0));
+		-ms-transform: (translate3d(0, 150px, 0));
+		transform: (translate3d(0, 150px, 0));
+	}
+	&.slideInDown{
+		-webkit-transition: 0.9s ease-in-out;
+		-moz-transition: 0.9s ease-in-out;
+		-o-transition: 0.9s ease-in-out;
+		transition: 0.9s ease-in-out;
+		-webkit-transform: (translate3d(0, -110px, 0));
+		-moz-transform: (translate3d(0, -110px, 0));
+		-o-transform: (translate3d(0, -110px, 0));
+		-ms-transform: (translate3d(0, -110px, 0));
+		transform: (translate3d(0, -110px, 0));
+	}
+	&.slideToLeft{
+		-webkit-transform: (translate3d(-200px, 0, 0));
+		-moz-transform: (translate3d(-200px, 0, 0));
+		-o-transform: (translate3d(-200px, 0, 0));
+		-ms-transform: (translate3d(-200px, 0, 0));
+		transform: (translate3d(-200px, 0, 0));
+	}
+	&.slideToRight{
+		opacity: .1;
+		-webkit-transform: (translate3d(200px, 0, 0));
+		-moz-transform: (translate3d(200px, 0, 0));
+		-o-transform: (translate3d(200px, 0, 0));
+		-ms-transform: (translate3d(200px, 0, 0));
+		transform: (translate3d(200px, 0, 0));
+	}
+}
+.is-active, .active {
+	.animate {
+		opacity: 1;
+	}
+	.slideInUp, .slideInUp2, .slideInUp3, .slideToLeft, .slideToRight, .slideInDown{
+		-webkit-transform: (translate3d(0, 0, 0));
+		-moz-transform: (translate3d(0, 0, 0));
+		-o-transform: (translate3d(0, 0, 0));
+		-ms-transform: (translate3d(0, 0, 0));
+		transform: (translate3d(0, 0, 0));
+	}
+}
+
 // layout
 .inner {
 	max-width: 1200px;
@@ -269,17 +349,41 @@ textarea {
 		}
 	}
 	.util {
+		display: flex;
 		a {
-			display: inline-block;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
 			width: 85px;
 			height: 30px;
 			font-size: 15px;
-			line-height: 1.7;
-			text-align: center;
 		}
 		.btn_login {
 			background-color: #ffffff;
 			border-radius: 100vw;
+		}
+		.user_info {
+			display: flex;
+			align-items: center;
+			span {
+				margin-left: 5px;
+				color:#888888;
+			}
+			.user {
+				display: block;
+				font-style: normal;
+				width: 36px;
+				height: 36px;
+				border-radius: 100%;
+				margin-right: 10px;
+				overflow: hidden;
+				background: {
+					image: url('../images/common/user_icon.png');
+					size: cover;
+					position: center center;
+					repeat: no-repeat;
+				};
+			}
 		}
 	}
 }
@@ -302,20 +406,41 @@ textarea {
 	}
 	.foo_btm {
 		padding: 50px 0 70px;
+		.inner {
+			> p {
+				font-weight: 500;
+				font-size: 14px;
+			}
+		}
 		.addr {
 			display: flex;
+			margin-top: 10px;
+			font-size: 14px;
+		}
+		.copyr {
+			margin-top: 25px;
 		}
 	}
 	.foo_logo {
 		display: block;
 		width:134px;
 		height:48px;
+		margin-right: 20px;
 		background: {
 			image: url('../images/common/logo_foo.png');
 			size:cover;
 			repeat: no-repeat;
 			position: 0 0;
 		};
+	}
+	.foo_link {
+		a {
+			margin-right: 23px;
+			font-weight: 500;
+		}
+		span {
+			font-weight: 400;
+		}
 	}
 }
 
