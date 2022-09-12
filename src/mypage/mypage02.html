@@ -1,0 +1,255 @@
+@@include('../inc/pagehead.inc',{
+  "pagetitle":"- 마이페이지 - 내 유언장",
+  "webroot":".."
+})
+<link rel="stylesheet" href="../assets/css/sub.css">
+</head>
+
+<body>
+  <div class="skipnavigation"><a href="#container">skip to container</a></div>
+  <div id="wrap">
+    @@include('../inc/header.inc',{
+      "webroot":"..",
+      "headertype":""
+    })
+
+    <div id="container" class="container">
+      <div class="sub_container mypage_wrap">
+        <div class="aside">
+          <h2 class="aside_tit">마이페이지</h2>
+          <ul class="aside_menu">
+            <li><a href="mypage01.html">가입정보 확인</a></li>
+            <li class="active"><a href="mypage02.html">내 유언장</a></li>
+            <li><a href="#" onclick="layerOpen('logout_pop');return false;">로그아웃</a></li>
+          </ul>
+        </div>
+        <div class="content">
+          <div class="cont_head">
+            내 유언장
+          </div>
+          <div class="my_will">
+            <ul class="check_list">
+              <li>
+                <p class="chkwrap type3">
+                  <label>
+                    <input type="checkbox">
+                    <span>간편 유언장</span>
+                  </label>
+                </p>
+              </li>
+              <li>
+                <p class="chkwrap type3">
+                  <label>
+                    <input type="checkbox">
+                    <span>프리미엄 유언장</span>
+                  </label>
+                </p>
+              </li>
+            </ul>
+            <ul class="check_list">
+              <li>
+                <p class="chkwrap type3">
+                  <label>
+                    <input type="checkbox">
+                    <span>작성중</span>
+                  </label>
+                </p>
+              </li>
+              <li>
+                <p class="chkwrap type3">
+                  <label>
+                    <input type="checkbox">
+                    <span>작성 완료</span>
+                  </label>
+                </p>
+              </li>
+            </ul>
+            <ul class="check_list">
+              <li>
+                <p class="chkwrap type3">
+                  <label>
+                    <input type="checkbox">
+                    <span>공증 미신청</span>
+                  </label>
+                </p>
+              </li>
+              <li>
+                <p class="chkwrap type3">
+                  <label>
+                    <input type="checkbox">
+                    <span>공증 신청</span>
+                  </label>
+                </p>
+              </li>
+              <li>
+                <p class="chkwrap type3">
+                  <label>
+                    <input type="checkbox">
+                    <span>공증 완료</span>
+                  </label>
+                </p>
+              </li>
+            </ul>
+
+            <div class="will_filter">
+              <div class="filter_chk">
+                <p class="filter_btn">
+                  <input type="checkbox" id="filter01" />
+                  <label for="filter01">어제</label>
+                </p>
+                <p class="filter_btn">
+                  <input type="checkbox" id="filter02" />
+                  <label for="filter02">오늘</label>
+                </p>
+                <p class="filter_btn">
+                  <input type="checkbox" id="filter03" />
+                  <label for="filter03">1개월</label>
+                </p>
+                <p class="filter_btn">
+                  <input type="checkbox" id="filter04" />
+                  <label for="filter04">3개월</label>
+                </p>
+                <p class="filter_btn">
+                  <input type="checkbox" id="filter05" />
+                  <label for="filter05">6개월</label>
+                </p>
+                <p class="filter_btn">
+                  <input type="checkbox" id="filter06" />
+                  <label for="filter06">1년</label>
+                </p>
+              </div>
+              <div class="filter_date">
+                <p>
+                  <input type="text" id="datepicker1" class="datepicker">
+                </p>
+                ~
+                <p>
+                  <input type="text" id="datepicker2" class="datepicker">
+                </p>
+              </div>
+            </div>
+
+            <div class="will_list">
+              <div class="list_head">
+                <p>총 <span>5</span>개</p>
+                <a href="#" class="btn_make">새 유언장 만들기</a>
+              </div>
+              <ul class="list_box">
+                <li>
+                  <div class="will_box">
+                    <div class="box_head">
+                      <p class="num">6</p>
+                      <p class="date">2022.05.05 / 12:08</p>
+                    </div>
+                    <div class="box_cont">
+                      <p class="type">간편 유언장</p>
+                      <p class="status">작성 완료</p>
+                      <p class="notarize">공증 : <span>공증 신청</span></p>
+                      <a href="#" class="btn_manage">관리</a>
+                    </div>
+                  </div>  
+                </li>
+                <li>
+                  <div class="will_box">
+                    <div class="box_head">
+                      <p class="num">5</p>
+                      <p class="date">2022.05.05 / 12:08</p>
+                    </div>
+                    <div class="box_cont">
+                      <p class="type">간편 유언장</p>
+                      <p class="status">작성 완료</p>
+                      <p class="notarize">공증 : <span>공증 신청</span></p>
+                      <a href="#" class="btn_manage">관리</a>
+                    </div>
+                  </div>  
+                </li>
+                <li>
+                  <div class="will_box">
+                    <div class="box_head">
+                      <p class="num">4</p>
+                      <p class="date">2022.05.05 / 12:08</p>
+                    </div>
+                    <div class="box_cont">
+                      <p class="type">간편 유언장</p>
+                      <p class="status">작성 완료</p>
+                      <p class="notarize">공증 : <span>공증 신청</span></p>
+                      <a href="#" class="btn_manage">관리</a>
+                    </div>
+                  </div>  
+                </li>
+                <li>
+                  <div class="will_box">
+                    <div class="box_head">
+                      <p class="num">3</p>
+                      <p class="date">2022.05.05 / 12:08</p>
+                    </div>
+                    <div class="box_cont">
+                      <p class="type">간편 유언장</p>
+                      <p class="status">작성 완료</p>
+                      <p class="notarize">공증 : <span>공증 신청</span></p>
+                      <a href="#" class="btn_manage">관리</a>
+                    </div>
+                  </div>  
+                </li>
+                <li>
+                  <div class="will_box">
+                    <div class="box_head">
+                      <p class="num">2</p>
+                      <p class="date">2022.05.05 / 12:08</p>
+                    </div>
+                    <div class="box_cont">
+                      <p class="type">간편 유언장</p>
+                      <p class="status">작성 완료</p>
+                      <p class="notarize">공증 : <span>공증 신청</span></p>
+                      <a href="#" class="btn_manage">관리</a>
+                    </div>
+                  </div>  
+                </li>
+                <li>
+                  <div class="will_box">
+                    <div class="box_head">
+                      <p class="num">1</p>
+                      <p class="date">2022.05.05 / 12:08</p>
+                    </div>
+                    <div class="box_cont">
+                      <p class="type">간편 유언장</p>
+                      <p class="status">작성 완료</p>
+                      <p class="notarize">공증 : <span>공증 신청</span></p>
+                      <a href="#" class="btn_manage">관리</a>
+                    </div>
+                  </div>  
+                </li>
+              </ul>
+
+              <div class="pagination">
+                <a href="#" class="btn_prev"><span class="a11y">이전</span></a>
+                <span class="now">1</span>
+                of
+                <span>1</span>
+                pages
+                <a href="#" class="btn_next"><span class="a11y">다음</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    @@include('../inc/footer.inc',{
+      "webroot":".."
+    })
+    <script>
+      $( function() {
+        $(".datepicker").each(function(){
+          $(this).datepicker({
+            showOn: "button",
+            buttonImage: "/assets/images/icons/ico_calender.png",
+            buttonImageOnly: true,
+            buttonText: "Select date",
+            dateFormat: 'yy.mm.dd'
+          });
+        });
+      } );
+    </script>
+  </div>
+</body>

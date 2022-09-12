@@ -1,3 +1,29 @@
+
+
+<!-- 로그아웃 -->
+<div class="layer_body mypage_layer" id="logout_pop" aria-hidden="true" role="dialog">
+  <div class="layer_wrap">
+    <div class="layer_box">
+      <div class="layer_top">
+        <a href="#" onclick="layerClose('logout_pop');return false;" class="btn_close"><span class="a11y">close</span></a>
+      </div>
+
+      <p class="my_head">로그아웃</p>
+      <div class="my_desc">
+        로그아웃 하시겠습니까?
+      </div>
+      <p class="my_ico">
+        <i class="ico_logout"></i>
+      </p>
+      <div class="btnwrap">
+        <a href="#" onclick="layerClose('logout_pop');return false;" class="btn_cancel">취소</a>
+        <a href="#" onclick="layerClose('logout_pop');return false;" class="btn_submit">확인</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!--// 로그아웃 -->
+
 <footer class="footer">
   <div class="foo_top">
     <div class="inner">

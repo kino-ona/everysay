@@ -1,0 +1,199 @@
+@@include('../inc/pagehead.inc',{
+  "pagetitle":"- 마이페이지 - 가입정보확인",
+  "webroot":".."
+})
+<link rel="stylesheet" href="../assets/css/sub.css">
+</head>
+
+<body>
+  <div class="skipnavigation"><a href="#container">skip to container</a></div>
+  <div id="wrap">
+    @@include('../inc/header.inc',{
+      "webroot":"..",
+      "headertype":""
+    })
+
+    <div id="container" class="container">
+      <div class="sub_container mypage_wrap">
+        <div class="aside">
+          <h2 class="aside_tit">마이페이지</h2>
+          <ul class="aside_menu">
+            <li class="active"><a href="mypage01.html">가입정보 확인</a></li>
+            <li><a href="mypage02.html">내 유언장</a></li>
+            <li><a href="#" onclick="layerOpen('logout_pop');return false;">로그아웃</a></li>
+          </ul>
+        </div>
+        <div class="content">
+          <div class="cont_head">
+            <p class="user_figure"><img src="https://w.namu.la/s/1830b4e9685b2a71753b169fb7303f9b82383a927754bd7fcc9d42776410f3c7cfcef5d53ca0f5c6f05c37832ae3431d88dcac616705457186ee01761aa5faa3adb4ec5665e223df348bdf0baff9345dcc3a18bfb5be84c4e229c87486095f0bd6518c918d802997a862acffb47796e8" alt="사용자이름" /></p>
+            <p class="user_name">홍길동</p>
+            <!-- 
+              default image : ../assets/images/common/user_default.png
+            //-->
+          </div>
+          <div class="my_info">
+            <dl class="my_row">
+              <dt>이메일</dt>
+              <dd>
+                <input type="text" value="abc@gmail.com" readonly />
+              </dd>
+            </dl>
+            <dl class="my_row">
+              <dt>휴대폰 번호</dt>
+              <dd>
+                <input type="text" value="010-1234-1234" readonly />
+                <a href="#" onclick="layerOpen('mypassword_pop');return false;" class="btn_change">변경하기</a>
+              </dd>
+            </dl>
+            <dl class="my_row">
+              <dt>비밀번호</dt>
+              <dd>
+                <input type="password" value="01012341234" readonly />
+                <a href="#" onclick="layerOpen('myphone_pop');return false;" class="btn_change">변경하기</a>
+              </dd>
+            </dl>
+          </div>
+          <div class="my_check">
+            <p>마케팅 정보 수신 동의</p>
+            <ul class="check_list">
+              <li>
+                <p class="chkwrap type2">
+                  <label>
+                    <input type="checkbox">
+                    <span>카카오톡 알림</span>
+                  </label>
+                </p>
+              </li>
+              <li>
+                <p class="chkwrap type2">
+                  <label>
+                    <input type="checkbox">
+                    <span>이메일</span>
+                  </label>
+                </p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="btn_wrap">
+            <div>
+              <a href="#" class="btn btn_round">저장하기</a>
+              <!-- <a href="#" class="btn btn_round btn_point">저장하기</a> -->
+            </div>
+          </div>
+          <div class="btn_wrap _right">
+            <a href="#" onclick="layerOpen('myout_pop');return false;">회원 <span>탈퇴하기</span></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 비밀번호 재설정 완료 -->
+      <div class="layer_body mypage_layer" id="mypassword_pop" aria-hidden="true" role="dialog">
+        <div class="layer_wrap">
+          <div class="layer_box">
+            <div class="layer_top">
+              <a href="#" onclick="layerClose('mypassword_pop');return false;" class="btn_close"><span class="a11y">close</span></a>
+            </div>
+
+            <p class="my_head">비밀번호 재설정 완료</p>
+            <div class="my_desc">
+              비밀번호 재설정이 완료되었습니다.<br>
+              재설정된 비밀번호로 로그인해주세요.
+            </div>
+            <p class="my_ico">
+              <i class="ico_set"></i>
+            </p>
+            <div class="btnwrap">
+              <a href="#" onclick="layerClose('mypassword_pop');return false;" class="btn_confirm">로그인 하기</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--// 비밀번호 재설정 완료 -->
+
+      <!-- 휴대폰번호 저장 완료 -->
+      <div class="layer_body mypage_layer" id="myphone_pop" aria-hidden="true" role="dialog">
+        <div class="layer_wrap">
+          <div class="layer_box">
+            <div class="layer_top">
+              <a href="#" onclick="layerClose('myphone_pop');return false;" class="btn_close"><span class="a11y">close</span></a>
+            </div>
+
+            <p class="my_head">휴대폰 번호 저장 완료</p>
+            <div class="my_desc">
+              입력하신 휴대폰 번호로 저장이 완료되었습니다.
+            </div>
+            <p class="my_ico">
+              <i class="ico_set"></i>
+            </p>
+            <div class="btnwrap">
+              <a href="#" onclick="layerClose('myphone_pop');return false;" class="btn_submit">확인</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--// 휴대폰번호 저장 완료 -->
+
+      <!-- 회원탈퇴 -->
+      <div class="layer_body mypage_layer" id="myout_pop" aria-hidden="true" role="dialog">
+        <div class="layer_wrap">
+          <div class="layer_box">
+            <div class="layer_top">
+              <a href="#" onclick="layerClose('myout_pop');return false;" class="btn_close"><span class="a11y">close</span></a>
+            </div>
+
+            <p class="my_head">회원 탈퇴</p>
+            <div class="my_desc">
+              회원 탈퇴를 진행 하시겠습니까?
+              <br><br>
+              탈퇴하시면, 작성하신 유언장을 포함하여 모든 정보가 삭제되며 복구할 수 없습니다.
+            </div>
+            <div class="form_box">
+              <dl class="form_field">
+                <dt>비밀번호</dt>
+                <dd>
+                  <input type="password" value="00000" />
+                  <div class="form_chk">
+                    <a href="#" onclick="txtReset(this);return false;" class="bt_reset"></a>
+                    <a href="#" onclick="pwdShow(this);return false;" class="bt_pwd"></a>
+                  </div>
+                </dd>
+              </dl>
+            </div>
+            <div class="btnwrap">
+              <a href="#" onclick="layerOpen('myoutok_pop');layerClose('myout_pop');return false;" class="btn_submit">확인</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--// 회원탈퇴 -->
+
+      <!-- 회원탈퇴 완료 -->
+      <div class="layer_body mypage_layer" id="myoutok_pop" aria-hidden="true" role="dialog">
+        <div class="layer_wrap">
+          <div class="layer_box">
+            <div class="layer_top">
+              <a href="#" onclick="layerClose('myoutok_pop');return false;" class="btn_close"><span class="a11y">close</span></a>
+            </div>
+
+            <p class="my_head">모두의 유언<br>회원 탈퇴가 완료되었습니다.</p>
+            <div class="my_desc">
+              모두의 유언 서비스를 이용해주셔서 감사합니다.
+            </div>
+            <p class="my_ico">
+              <i class="ico_outok"></i>
+            </p>
+            <div class="btnwrap">
+              <a href="#" onclick="layerClose('myoutok_pop');return false;" class="btn_submit">확인</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--// 회원탈퇴 완료 -->
+
+    </div>
+    @@include('../inc/footer.inc',{
+      "webroot":".."
+    })
+  </div>
+</body>

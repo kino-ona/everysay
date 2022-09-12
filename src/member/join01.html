@@ -1,0 +1,40 @@
+@@include('../inc/pagehead.inc',{
+  "pagetitle":"- 회원가입",
+  "webroot":".."
+})
+<link rel="stylesheet" href="../assets/css/sub.css">
+</head>
+
+<body>
+  <div class="skipnavigation"><a href="#container">skip to container</a></div>
+  <div id="wrap">
+    <!-- header -->
+    @@include('../inc/header.inc',{
+      "webroot":"..",
+      "headertype":""
+    })
+    <!--// header -->
+
+    <div id="container" class="container">
+      <div class="sub_container">
+        <div class="join_index">
+          <p class="title">회원가입</p>
+          <p class="desc">회원 가입 후 모두의 유언 서비스를 이용할 수 있습니다.</p>
+
+          <div class="btnwrap">
+            <a href="#" class="btn_email_join"><i></i>이메일로 가입하기</a>
+            <a href="#" class="btn_kakao_join"><i></i>카카오로 가입하기</a>
+          </div>
+
+          <p class="desc _center">이미 계정이 있으면 <a href="#">로그인</a> 하기</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    @@include('../inc/footer.inc',{
+      "webroot":".."
+    })
+    <!--// footer -->
+  </div>
+</body>

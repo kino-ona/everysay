@@ -5,33 +5,33 @@
 /* font family */
 @font-face {
 	font-family:'NS DL';
-	src:url('../../fonts/NotoSans-DemiLight.woff') format('woff'),
-		 url('../../fonts/NotoSansKR-DemiLight.woff2') format('woff2'),
-		 url('../../fonts/NotoSans-DemiLight.otf') format('opentype');
+	src:url('../fonts/NotoSans-DemiLight.woff') format('woff'),
+		 url('../fonts/NotoSansKR-DemiLight.woff2') format('woff2'),
+		 url('../fonts/NotoSans-DemiLight.otf') format('opentype');
 	font-weight:300;
 	font-style:normal;
 }
 @font-face {
 	font-family:'NS RG';
-	src:url('../../fonts/NotoSans-Regular.woff') format('woff'),
-		 url('../../fonts/NotoSansKR-Regular.woff2') format('woff2'),
-		 url('../../fonts/NotoSans-Regular.otf') format('opentype');
+	src:url('../fonts/NotoSans-Regular.woff') format('woff'),
+		 url('../fonts/NotoSansKR-Regular.woff2') format('woff2'),
+		 url('../fonts/NotoSans-Regular.otf') format('opentype');
 	font-weight:400;
 	font-style:normal;
 }
 @font-face {
 	font-family:'NS MD';
-	src:url('../../fonts/NotoSans-Medium.woff') format('woff'),
-		 url('../../fonts/NotoSansKR-Medium.woff2') format('woff2'),
-		 url('../../fonts/NotoSans-Medium.otf') format('opentype');
+	src:url('../fonts/NotoSans-Medium.woff') format('woff'),
+		 url('../fonts/NotoSansKR-Medium.woff2') format('woff2'),
+		 url('../fonts/NotoSans-Medium.otf') format('opentype');
 	font-weight:500;
 	font-style:normal;
 }
 @font-face {
 	font-family:'NS BD';
-	src:url('../../fonts/NotoSans-Bold.woff') format('woff'),
-		 url('../../fonts/NotoSansKR-Bold.woff2') format('woff2'),
-		 url('../../fonts/NotoSans-Bold.otf') format('opentype');
+	src:url('../fonts/NotoSans-Bold.woff') format('woff'),
+		 url('../fonts/NotoSansKR-Bold.woff2') format('woff2'),
+		 url('../fonts/NotoSans-Bold.otf') format('opentype');
 	font-weight:700;
 	font-style:normal;
 }
@@ -218,11 +218,15 @@ textarea {
 	display: flex;
 	align-items: center;
 	padding: 80px 0;
+	justify-content: center;
 	&._right {
 		justify-content: flex-end;
 	}
 	&._left {
 		justify-content: flex-start;
+	}
+	& + .btn_wrap {
+		padding-top: 0px;
 	}
 }
 
@@ -467,17 +471,45 @@ textarea {
 		max-width: 800px;
 	}
 	.layer_box {
+		position: relative;
 		background-color: #ffffff;
 		border-radius: 45px;
 		overflow: hidden;
 	}
+	.layer_top {
+		position: absolute;
+		right: 10px;
+		top: 10px;
+	}
+	.btn_close {
+		display: block;
+		width: 40px;
+		height: 40px;
+		background: {
+			image: url('../images/icons/ico_layer_close.png');
+			size: cover;
+			repeat: no-repeat;
+			position: center center;
+		}
+	}
 	.layer_foo {
 		height: 75px;
+	}
+	&[aria-hidden="true"] {
+		display: none;
+	}
+	&[aria-hidden="false"] {
+		display: flex;
+	}
+	&.is-visible {
+		visibility: visible;
+		&[role="dialog"]{
+			display: flex;
+		}
 	}
 }
 
 // checkbox, radio
-
 .chkwrap {
 	position:relative;
 	min-height:45px;
@@ -552,7 +584,104 @@ textarea {
 			}
 		}
 	}
+	&.type3 {
+		label {
+			input[type=checkbox], input[type=radio] {
+				margin-right: 10px;
+				+ span {
+					font-size: 16px;
+					color:#000000;
+				}
+				&:before {
+					top: -16px;
+					width: 22px;
+					background-image: url('../images/icons/ico_check3_off.jpg');
+					background-size: 22px;
+				}
+				&:checked{
+					&:before {
+						background-image: url('../images/icons/ico_check3_on.png');
+						background-size: 22px;
+					}
+					+ span {
+						font-size: 16px;
+					}
+				}
+			}
+		}
+	}
 }
 
 @include mixins.mobile() {
+	input[type=text], input[type=password], input[type=number],
+	select {
+		height: 35px;
+	}
+
+
+	.header {
+		height: 60px;
+		.inner {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+		.logo {
+			width: 102px;
+			background-size: 102px;
+		}
+		.gnb {
+			display: none;
+		}
+		.util {
+			display: none;
+		}
+	}
+	.footer {
+		height: auto;
+		.foo_logo {
+			height: 30px;
+			margin-bottom: 15px;
+			background-size: auto 30px;
+		}
+		.foo_top {
+			height: auto;
+			padding-left: 20px;
+			padding-right: 20px;
+			padding-top: 15px;
+			padding-bottom: 15px;
+			.inner {
+				display: block;
+			}
+		}
+		.foo_link {
+			padding-left: 20px;
+			padding-right: 20px;
+			a {
+				font-size: 10px;
+			}
+			span {
+				display: block;
+				font-size: 10px;
+			}
+		}
+		.foo_btm {
+			padding: 20px 40px 40px;
+			.inner {
+				> p {
+					font-size: 10px;
+				}
+				.addr {
+					display: block;
+					font-size: 10px;
+					line-height: 1.6;
+					p {
+
+					}
+				}
+			}
+			.copyr {
+				margin-top: 15px;
+			}
+		}
+	}
 }
