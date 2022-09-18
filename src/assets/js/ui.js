@@ -114,3 +114,22 @@ function layerClose(layerId){
 		isOpen = false;
 	}
 }
+
+//******
+// tab control
+//******
+$('.tab_wrap').each(function(){
+	var $tabwrap = $(this);
+	var $tabcont = $(this).find('.tabs_list');
+
+	$(this).find('li').click(function(){
+		$tabcont.find('li').removeClass('active');
+		$(this).addClass('active');
+		$tabwrap.find('.tab_box').hide();
+		
+		var activeTab = $(this).find('a').attr('href');
+		$(activeTab).fadeIn();
+
+		return false;
+	});
+});

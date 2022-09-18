@@ -1,0 +1,139 @@
+@@include('../inc/pagehead.inc',{
+  "pagetitle":"- 프리미엄 유언장 - 자녀 정보",
+  "webroot":".."
+})
+<link rel="stylesheet" href="../assets/css/sub.css">
+</head>
+
+<body>
+  <div class="skipnavigation"><a href="#container">skip to container</a></div>
+  <div id="wrap">
+    @@include('../inc/header.inc',{
+      "webroot":"..",
+      "headertype":""
+    })
+
+    <div id="container" class="container">
+      <div class="sub_container premium_wrap">
+        <div class="aside">
+          <h2 class="aside_tit">프리미엄 유언장</h2>
+          <div class="aside_status">
+            <strong>6</strong>
+            <span>%</span>
+          </div>
+          <ul class="aside_menu">
+            <li><a href="premium_step01.html">인적 사항</a></li>
+            <li class="active"><a href="premium_step02.html">자녀 정보</a></li>
+            <li><a href="premium_step03.html">자산</a></li>
+            <li><a href="premium_step04.html">반려 동물</a></li>
+            <li><a href="premium_step05.html">기부</a></li>
+            <li><a href="premium_step06.html">재산 처리 방법</a></li>
+            <li><a href="premium_step07.html">디지털 자산</a></li>
+            <li><a href="premium_step08.html">사전 의료 지침</a></li>
+            <li><a href="premium_step09.html">장례 방법</a></li>
+            <li><a href="premium_step10.html">후견인</a></li>
+            <li><a href="premium_step11.html">기타 부탁할 일</a></li>
+            <li><a href="premium_step12.html">나의 회고</a></li>
+            <li><a href="premium_step13.html">유언 장소</a></li>
+            <li><a href="premium_step14.html">유언 집행인</a></li>
+            <li><a href="premium_step15.html">검토</a></li>
+          </ul>
+        </div>
+        <div class="content">
+          <div class="cont_head">
+            <span>자녀 정보</span>를 입력하세요.
+          </div>
+
+          <div class="form_box">
+            <dl class="form_field field_inline">
+              <dt>자녀</dt>
+              <dd>
+                <p class="chkwrap radio_chk">
+                  <label>
+                    <input type="radio" name="child">
+                    없음
+                  </label>
+                </p>
+                <p class="chkwrap radio_chk">
+                  <label>
+                    <input type="radio" name="child">
+                    있음
+                  </label>
+                </p>
+              </dd>
+            </dl>
+          </div>
+          <div class="form_box">
+            <dl class="form_field">
+              <dt>이름</dt>
+              <dd class="mid_size">
+                <input type="text" value="" placeholder="이름을 입력하세요." />
+              </dd>
+            </dl>
+          </div>
+          <div class="form_box">
+            <dl class="form_field">
+              <dt>주민등록번호</dt>
+              <dd class="mid_size">
+                <input type="text" value="" />
+                -
+                <input type="text" value="" />
+              </dd>
+            </dl>
+          </div>
+          <div class="form_box">
+            <dl class="form_field">
+              <dt>휴대폰 번호</dt>
+              <dd class="mid_size">
+                <input type="text" value="" />
+              </dd>
+            </dl>
+          </div>
+          <div class="form_btn">
+            <a href="#" class="btn btn_add">추가 하기</a>
+          </div>
+
+          <div class="form_result">
+            <p class="table_cnt">총 <strong>2</strong>개</p>
+            <!-- loop s -->
+            <div class="table_box">
+              <table class="form_table">
+                <tbody class="center">
+                  <tr>
+                    <th>이름</th>
+                    <th>자녀 출생 연도</th>
+                    <th></th>
+                  </tr>
+                  <tr>
+                    <td>김나라</td>
+                    <td>2000년 생 (23세)</td>
+                    <td class="td_del"><a href="#" class="btn_delete"><span class="a11y">삭제</span></a></td>
+                  </tr>
+                  <tr>
+                    <td>김나라</td>
+                    <td>2000년 생 (23세)</td>
+                    <td class="td_del"><a href="#" class="btn_delete"><span class="a11y">삭제</span></a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- loop e -->
+          </div>
+
+          <div class="btn_wrap _half">
+            <div>
+              <a href="#" class="btn btn_round">이전</a>
+            </div>
+            <div>
+              <a href="#" class="btn btn_round">저장 후 나가기</a>
+              <a href="#" class="btn btn_round btn_point">다음 단계로 이동</a>
+            </diV>
+          </div>
+        </div>
+      </div>
+    </div>
+    @@include('../inc/footer.inc',{
+      "webroot":".."
+    })
+  </div>
+</body>

@@ -221,9 +221,15 @@ textarea {
 	justify-content: center;
 	&._right {
 		justify-content: flex-end;
+		.btn {
+			margin-left: 5px;
+		}
 	}
 	&._left {
 		justify-content: flex-start;
+	}
+	&._half {
+		justify-content: space-between;
 	}
 	& + .btn_wrap {
 		padding-top: 0px;
@@ -609,6 +615,78 @@ textarea {
 				}
 			}
 		}
+	}
+	&.radio_chk {
+		margin-right: 10px;
+		label {
+			font-size: 18px;
+			input[type=radio] {
+				margin-right: 20px;
+				+ span {
+					font-size: 18px;
+					color:#000000;
+				}
+				&:before {
+					top: -18px;
+					width: 30px;
+					background-image: url('../images/icons/ico_radio_off.png');
+					background-size: 30px;
+					border-radius: 50%;
+					overflow: hidden;
+				}
+				&:checked{
+					&:before {
+						background-image: url('../images/icons/ico_radio_on.png');
+						background-size: 30px;
+						background-color: #ffffff;
+					}
+					+ span {
+						font-size: 18px;
+					}
+				}
+			}
+		}
+	}
+}
+
+// tab
+.tab_wrap {
+	.tab_box {
+		display: none;
+		padding: 36px 0;
+	}
+}
+.tabs_list {
+	display: flex;
+	gap: 28px;
+	justify-content: space-between;
+	border-bottom:1px solid #b9b9ba;
+	li {
+		position: relative;
+		padding-bottom:13px;
+		cursor: pointer;
+		&:hover,
+		&.active {
+			a {
+				color:#000000
+			}
+			&:after {
+				content: '';
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				display: block;
+				width: 100%;
+				height: 4px;
+				background-color: #016241;
+			}
+		}
+	}
+	a {
+		font-weight: 500;
+		font-size: 18px;
+		color:#666666;
+		text-decoration: none;
 	}
 }
 
