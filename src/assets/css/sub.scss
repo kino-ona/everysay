@@ -64,6 +64,22 @@
 				color: #888888;
 			}
 		}
+    .aside_status {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      margin-top: -10px;
+      margin-bottom: 10px;
+      font-weight: 700;
+      strong {
+        font-size: 60px;
+        color: #016241;
+      }
+      span {
+        margin-top:13px;
+        font-size: 26px;
+      }
+    }
 	}
 
 	// .aside
@@ -92,10 +108,87 @@
 }
 
 .form_box {
-	display: flex;
-	gap: 10px;
-	width: 100%;
-	margin-top: 27px;
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  margin-top: 27px;
+  &:first-of-type {
+    margin-top: 0;
+  }
+  .essential {
+    display: inline-block;
+    &:before {
+      content: '*';
+      display: block;
+      font-size: 18px;
+      font-style: normal;
+      color:#c7613e;
+    }
+  }
+  .form_field {
+    width: 100%;
+    text-align: left;
+    dt {
+      min-height: 19px;
+      margin-bottom: 5px;
+      font-weight: 500;
+      span {
+        font-weight: 400;
+        font-size: 15px;
+        color:#666666;
+      }
+    }
+    dd {
+      position: relative;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      margin-top: 20px;
+      &:first-of-type {
+        margin-top: 0;
+      }
+      &.mid_size {
+        width: 50%;
+      }
+      &.sm_size {
+        width: 25%;
+      }
+    }
+    .infotxt {
+      margin-top: 10px;
+      padding-left: 15px;
+      p {
+        font-size: 15px;
+        font-weight: 400;
+        color:#666666;
+      }
+      &.errortxt {
+        p {
+          color:#c7613e;
+        }
+      }
+    }
+    .unit {
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      @include mixins.translate(0, -50%);
+    }
+    &.field_inline {
+      display: flex;
+      align-items: center;
+      dt {
+        width: 90px;
+        margin-bottom: 0;
+      }
+    }
+  }
+  &._auto {
+    justify-content:space-between;
+    .form_field {
+      width: auto;
+    }
+  }
 
 	&:first-of-type {
 		margin-top: 0;
@@ -225,82 +318,73 @@
 }
 
 .form_result {
-	.table_cnt {
-		margin-bottom: 10px;
-	}
-
-	.btn_delete {
-		display: block;
-		width: 27px;
-		height: 27px;
-
-		background: {
-			image: url('../images/icons/ico_trash.png');
-			repeat: no-repeat;
-			position: center center;
-			size: cover;
-		}
-	}
-
-	.table_box {
-		margin-bottom: 12px;
-	}
-
-	.form_table {
-		width: 100%;
-		border-top: 1px solid #b9b9ba;
-		border-bottom: 1px solid #b9b9ba;
-
-		tr {
-
-			// display: flex;
-			// justify-content: space-between;
-			.td_del {
-				width: 60px;
-				padding-left: 10px;
-				padding-right: 10px;
-				text-align: center;
-			}
-
-			th {
-				min-width: 80px;
-				padding: 0 20px;
-				background-color: #eeeeee;
-				border-left: 1px solid #b9b9ba;
-
-				&:first-child {
-					border-left: 0;
-				}
-			}
-
-			td {
-				// width: 100%;
-				padding: 0 20px;
-				border-left: 1px solid #b9b9ba;
-
-				&:first-child {
-					border-left: 0;
-				}
-			}
-		}
-
-		th,
-		td {
-			// display: inline-flex;
-			// align-items: center;
-			// justify-content: flex-start;
-			height: 58px;
-			vertical-align: middle;
-		}
-
-		.center {
-
-			th,
-			td {
-				text-align: center;
-			}
-		}
-	}
+  .table_cnt {
+    margin-bottom:10px;
+  }
+  .btn_delete {
+    display: block;
+    width: 27px;
+    height: 27px;
+    background: {
+      image: url('../images/icons/ico_trash.png');
+      repeat: no-repeat;
+      position: center center;
+      size: cover;
+    }
+  }
+  .table_box {
+    margin-bottom: 12px;
+  }
+  .form_table {
+    width: 100%;
+    border-top:1px solid #b9b9ba;
+    border-bottom:1px solid #b9b9ba;
+    tr {
+      // display: flex;
+      // justify-content: space-between;
+      .td_del {
+        width: 60px;
+        padding-left: 10px;
+        padding-right: 10px;
+        text-align: center;
+      }
+      th {
+        min-width: 80px;
+        padding:0 20px;
+        background-color: #eeeeee;
+        border-left: 1px solid #b9b9ba;
+        &:first-child {
+          border-left: 0;
+        }
+      }
+      td {
+        // width: 100%;
+        padding:0 20px;
+        border-left: 1px solid #b9b9ba;
+        border-bottom: 1px solid #b9b9ba;
+        &:first-child {
+          border-left: 0;
+        }
+      }
+      &:last-of-type {
+        td {
+          border-bottom: 0;
+        }
+      }
+    }
+    th, td {
+      // display: inline-flex;
+      // align-items: center;
+      // justify-content: flex-start;
+      height: 58px;
+      vertical-align: middle;
+    }
+    .center {
+      th, td  {
+        text-align: center;
+      }
+    }
+  }
 }
 
 .btn_delete {

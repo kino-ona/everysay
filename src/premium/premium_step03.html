@@ -1,0 +1,273 @@
+@@include('../inc/pagehead.inc',{
+  "pagetitle":"- 프리미엄 유언장 - 자산",
+  "webroot":".."
+})
+<link rel="stylesheet" href="../assets/css/sub.css">
+</head>
+
+<body>
+  <div class="skipnavigation"><a href="#container">skip to container</a></div>
+  <div id="wrap">
+    @@include('../inc/header.inc',{
+      "webroot":"..",
+      "headertype":""
+    })
+
+    <div id="container" class="container">
+      <div class="sub_container premium_wrap">
+        <div class="aside">
+          <h2 class="aside_tit">프리미엄 유언장</h2>
+          <div class="aside_status">
+            <strong>6</strong>
+            <span>%</span>
+          </div>
+          <ul class="aside_menu">
+            <li><a href="premium_step01.html">인적 사항</a></li>
+            <li><a href="premium_step02.html">자녀 정보</a></li>
+            <li class="active"><a href="premium_step03.html">자산</a></li>
+            <li><a href="premium_step04.html">반려 동물</a></li>
+            <li><a href="premium_step05.html">기부</a></li>
+            <li><a href="premium_step06.html">재산 처리 방법</a></li>
+            <li><a href="premium_step07.html">디지털 자산</a></li>
+            <li><a href="premium_step08.html">사전 의료 지침</a></li>
+            <li><a href="premium_step09.html">장례 방법</a></li>
+            <li><a href="premium_step10.html">후견인</a></li>
+            <li><a href="premium_step11.html">기타 부탁할 일</a></li>
+            <li><a href="premium_step12.html">나의 회고</a></li>
+            <li><a href="premium_step13.html">유언 장소</a></li>
+            <li><a href="premium_step14.html">유언 집행인</a></li>
+            <li><a href="premium_step15.html">검토</a></li>
+          </ul>
+        </div>
+        <div class="content">
+          <div class="cont_head">
+            <span>자산 항목</span>
+          </div>
+          <div class="tab_wrap">
+            <ul class="tabs_list">
+              <li class="active"><a href="#tab_cont01">예금·채권</a></li>
+              <li><a href="#tab_cont02">현금</a></li>
+              <li><a href="#tab_cont03">암호 화폐</a></li>
+              <li><a href="#tab_cont04">보험금</a></li>
+              <li><a href="#tab_cont05">임대차 보증금</a></li>
+              <li><a href="#tab_cont06">부동산</a></li>
+              <li><a href="#tab_cont07">자동차</a></li>
+              <li><a href="#tab_cont08">기타</a></li>
+            </ul>
+            <div class="tabs-content">
+              <!-- 예금·채권 -->
+              <div id="tab_cont01" class="tab_box" style="display: block">
+                <div class="form_box">
+                  <dl class="form_field">
+                    <dt>구분 선택</dt>
+                    <dd class="sm_size">
+                      <select>
+                        <option>예금</option>
+                        <option>채권</option>
+                      </select>
+                    </dd>
+                  </dl>
+                </div>
+                <div class="form_box">
+                  <dl class="form_field">
+                    <dt>은행 또는 증권사</dt>
+                    <dd class="mid_size">
+                      <select>
+                        <option>선택</option>
+                        <option>국민은행</option>
+                        <option>삼성증권</option>
+                      </select>
+                    </dd>
+                  </dl>
+                </div>
+                <div class="form_box">
+                  <dl class="form_field">
+                    <dt>계좌 번호</dt>
+                    <dd class="mid_size">
+                      <input type="text" value="" placeholder="계좌 번호 정보를 입력하세요." />
+                    </dd>
+                  </dl>
+                </div>
+                <div class="form_btn">
+                  <a href="#" class="btn btn_add">추가 하기</a>
+                </div>
+                <div class="form_result">
+                  <p class="table_cnt">총 <strong>2</strong>개</p>
+                  <!-- loop s -->
+                  <div class="table_box">
+                    <table class="form_table">
+                      <tbody class="center">
+                        <tr>
+                          <th>구분</th>
+                          <th>은행 또는 증권사</th>
+                          <th>계좌 번호</th>
+                          <th></th>
+                        </tr>
+                        <tr>
+                          <td>채권</td>
+                          <td>한국 투자 증권</td>
+                          <td>123-4567-89102345</td>
+                          <td class="td_del"><a href="#" class="btn_delete"><span class="a11y">삭제</span></a></td>
+                        </tr>
+                        <tr>
+                          <td>예금</td>
+                          <td>KB 국민 은행</td>
+                          <td>123-4567-89102345</td>
+                          <td class="td_del"><a href="#" class="btn_delete"><span class="a11y">삭제</span></a></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- loop e -->
+                </div>
+              </div>
+
+              <!-- 현금 -->
+              <div id="tab_cont02" class="tab_box">
+                <div class="form_box">
+                  <dl class="form_field">
+                    <dt>금액</dt>
+                    <dd class="mid_size">
+                      <input type="text" value="" placeholder="현금 보유액을 입력하세요." /> 원
+                    </dd>
+                  </dl>
+                </div>
+              </div>
+
+              <!-- 암호 화폐 -->
+              <div id="tab_cont03" class="tab_box">
+                <div class="form_box">
+                  <dl class="form_field">
+                    <dt>지갑</dt>
+                    <dd class="mid_size">
+                      <input type="text" value="" placeholder="정보를 입력하세요." />
+                    </dd>
+                  </dl>
+                </div>
+                <div class="form_box">
+                  <dl class="form_field">
+                    <dt>지갑 위치</dt>
+                    <dd class="mid_size">
+                      <input type="text" value="" placeholder="위치를 입력하세요." />
+                    </dd>
+                  </dl>
+                </div>
+                <div class="form_box">
+                  <dl class="form_field">
+                    <dt>핀 번호</dt>
+                    <dd class="mid_size">
+                      <input type="text" value="" placeholder="핀 번호를 입력하세요." />
+                    </dd>
+                  </dl>
+                </div>
+                <div class="form_btn">
+                  <a href="#" class="btn btn_add">추가 하기</a>
+                </div>
+                <div class="form_result">
+                  <p class="table_cnt">총 <strong>2</strong>개</p>
+                  <!-- loop s -->
+                  <div class="table_box">
+                    <table class="form_table">
+                      <tbody class="center">
+                        <tr>
+                          <th>지갑</th>
+                          <th>핀번호</th>
+                          <td class="td_del" rowspan="4"><a href="#" class="btn_delete"><span class="a11y">삭제</span></a></td>
+                        </tr>
+                        <tr>
+                          <td>암호 화페 지갑 A</td>
+                          <td>123-4567-891023455</td>
+                        </tr>
+                        <tr>
+                          <th colspan="2">지갑 위치</td>
+                        </tr>
+                        <tr>
+                          <td colspan="2">입력된 암호 화폐 지갑 위치</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- loop e -->
+                </div>
+              </div>
+
+              <!-- 보험금 -->
+              <div id="tab_cont04" class="tab_box">
+                <div class="form_box">
+                  <dl class="form_field">
+                    <dt>금액</dt>
+                    <dd class="mid_size">
+                      <input type="text" value="" placeholder="보험금 보유액을 입력하세요." /> 원
+                    </dd>
+                  </dl>
+                </div>
+              </div>
+
+              <!-- 임대차 보증금 -->
+              <div id="tab_cont05" class="tab_box">
+                <div class="form_box">
+                  <dl class="form_field">
+                    <dt>금액</dt>
+                    <dd class="mid_size">
+                      <input type="text" value="" placeholder="임대차 보증금액을 입력하세요." /> 원
+                    </dd>
+                  </dl>
+                </div>
+              </div>
+
+              <!-- 부동산 -->
+              <div id="tab_cont06" class="tab_box">
+                <div class="form_box">
+                  <dl class="form_field">
+                    <dt>금액</dt>
+                    <dd class="mid_size">
+                      <input type="text" value="" placeholder="부동산 보유액을 입력하세요." /> 원
+                    </dd>
+                  </dl>
+                </div>
+              </div>
+
+              <!-- 자동차 -->
+              <div id="tab_cont07" class="tab_box">
+                <div class="form_box">
+                  <dl class="form_field">
+                    <dt>자동차</dt>
+                    <dd class="mid_size">
+                      <input type="text" value="" placeholder="" /> 원
+                    </dd>
+                  </dl>
+                </div>
+              </div>
+
+              <!-- 기타 -->
+              <div id="tab_cont08" class="tab_box">
+                <div class="form_box">
+                  <dl class="form_field">
+                    <dt>기타</dt>
+                    <dd class="mid_size">
+                      <input type="text" value="" placeholder="" /> 원
+                    </dd>
+                  </dl>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="btn_wrap _half">
+            <div>
+              <a href="#" class="btn btn_round">이전</a>
+            </div>
+            <div>
+              <a href="#" class="btn btn_round">저장 후 나가기</a>
+              <a href="#" class="btn btn_round btn_point">다음 단계로 이동</a>
+            </diV>
+          </div>
+        </div>
+      </div>
+    </div>
+    @@include('../inc/footer.inc',{
+      "webroot":".."
+    })
+  </div>
+</body>
