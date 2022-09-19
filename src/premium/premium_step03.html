@@ -163,6 +163,7 @@
                 <div class="form_btn">
                   <a href="#" class="btn btn_add">추가 하기</a>
                 </div>
+
                 <div class="form_result">
                   <p class="table_cnt">총 <strong>2</strong>개</p>
                   <!-- loop s -->
@@ -195,11 +196,101 @@
               <div id="tab_cont04" class="tab_box">
                 <div class="form_box">
                   <dl class="form_field">
-                    <dt>금액</dt>
-                    <dd class="mid_size">
-                      <input type="text" value="" placeholder="보험금 보유액을 입력하세요." /> 원
+                    <dt>보험 회사</dt>
+                    <dd>
+                      <input type="text" value="" placeholder="보험 회사 이름을 입력하세요." />
                     </dd>
                   </dl>
+                </div>
+                <div class="form_box">
+                  <dl class="form_field">
+                    <dt>보험 상품</dt>
+                    <dd>
+                      <input type="text" value="" placeholder="보험 상품 이름을 입력하세요." />
+                    </dd>
+                  </dl>
+                </div>
+                <div class="form_box">
+                  <dl class="form_field">
+                    <dt>증권 번호</dt>
+                    <dd>
+                      <input type="text" value="" placeholder="증권 번호를 입력하세요." />
+                    </dd>
+                  </dl>
+                </div>
+                <div class="form_box">
+                  <dl class="form_field">
+                    <dt>계약자</dt>
+                    <dd>
+                      <input type="text" value="" placeholder="계약자 이름을 입력하세요." />
+                    </dd>
+                  </dl>
+                  <dl class="form_field">
+                    <dt>피보험자 <span>(수익자)</span></dt>
+                    <dd>
+                      <input type="text" value="" placeholder="피보험자 이름을 입력하세요." />
+                    </dd>
+                  </dl>
+                </div>
+                <div class="form_btn">
+                  <a href="#" class="btn btn_add">추가 하기</a>
+                </div>
+                
+                <div class="form_result">
+                  <p class="table_cnt">총 <strong>2</strong>개</p>
+                  <!-- loop s -->
+                  <div class="table_box">
+                    <table class="form_table">
+                      <tbody class="center">
+                        <tr>
+                          <th>보험회사</th>
+                          <th colspan="2">보험상품</th>
+                          <td class="td_del" rowspan="4"><a href="#" class="btn_delete"><span class="a11y">삭제</span></a></td>
+                        </tr>
+                        <tr>
+                          <td>현대해상</td>
+                          <td colspan="2">60세만기 종신보험</td>
+                        </tr>
+                        <tr>
+                          <th>증권번호</th>
+                          <th>계약자</th>
+                          <th>피보험자</th>
+                        </tr>
+                        <tr>
+                          <td>-</td>
+                          <td>김유민</td>
+                          <td>이나래</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- loop e -->
+      
+                  <div class="table_box">
+                    <table class="form_table">
+                      <tbody class="center">
+                        <tr>
+                          <th>보험회사</th>
+                          <th colspan="2">보험상품</th>
+                          <td class="td_del" rowspan="4"><a href="#" class="btn_delete"><span class="a11y">삭제</span></a></td>
+                        </tr>
+                        <tr>
+                          <td>현대해상</td>
+                          <td colspan="2">60세만기 종신보험</td>
+                        </tr>
+                        <tr>
+                          <th>증권번호</th>
+                          <th>계약자</th>
+                          <th>피보험자</th>
+                        </tr>
+                        <tr>
+                          <td>123456789-2576</td>
+                          <td>김유민</td>
+                          <td>이나래</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
               </div>
 
@@ -207,11 +298,69 @@
               <div id="tab_cont05" class="tab_box">
                 <div class="form_box">
                   <dl class="form_field">
-                    <dt>금액</dt>
-                    <dd class="mid_size">
-                      <input type="text" value="" placeholder="임대차 보증금액을 입력하세요." /> 원
+                    <dt>부동산 주소</dt>
+                    <dd>
+                      <input type="text" placeholder="도로명, 건물명, 번지" />
+                      <a href="#" class="btn btn_grey">주소검색</a>
+                    </dd>
+                    <dd>
+                      <input type="text" placeholder="상세 주소 입력" />
                     </dd>
                   </dl>
+                </div>
+                <div class="form_box">
+                  <dl class="form_field">
+                    <dt>임대인</dt>
+                    <dd>
+                      <input type="text" placeholder="임대인 이름을 입력하세요." />
+                    </dd>
+                  </dl>
+                  <dl class="form_field">
+                    <dt>임차인</dt>
+                    <dd>
+                      <input type="text" placeholder="임차인 이름을 입력하세요." />
+                    </dd>
+                  </dl>
+                </div>
+                <div class="form_box">
+                  <dl class="form_field">
+                    <dt>보증금 <span>(원)</span></dt>
+                    <dd>
+                      <input type="text" placeholder="보증 금액을 입력하세요." />
+                    </dd>
+                  </dl>
+                </div>
+                <div class="form_btn">
+                  <a href="#" class="btn btn_add">추가 하기</a>
+                </div>
+      
+                <div class="form_result">
+                  <p class="table_cnt">총 <strong>2</strong>개</p>
+                  <!-- loop s -->
+                  <div class="table_box">
+                    <table class="form_table">
+                      <tbody>
+                        <tr>
+                          <th colspan="3">부동산 주소</th>
+                          <td class="td_del" rowspan="4"><a href="#" class="btn_delete"><span class="a11y">삭제</span></a></td>
+                        </tr>
+                        <tr class="center">
+                          <td colspan="3">서울시 강남구 도곡동 345 레미안 3차 2022동 1305호</td>
+                        </tr>
+                        <tr>
+                          <th>임대인</th>
+                          <th>임차인</th>
+                          <th>보증금</th>
+                        </tr>
+                        <tr class="center">
+                          <td>홍길동</td>
+                          <td>허균</td>
+                          <td>보증금</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!--// loop e -->
                 </div>
               </div>
 
@@ -219,11 +368,47 @@
               <div id="tab_cont06" class="tab_box">
                 <div class="form_box">
                   <dl class="form_field">
-                    <dt>금액</dt>
-                    <dd class="mid_size">
-                      <input type="text" value="" placeholder="부동산 보유액을 입력하세요." /> 원
+                    <dt>부동산 주소</dt>
+                    <dd>
+                      <input type="text" placeholder="도로명, 건물명, 번지" />
+                      <a href="#" class="btn btn_grey">주소검색</a>
+                    </dd>
+                    <dd>
+                      <input type="text" placeholder="상세 주소 입력" />
                     </dd>
                   </dl>
+                </div>
+                <div class="form_btn">
+                  <a href="#" class="btn btn_add">추가 하기</a>
+                </div>
+      
+                <div class="form_result">
+                  <p class="table_cnt">총 <strong>2</strong>개</p>
+                  <!-- loop s -->
+                  <div class="table_box">
+                    <table class="form_table">
+                      <tbody>
+                        <tr>
+                          <th>부동산 주소</th>
+                          <td>서울시 강남구 도곡동 345 레미안 3차 2022동 1305호</td>
+                          <td class="td_del"><a href="#" class="btn_delete"><span class="a11y">삭제</span></a></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- loop e -->
+      
+                  <div class="table_box">
+                    <table class="form_table">
+                      <tbody>
+                        <tr>
+                          <th>부동산 주소</th>
+                          <td>서울시 강남구 도곡동 345 레미안 3차 2022동 1305호</td>
+                          <td class="td_del"><a href="#" class="btn_delete"><span class="a11y">삭제</span></a></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
               </div>
 
@@ -231,11 +416,50 @@
               <div id="tab_cont07" class="tab_box">
                 <div class="form_box">
                   <dl class="form_field">
-                    <dt>자동차</dt>
+                    <dt>자동차 모델</dt>
                     <dd class="mid_size">
-                      <input type="text" value="" placeholder="" /> 원
+                      <input type="text" value="" placeholder="자동차 모델명을 입력하세요." />
                     </dd>
                   </dl>
+                </div>
+                <div class="form_box">
+                  <dl class="form_field">
+                    <dt>자동차 등록 번호</dt>
+                    <dd class="mid_size">
+                      <input type="text" value="" placeholder="자동차 등록 번호를 입력하세요." />
+                    </dd>
+                  </dl>
+                </div>
+
+                <div class="form_btn">
+                  <a href="#" class="btn btn_add">추가 하기</a>
+                </div>
+
+                <div class="form_result">
+                  <p class="table_cnt">총 <strong>2</strong>개</p>
+                  <!-- loop s -->
+                  <div class="table_box">
+                    <table class="form_table">
+                      <tbody class="center">
+                        <tr>
+                          <th>모델명</th>
+                          <th>테슬라 모델 X</th>
+                          <th></th>
+                        </tr>
+                        <tr>
+                          <td>자동차 등록 번호</td>
+                          <td>123가1234</td>
+                          <td class="td_del"><a href="#" class="btn_delete"><span class="a11y">삭제</span></a></td>
+                        </tr>
+                        <tr>
+                          <td>-</td>
+                          <td>123-4567-89102345</td>
+                          <td class="td_del"><a href="#" class="btn_delete"><span class="a11y">삭제</span></a></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- loop e -->
                 </div>
               </div>
 
