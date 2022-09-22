@@ -1,5 +1,5 @@
 @@include('../inc/pagehead.inc',{
-  "pagetitle":"- 프리미엄 유언장 - 반려 동물",
+  "pagetitle":"- 프리미엄 유언장 - 재산 처리 방법",
   "webroot":".."
 })
 <link rel="stylesheet" href="../assets/css/sub.css">
@@ -18,16 +18,16 @@
         <div class="aside">
           <h2 class="aside_tit">프리미엄 유언장</h2>
           <div class="aside_status">
-            <strong>6</strong>
+            <strong>36</strong>
             <span>%</span>
           </div>
           <ul class="aside_menu">
             <li class="checking"><a href="premium_step01.html">인적 사항</a></li>
             <li class="checking"><a href="premium_step02.html">자녀 정보</a></li>
             <li class="checking"><a href="premium_step03.html">자산</a></li>
-            <li class="active"><a href="premium_step04.html">반려 동물</a></li>
-            <li><a href="premium_step05.html">기부</a></li>
-            <li><a href="premium_step06.html">재산 처리 방법</a></li>
+            <li class="checking"><a href="premium_step04.html">반려 동물</a></li>
+            <li class="checking"><a href="premium_step05.html">기부</a></li>
+            <li class="active"><a href="premium_step06.html">재산 처리 방법</a></li>
             <li><a href="premium_step07.html">디지털 자산</a></li>
             <li><a href="premium_step08.html">사전 의료 지침</a></li>
             <li><a href="premium_step09.html">장례 방법</a></li>
@@ -41,39 +41,42 @@
         </div>
         <div class="content">
           <div class="cont_head">
-            <span>반려 동물 정보</span>를 입력하세요.
+            <span>재산 상속 정보</span>를 입력하세요.
           </div>
           <div class="form_box">
-            <dl class="form_field">
-              <dt>반려 동물 이름</dt>
+            <dl class="form_field" style="width: 45%;">
+              <dt>상속자 이름</dt>
               <dd>
-                <input type="text" value="" placeholder="반려 동물 이름을 입력하세요." />
+                <input type="text" value="" placeholder="이름을 입력하세요." />
               </dd>
             </dl>
-            <dl class="form_field">
-              <dt>출생 연도</dt>
-              <dd class="mid_size">
+            <dl class="form_field" style="width: 25%;">
+              <dt>관계</dt>
+              <dd>
+                <input type="text" value=""/>
+              </dd>
+            </dl>
+            <dl class="form_field" style="width: 13%;">
+              <dt>상속 순위</dt>
+              <dd>
                 <select>
-                  <option>선택</option>
-                  <option>2000년</option>
-                  <option>2001년</option>
+                  <option>1</option>
+                  <option>2</option>
                 </select>
               </dd>
             </dl>
-          </div>
-          <div class="form_box">
-            <dl class="form_field">
-              <dt>반려 동물 설명</dt>
+            <dl class="form_field" style="width: 17%;">
+              <dt>상속 비율</dt>
               <dd>
-                <input type="text" value="" placeholder="반려 동물의 버릇이나 주의할 점 등을 입력하세요." />
+                <input type="text" value=""/> %
               </dd>
             </dl>
           </div>
           <div class="form_box">
             <dl class="form_field">
-              <dt>필요 사항</dt>
+              <dt>상속 조건</dt>
               <dd>
-                <input type="text" value="" placeholder="반려 동물에게 꼭 해줘야할 필요 사항을 입력하세요." />
+                <input type="text" value="" placeholder="상속 조건을 입력하세요." />
               </dd>
             </dl>
           </div>
@@ -89,18 +92,25 @@
               <table class="form_table">
                 <tbody class="center">
                   <tr>
-                    <th style="width: 20%;">반려 동물</th>
-                    <td>말티즈 (2018년)</td>
-                    <td class="td_del" rowspan="3"><a href="#" class="btn_delete"><span class="a11y">삭제</span></a></td>
+                    <th>이름</th>
+                    <th>관계</th>
+                    <th>상속 순위</th>
+                    <th>상속 비율</th>
+                    <td class="td_del" rowspan="4"><a href="#" class="btn_delete"><span class="a11y">삭제</span></a></td>
                   </tr>
                   <tr>
-                    <th style="width: 20%;">설명</th>
-                    <td>어떠한 동물의 설명을 써주세요.</td>
+                    <td>김나라</td>
+                    <td>아내</td>
+                    <td>1</td>
+                    <td>60%</td>
                   </tr>
                   <tr>
-                    <th style="width: 20%;">필요 사항</th>
-                    <td>반려 동물에게 필요한 내용들을 써주세요.</td>
+                    <th colspan="4">상속 조건</th>
                   </tr>
+                  <tr>
+                    <td colspan="4">상속 조건의 내용을 보여줍니다.<br>상속 조건의 내용을 보여줍니다.<br>상속 조건의 내용을 보여줍니다.<br>상속 조건의 내용을 보여줍니다. 상속 조건의 내용을 보여줍니다.</td>
+                  </tr>
+
                 </tbody>
               </table>
             </div>

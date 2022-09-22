@@ -39,15 +39,18 @@
 
 		.aside_menu {
 			width: 165px;
-
 			li {
 				margin-bottom: 10px;
-
 				&:hover,
 				&.active {
 					a {
 						border: 1px solid #888888;
 						color: #016241;
+					}
+				}
+				&.checking {
+					a {
+						color:#000000;
 					}
 				}
 			}
@@ -320,6 +323,11 @@
 .form_result {
   .table_cnt {
     margin-bottom:10px;
+		font-size: 18px;
+		color:#888888;
+		strong {
+			color:#000000;
+		}
   }
   .btn_delete {
     display: block;
@@ -360,7 +368,7 @@
       }
       td {
         // width: 100%;
-        padding:0 20px;
+        padding:10px 20px;
         border-left: 1px solid #b9b9ba;
         border-bottom: 1px solid #b9b9ba;
         &:first-child {
@@ -380,6 +388,9 @@
       height: 58px;
       vertical-align: middle;
     }
+		td {
+			height: 38px;
+		}
     .center {
       th, td  {
         text-align: center;
