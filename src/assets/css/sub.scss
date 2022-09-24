@@ -573,6 +573,18 @@
 }
 .testament_check-box {
 	margin-bottom: 30px;
+	p {
+		line-height: 1.4;
+	}
+	hr {
+		height: 25px;
+		border: 0;
+	}
+	strong {
+		display: block;
+		font-weight: 700;
+		margin-bottom: 5px;
+	}
 	.btn_modify {
 		display: inline-flex;
 		align-items: center;
@@ -641,6 +653,17 @@
 			display: flex;
 			margin-bottom: 15px;
 			font-size: 18px;
+		}
+	}
+	.default_data {
+		.sub_title {
+			font-size: 16px;
+			color:#000000;
+		}
+		li {
+			display: flex;
+			margin-bottom: 10px;
+			font-size: 16px;
 		}
 	}
 }
