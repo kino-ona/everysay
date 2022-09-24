@@ -1,0 +1,596 @@
+@@include('../inc/pagehead.inc',{
+  "pagetitle":"- 프리미엄 유언장 - 검토",
+  "webroot":".."
+})
+<link rel="stylesheet" href="../assets/css/sub.css">
+</head>
+
+<body>
+  <div class="skipnavigation"><a href="#container">skip to container</a></div>
+  <div id="wrap">
+    @@include('../inc/header.inc',{
+      "webroot":"..",
+      "headertype":""
+    })
+
+    <div id="container" class="container">
+      <div class="sub_container premium_wrap">
+        <div class="aside">
+          <h2 class="aside_tit">프리미엄 유언장</h2>
+          <div class="aside_status">
+            <strong>99</strong>
+            <span>%</span>
+          </div>
+          <ul class="aside_menu">
+            <li><a href="premium_step01.html">인적 사항</a></li>
+            <li><a href="premium_step02.html">자녀 정보</a></li>
+            <li><a href="premium_step03.html">자산</a></li>
+            <li><a href="premium_step04.html">반려 동물</a></li>
+            <li><a href="premium_step05.html">기부</a></li>
+            <li><a href="premium_step06.html">재산 처리 방법</a></li>
+            <li><a href="premium_step07.html">디지털 자산</a></li>
+            <li><a href="premium_step08.html">사전 의료 지침</a></li>
+            <li><a href="premium_step09.html">장례 방법</a></li>
+            <li><a href="premium_step10.html">후견인</a></li>
+            <li><a href="premium_step11.html">기타 부탁할 일</a></li>
+            <li><a href="premium_step12.html">나의 회고</a></li>
+            <li><a href="premium_step13.html">유언 장소</a></li>
+            <li><a href="premium_step14.html">유언 집행인</a></li>
+            <li class="active"><a href="premium_step15.html">검토</a></li>
+          </ul>
+        </div>
+        <div class="content testament_check">
+          <div class="cont_head">
+            <p>프리미엄 유언장 검토하기</p>
+          </div>
+          <!-- 인적 사항 //-->
+          <div class="testament_check-box">
+            <p class="title">
+              인적 사항
+              <a href="#" class="btn_modify"><i></i>수정</a>
+            </p>
+            <ul class="personal_data">
+              <li>
+                <span class="sub_title">1. 이름 :</span>
+                <p>홍길동</p>
+              </li>
+              <li>
+                <span class="sub_title">2. 주민등록번호 :</span>
+                <p>000000 - 1******</p>
+              </li>
+              <li>
+                <span class="sub_title">3. 성별 :</span>
+                <p>남자</p>
+              </li>
+              <li>
+                <span class="sub_title">4. 휴대폰 번호 :</span>
+                <p>010-1234-5678</p>
+              </li>
+              <li>
+                <span class="sub_title">5. 주소 :</span>
+                <p>서울특별시 강남구 학동로</p>
+              </li>
+              <li>
+                <span class="sub_title">6. 등록기준지 :</span>
+                <p>서울특별시 강남구 학동로</p>
+              </li>
+              <li>
+                <span class="sub_title">7. 결혼 상태 :</span>
+                <p>미혼</p>
+              </li>
+              <li>
+                <span class="sub_title">8. 혼인 상대자 :</span>
+                <p>-</p>
+              </li>
+            </ul>
+          </div>
+          <!-- 자녀 정보 //-->
+          <div class="testament_check-box">
+            <p class="title">
+              자녀 정보
+            </p>
+            <div class="mix_box">
+              <div class="table_area">
+                <table class="form_table">
+                  <thead>
+                    <tr>
+                      <th>이름</th>
+                      <th>자녀 출생 연도</th>
+                    </tr>
+                  </thead>
+                  <tbody class="center">
+                    <tr>
+                      <td>홍길동</td>
+                      <td>2000년 생 (23세)</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <a href="#" class="btn_modify"><i></i>수정</a>
+            </div>
+          </div>
+          <!-- 재산 목록 //-->
+          <div class="testament_check-box">
+            <p class="title">
+              재산 목록
+            </p>
+            <div class="mix_box">
+              <div class="table_area">
+                <p class="table_title">
+                  <span class="sub_title">1. 예금·채권</span>
+                  총 2개
+                </p>
+                <!-- loop s -->
+                <table class="form_table">
+                  <thead>
+                    <tr>
+                      <th>이름</th>
+                      <th>자녀 출생 연도</th>
+                    </tr>
+                  </thead>
+                  <tbody class="center">
+                    <tr>
+                      <td>홍길동</td>
+                      <td>2000년 생 (23세)</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <!-- loop e -->
+              </div>
+              <a href="#" class="btn_modify"><i></i>수정</a>
+            </div>
+
+            <div class="mix_box">
+              <div class="table_area">
+                <p class="table_title">
+                  <span class="sub_title">2. 현금</span>
+                </p>
+                <p>5,000,000,000원</p>
+              </div>
+              <a href="#" class="btn_modify"><i></i>수정</a>
+            </div>
+
+            <div class="mix_box">
+              <div class="table_area">
+                <p class="table_title">
+                  <span class="sub_title">3. 암호 화폐</span>
+                  총 2개
+                </p>
+                <!-- loop s -->
+                <table class="form_table">
+                  <thead>
+                    <tr>
+                      <th>지갑</th>
+                      <th>핀번호</th>
+                    </tr>
+                  </thead>
+                  <tbody class="center">
+                    <tr>
+                      <td>암호 화페 지갑 A</td>
+                      <td>123-4567-89102345</td>
+                    </tr>
+                  </tbody>
+                  <thead>
+                    <tr>
+                      <th colspan="2">지갑 위치</th>
+                    </tr>
+                  </thead>
+                  <tbody class="center">
+                    <tr>
+                      <td colspan="2">입력된 암호 화폐 지갑 위치</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <!-- loop e -->
+              </div>
+              <a href="#" class="btn_modify"><i></i>수정</a>
+            </div>
+
+            <div class="mix_box">
+              <div class="table_area">
+                <p class="table_title">
+                  <span class="sub_title">4. 보험금</span>
+                  총 2개
+                </p>
+                <!-- loop s -->
+                <table class="form_table">
+                  <thead>
+                    <tr>
+                      <th>보험회사</th>
+                      <th colspan="2">보험상품</th>
+                    </tr>
+                  </thead>
+                  <tbody class="center">
+                    <tr>
+                      <td>현대해상</td>
+                      <td colspan="2">60세만기 종신보험</td>
+                    </tr>
+                  </tbody>
+                  <thead>
+                    <tr>
+                      <th>증권번호</th>
+                      <th>계약자</th>
+                      <th>피보험자</th>
+                    </tr>
+                  </thead>
+                  <tbody class="center">
+                    <tr>
+                      <td>123456789-2576</td>
+                      <td>홍길동</td>
+                      <td>홍길동</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <!-- loop e -->
+              </div>
+              <a href="#" class="btn_modify"><i></i>수정</a>
+            </div>
+
+            <div class="mix_box">
+              <div class="table_area">
+                <p class="table_title">
+                  <span class="sub_title">5. 임대차 보증금</span>
+                  총 2개
+                </p>
+                <!-- loop s -->
+                <table class="form_table">
+                  <thead>
+                    <tr>
+                      <th colspan="3">부동산 주소</th>
+                    </tr>
+                  </thead>
+                  <tbody class="center">
+                    <tr>
+                      <td colspan="3">서울시 강남구 신사동 000-00</td>
+                    </tr>
+                  </tbody>
+                  <thead>
+                    <tr>
+                      <th>임대인</th>
+                      <th>임차인</th>
+                      <th>보증금</th>
+                    </tr>
+                  </thead>
+                  <tbody class="center">
+                    <tr>
+                      <td>홍길동</td>
+                      <td>홍길동</td>
+                      <td>50,000,000</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <!-- loop e -->
+              </div>
+              <a href="#" class="btn_modify"><i></i>수정</a>
+            </div>
+
+            <div class="mix_box">
+              <div class="table_area">
+                <p class="table_title">
+                  <span class="sub_title">6. 부동산</span>
+                  총 2개
+                </p>
+                <!-- loop s -->
+                <table class="form_table">
+                  <tbody>
+                    <tr>
+                      <th>부동산 주소</th>
+                      <td>서울시 강남구 신사동 000-00</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <!-- loop e -->
+                <table class="form_table">
+                  <tbody>
+                    <tr>
+                      <th>부동산 주소</th>
+                      <td>서울시 강남구 신사동 000-00</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <a href="#" class="btn_modify"><i></i>수정</a>
+            </div>
+
+            <div class="mix_box">
+              <div class="table_area">
+                <p class="table_title">
+                  <span class="sub_title">7. 자동차</span>
+                  총 2개
+                </p>
+                <table class="form_table">
+                  <thead>
+                    <tr>
+                      <th>모델명</th>
+                      <th>자동차 등록 번호</th>
+                    </tr>
+                  </thead>
+                  <tbody class="center">
+                    <!-- loop s -->
+                    <tr>
+                      <td>테슬라 모델 X</td>
+                      <td>123가1234</td>
+                    </tr>
+                    <!-- loop e -->
+                    <tr>
+                      <td>테슬라 모델 X</td>
+                      <td>123가1234</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <a href="#" class="btn_modify"><i></i>수정</a>
+            </div>
+
+            <div class="mix_box">
+              <div class="table_area">
+                <p class="table_title">
+                  <span class="sub_title">8. 기타 재산</span>
+                  총 2개
+                </p>
+                <!-- loop s -->
+                <table class="form_table">
+                  <tbody class="center">
+                    <tr>
+                      <th>기타 재산</th>
+                    </tr>
+                    <tr>
+                      <td>재산명 A</td>
+                    </tr>
+                    <tr>
+                      <th>설명</th>
+                    </tr>
+                    <tr>
+                      <td>재산에 대한 설명입니다.</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <!-- loop e -->
+              </div>
+              <a href="#" class="btn_modify"><i></i>수정</a>
+            </div>
+
+          </div>
+          <!-- 반려 동물 //-->
+          <div class="testament_check-box">
+            <p class="title">
+              반려 동물
+            </p>
+            <div class="mix_box">
+              <div class="table_area">
+                <p class="table_title">
+                  총 2마리
+                </p>
+                <!-- loop s -->
+                <table class="form_table">
+                  <tbody>
+                    <tr>
+                      <th style="border-bottom: 1px solid #b9b9ba;">반려 동물</th>
+                      <td>말티즈 (2018년)</td>
+                    </tr>
+                    <tr>
+                      <th style="border-bottom: 1px solid #b9b9ba;">설명</th>
+                      <td>어떠한 동물의 설명을 써주세요.</td>
+                    </tr>
+                    <tr>
+                      <th>필요 사항</th>
+                      <td>반려 동물에게 필요한 내용들을 써주세요.</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <!-- loop e -->
+              </div>
+              <a href="#" class="btn_modify"><i></i>수정</a>
+            </div>
+          </div>
+          <!-- 기부 //-->
+          <div class="testament_check-box">
+            <p class="title">
+              기부
+            </p>
+            <div class="mix_box">
+              <div class="table_area">
+                <p class="table_title">
+                  총 2개
+                </p>
+                <!-- loop s -->
+                <table class="form_table">
+                  <tbody>
+                    <tr>
+                      <th style="border-bottom: 1px solid #b9b9ba;">구분</th>
+                      <td colspan="3">인도주의</td>
+                    </tr>
+                    <tr>
+                      <th style="border-bottom: 1px solid #b9b9ba;">수혜자</th>
+                      <td>그린피스</td>
+                      <th style="border-bottom: 1px solid #b9b9ba;">기부 금액</th>
+                      <td>1,000,000원</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <!-- loop e -->
+                <table class="form_table">
+                  <tbody>
+                    <tr>
+                      <th style="border-bottom: 1px solid #b9b9ba;">구분</th>
+                      <td colspan="3">인도주의</td>
+                    </tr>
+                    <tr>
+                      <th style="border-bottom: 1px solid #b9b9ba;">수혜자</th>
+                      <td>그린피스</td>
+                      <th style="border-bottom: 1px solid #b9b9ba;">기부 금액</th>
+                      <td>1,000,000원</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <a href="#" class="btn_modify"><i></i>수정</a>
+            </div>
+          </div>
+          <!-- 재산 처리 방법 //-->
+          <div class="testament_check-box">
+            <p class="title">
+              재산 처리 방법
+            </p>
+            <div class="mix_box">
+              <div class="table_area">
+                <p class="table_title">
+                  총 2명
+                </p>
+                <!-- loop s -->
+                <table class="form_table">
+                  <thead>
+                    <tr>
+                      <th>이름</th>
+                      <th>관계</th>
+                      <th>상속 순위</th>
+                      <th>상속 비율</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>홍길동</td>
+                      <td>형제</td>
+                      <td>1</td>
+                      <td>60%</td>
+                    </tr>
+                  </tbody>
+                  <thead>
+                    <tr>
+                      <th colspan="4">상속 조건</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td colspan="4">상속 조건의 내용을 보여줍니다.</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <!-- loop e -->
+              </div>
+              <a href="#" class="btn_modify"><i></i>수정</a>
+            </div>
+          </div>
+          <!-- 디지털 자산 //-->
+          <div class="testament_check-box">
+            <p class="title">
+              디지털 자산
+            </p>
+            <div class="mix_box">
+              <div class="table_area">
+                <p class="table_title">
+                  총 2개
+                </p>
+                <!-- loop s -->
+                <table class="form_table">
+                  <thead>
+                    <tr>
+                      <th>디지털 자산</th>
+                      <th>관리 방식</th>
+                    </tr>
+                  </thead>
+                  <tbody class="center">
+                    <tr>
+                      <td>Gmail 계정</td>
+                      <td>삭제</td>
+                    </tr>
+                  </tbody>
+                  <thead>
+                    <tr>
+                      <th colspan="2">계정 정보</th>
+                    </tr>
+                  </thead>
+                  <tbody class="center">
+                    <tr>
+                      <td colspan="2">abc_123@gmail.com/!@#$qwer1</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <!-- loop e -->
+              </div>
+              <a href="#" class="btn_modify"><i></i>수정</a>
+            </div>
+          </div>
+          <!-- 디지털 자산 관리자 //-->
+          <div class="testament_check-box">
+            <p class="title">
+              디지털 자산 관리자
+              <a href="#" class="btn_modify"><i></i>수정</a>
+            </p>
+            <ul class="personal_data">
+              <li>
+                <span class="sub_title">- 이름 :</span>
+                <p>홍길동</p>
+              </li>
+              <li>
+                <span class="sub_title">- 관계 :</span>
+                <p>친구</p>
+              </li>
+            </ul>
+          </div>
+          <!-- 사전 의료 지침 //-->
+          <div class="testament_check-box">
+            <p class="title">
+              사전 의료 지침
+              <a href="#" class="btn_modify"><i></i>수정</a>
+            </p>
+            <ul class="personal_data">
+              <li>
+                <span class="sub_title">1. 집행자 :</span>
+                <p>홍길동</p>
+              </li>
+              <li>
+                <span class="sub_title">2. 당사자와의 관계 :</span>
+                <p>친구</p>
+              </li>
+              <li>
+                <span class="sub_title">3. 사전 의료 지침 :</span>
+                <p>기계에 의존해야만 살 수 있는 상황이 아닐 때까지만 살고 싶음<br>
+                  의식 불명 상태 - 그 때 가족의 의견을 물어봐 주세요.</p>
+              </li>
+            </ul>
+          </div>
+          <!-- 장례 방법 //-->
+          <div class="testament_check-box">
+            <p class="title">
+              장례 방법
+              <a href="#" class="btn_modify"><i></i>수정</a>
+            </p>
+            <ul class="personal_data">
+              <li>
+                <span class="sub_title">1. 장례 방법 :</span>
+                <p>수목장</p>
+              </li>
+              <li>
+                <span class="sub_title">2. 안식처 :</span>
+                <p>부모님 모신 선산</p>
+              </li>
+              <li>
+                <span class="sub_title">3. 장례에 바라는 점 :</span>
+                <p>기독교 방식으로 작고 소소하게</p>
+              </li>
+              <li>
+                <span class="sub_title">4. 안식처에 대한 바람 :</span>
+                <p>가족이 거주하는 곳 근처에서 자주 찾아왔으면 좋겠어요.</p>
+              </li>
+            </ul>
+          </div>
+
+
+          <div class="btn_wrap _half">
+            <div>
+              <a href="#" class="btn btn_round">이전</a>
+            </div>
+            <div>
+              <a href="#" class="btn btn_round">저장 후 나가기</a>
+              <a href="#" class="btn btn_round btn_point">다음 단계로 이동</a>
+            </diV>
+          </div>
+        </div>
+      </div>
+    </div>
+    @@include('../inc/footer.inc',{
+      "webroot":".."
+    })
+  </div>
+</body>

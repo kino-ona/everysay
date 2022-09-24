@@ -616,6 +616,35 @@ textarea {
 			}
 		}
 	}
+	&.type4 {
+		label {
+			input[type=checkbox], input[type=radio] {
+				margin-right: 20px;
+				+ span {
+					font-size: 16px;
+					color:#000000;
+				}
+				&:before {
+					top: -16px;
+					width: 30px;
+					background-image: url('../images/icons/ico_radio_off.png');
+					background-size: 30px;
+					border-radius: 50%;
+					overflow: hidden;
+				}
+				&:checked{
+					&:before {
+						background-image: url('../images/icons/ico_radio_on.png');
+						background-size: 30px;
+						background-color: #ffffff;
+					}
+					+ span {
+						font-size: 16px;
+					}
+				}
+			}
+		}
+	}
 	&.radio_chk {
 		margin-right: 10px;
 		label {
@@ -644,6 +673,11 @@ textarea {
 						font-size: 18px;
 					}
 				}
+			}
+		}
+		&.type1 {
+			label {
+				color:#000000;
 			}
 		}
 	}

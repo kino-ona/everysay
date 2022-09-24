@@ -1,0 +1,150 @@
+@@include('../inc/pagehead.inc',{
+  "pagetitle":"- 프리미엄 유언장 - 사전 의료 지침",
+  "webroot":".."
+})
+<link rel="stylesheet" href="../assets/css/sub.css">
+</head>
+
+<body>
+  <div class="skipnavigation"><a href="#container">skip to container</a></div>
+  <div id="wrap">
+    @@include('../inc/header.inc',{
+      "webroot":"..",
+      "headertype":""
+    })
+
+    <div id="container" class="container">
+      <div class="sub_container premium_wrap">
+        <div class="aside">
+          <h2 class="aside_tit">프리미엄 유언장</h2>
+          <div class="aside_status">
+            <strong>48</strong>
+            <span>%</span>
+          </div>
+          <ul class="aside_menu">
+            <li><a href="premium_step01.html">인적 사항</a></li>
+            <li><a href="premium_step02.html">자녀 정보</a></li>
+            <li><a href="premium_step03.html">자산</a></li>
+            <li><a href="premium_step04.html">반려 동물</a></li>
+            <li><a href="premium_step05.html">기부</a></li>
+            <li><a href="premium_step06.html">재산 처리 방법</a></li>
+            <li><a href="premium_step07.html">디지털 자산</a></li>
+            <li class="active"><a href="premium_step08.html">사전 의료 지침</a></li>
+            <li><a href="premium_step09.html">장례 방법</a></li>
+            <li><a href="premium_step10.html">후견인</a></li>
+            <li><a href="premium_step11.html">기타 부탁할 일</a></li>
+            <li><a href="premium_step12.html">나의 회고</a></li>
+            <li><a href="premium_step13.html">유언 장소</a></li>
+            <li><a href="premium_step14.html">유언 집행인</a></li>
+            <li><a href="premium_step15.html">검토</a></li>
+          </ul>
+        </div>
+        <div class="content">
+          <div class="cont_head">
+            <span>사전 의료 지침 정보</span>를 입력하세요.
+          </div>
+          <div class="form_box">
+            <dl class="form_field">
+              <dt>사전 의료 지침 집행자</dt>
+              <dd class="mid_size">
+                <input type="text" value="" placeholder="예: 가족, 친구" />
+              </dd>
+            </dl>
+          </div>
+          <div class="form_box">
+            <dl class="form_field">
+              <dt>휴대폰 번호</dt>
+              <dd class="mid_size">
+                <input type="text" value="" placeholder="- 없이 번호만 입력해주세요." />
+              </dd>
+            </dl>
+          </div>
+          <div class="form_box">
+            <dl class="form_field">
+              <dt>당사자와의 관계</dt>
+              <dd class="mid_size">
+                <input type="text" value="" />
+              </dd>
+            </dl>
+          </div>
+          <div class="form_box">
+            <dl class="form_field">
+              <dt>사전 의료 지침</dt>
+              <dd>
+                <div>
+                  <p class="quest">1. 당신은 언제까지 살고 싶습니까?</p>
+                  <p class="chkwrap radio_chk type1">
+                    <label>
+                      <input type="radio" name="radio01">
+                      친구나 가족들과 이야기를 할 수 있을 때
+                    </label>
+                  </p>
+                  <p class="chkwrap radio_chk type1">
+                    <label>
+                      <input type="radio" name="radio01">
+                      혼수 상태에 빠지더라도 깨어날 가능성이 있을 때
+                    </label>
+                  </p>
+                  <p class="chkwrap radio_chk type1">
+                    <label>
+                      <input type="radio" name="radio01">
+                      스스로 식사하고 씻으며 살 수 있을 때
+                    </label>
+                  </p>
+                  <p class="chkwrap radio_chk type1">
+                    <label>
+                      <input type="radio" name="radio01">
+                      병으로 고통이 극심해져서 견디기 힘들지 않을 때
+                    </label>
+                  </p>
+                  <p class="chkwrap radio_chk type1">
+                    <label>
+                      <input type="radio" name="radio01">
+                      기계에 의존해야만 살 수 있는 상황이 아닐 때
+                    </label>
+                  </p>
+                </div>
+              </dd>
+              <dd>
+                <div>
+                  <p class="quest">2. 당신이 의식불명 상태에 빠진다면 연명 치료를 하시겠습니까?</p>
+                  <p class="chkwrap radio_chk type1">
+                    <label>
+                      <input type="radio" name="radio02">
+                      그 때 가족의 의견을 물어봐주세요.
+                    </label>
+                  </p>
+                  <p class="chkwrap radio_chk type1">
+                    <label>
+                      <input type="radio" name="radio02">
+                      깨어날 때까지 기다려주세요.
+                    </label>
+                  </p>
+                  <p class="chkwrap radio_chk type1">
+                    <label>
+                      <input type="radio" name="radio02">
+                      심폐 소생술을 해도 의식이 깨어나지 않거든 1주일 후 연명 치료를 중단해 주세요.
+                    </label>
+                  </p>
+                </div>
+              </dd>
+            </dl>
+          </div>
+
+          <div class="btn_wrap _half">
+            <div>
+              <a href="#" class="btn btn_round">이전</a>
+            </div>
+            <div>
+              <a href="#" class="btn btn_round">저장 후 나가기</a>
+              <a href="#" class="btn btn_round btn_point">다음 단계로 이동</a>
+            </diV>
+          </div>
+        </div>
+      </div>
+    </div>
+    @@include('../inc/footer.inc',{
+      "webroot":".."
+    })
+  </div>
+</body>
