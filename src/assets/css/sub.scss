@@ -88,7 +88,7 @@
 	// .aside
 	.content {
 		width: 100%;
-		max-width: 660px;
+		max-width: 680px;
 
 		.cont_head {
 			margin-bottom: 30px;
@@ -548,6 +548,8 @@
 
 .sub_container {
 	.testament_check {
+		padding: 50px;
+		background-color: #ffffff;;
 		.cont_head {
 			font-size: 30px;
 			color:#016241;
@@ -664,6 +666,75 @@
 			display: flex;
 			margin-bottom: 10px;
 			font-size: 16px;
+		}
+	}
+}
+
+.preview_layer {
+	.layer_wrap {
+		max-width: 1200px;
+	}
+	.layer_box {
+		height: calc(75vh - 120px);
+		padding: 60px;
+		background: {
+			image: url('../images/icons/ico_watermark.png');
+			repeat: no-repeat;
+			position: center top 60%;
+			size: 220px;
+		}
+		border-radius: 0;
+	}
+	.layer_bottom {
+		padding-top: 50px;
+		text-align: right;
+	}
+}
+.paper_wrap {
+	width: calc(100% - 60px);
+	height: calc(100% - 100px);
+	border: 1px solid #cccccc;
+	padding: 50px 30px;
+	overflow-y: auto;
+	.paper_title {
+		padding-bottom: 90px;
+		font-size: 60px;
+		font-weight: 300;
+		text-align: center;
+	}
+	p {
+		font-size: 18px;
+		font-weight: 300;
+		span {
+			color:#016241;
+			text-decoration: underline;
+		}
+	}
+	.paper_cont {
+		margin-top: 50px;
+		dt {
+			margin-bottom: 20px;
+			font-size: 18px;
+			font-weight: 500;
+			color: #016241;
+		}
+		dd {
+			padding: 0 0 0 20px;
+			p {
+				margin-bottom: 6px;
+				font-size: 18px;
+				font-weight: 400;
+			}
+		}
+	}
+	.paper_inn {
+		margin-bottom: 23px;
+		span {
+			display: block;
+			padding-left: 20px;
+			margin-bottom: 6px;
+			font-size: 18px;
+			font-weight: 400;
 		}
 	}
 }
