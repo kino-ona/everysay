@@ -7,7 +7,7 @@
 				<li><a href="/everysay/simple/simple_step01.html">간편 유언장</a></li>
 				<li><a href="/everysay/premium/premium_step01.html">프리미엄 유언장</a></li>
 				<li><a href="#">서비스 소개</a></li>
-				<li><a href="#">고객센터</a></li>
+				<li><a href="/everysay/customer/faq.html">고객센터</a></li>
 			</ul>
 		</div>
 
