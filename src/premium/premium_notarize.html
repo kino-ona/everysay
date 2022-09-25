@@ -1,0 +1,131 @@
+@@include('../inc/pagehead.inc',{
+  "pagetitle":"- 공증신청하기",
+  "webroot":".."
+})
+<link rel="stylesheet" href="../assets/css/sub.css">
+</head>
+
+<body>
+  <div class="skipnavigation"><a href="#container">skip to container</a></div>
+  <div id="wrap">
+    @@include('../inc/header.inc',{
+      "webroot":"..",
+      "headertype":""
+    })
+
+    <div id="container" class="container">
+      <div class="sub_container premium_wrap">
+        <div class="aside">
+          <h2 class="aside_tit">공증신청하기</h2>
+        </div>
+        <div class="content notarize_wrap">
+          <div class="cont_head">
+            <span>48시간 이내에</span><br>담당자가 연락드리겠습니다.
+            <p class="desc">작성하신 유언장에 공증 신청을 통해<br>법적 효력을 만들어보세요.</p>
+          </div>
+          <div class="form_box">
+            <dl class="form_field">
+              <dt>유언장 구분 : <span>프리미엄 유언장</span>
+                <a href="#" class="btn_spreview">미리보기</a>
+              </dt>
+            </dl>
+          </div>
+          <div class="form_box">
+            <dl class="form_field">
+              <dt>작성 완료 일시 : <span>2022년 4월 1일 13:30</span></dt>
+            </dl>
+          </div>
+          <div class="form_box">
+            <dl class="form_field">
+              <dt>휴대폰 번호</dt>
+              <dd class="mid_size">
+                <input type="text" value="" placeholder="- 없이 번호만 입력해주세요." />
+              </dd>
+            </dl>
+          </div>
+          <div class="form_box">
+            <dl class="form_field">
+              <dt>공증 신청</dt>
+              <dd>
+                <textarea style="height:120px;" placeholder="공증과 관련해 문의하실 내용이 있으면 작성해주세요."></textarea>
+              </dd>
+            </dl>
+          </div>
+          <div class="agree_box">
+            <ul class="agree_list">
+              <li>
+                <p class="chkwrap type2">
+                  <label>
+                    <input type="checkbox">
+                    <span>개인정보 처리방침 필수 동의 <em>(필수)</em></span>
+                  </label>
+                </p>
+                <a href="#" class="btn_view">자세히 보기 &gt;</a>
+              </li>
+              <li>
+                <p class="chkwrap type2">
+                  <label>
+                    <input type="checkbox">
+                    <span>공증 신청 시 유언장 열람 및 수정 동의 <em>(필수)</em></span>
+                  </label>
+                </p>
+                <a href="#" class="btn_view">자세히 보기 &gt;</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="btn_wrap _right">
+            <a href="#" class="btn btn_round btn_cancel">취소</a>
+            <a href="#" onclick="layerOpen('notarize_send');return false;" class="btn btn_round btn_notarize">신청 완료</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 공증 신청 하기 -->
+      <div class="layer_body notarize_layer" id="notarize_send" aria-hidden="true" role="dialog">
+        <div class="layer_wrap">
+          <div class="layer_box">
+            <div class="layer_top">
+              <a href="#" onclick="layerClose('notarize_send');return false;" class="btn_close"><span class="a11y">close</span></a>
+            </div>
+
+            <p class="layer_head">공증 신청하기</p>
+            <div class="layer_desc">
+              공증을 신청하시겠습니까?
+            </div>
+            <div class="btnwrap">
+              <a href="#" onclick="layerClose('notarize_send');return false;" class="btn_cancel">취소</a>
+              <a href="#" onclick="layerOpen('notarize_end');layerClose('notarize_send');return false;" class="btn_submit">확인</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--// 공증 신청 하기 -->
+      <!-- 공증 신청 완료 -->
+      <div class="layer_body notarize_layer" id="notarize_end" aria-hidden="true" role="dialog">
+        <div class="layer_wrap">
+          <div class="layer_box">
+            <div class="layer_top">
+              <a href="#" onclick="layerClose('notarize_end');return false;" class="btn_close"><span class="a11y">close</span></a>
+            </div>
+
+            <p class="layer_head">공증 신청 완료</p>
+            <div class="layer_desc">
+              공증 신청이 완료되었습니다.<br>
+              영업일 기준 48시간 이내 담당자가 입력하신 전화번호로<br>
+              연락드리겠습니다.
+            </div>
+            <div class="btnwrap">
+              <a href="#" onclick="layerClose('notarize_end');return false;" class="btn_submit">확인</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--// 공증 신청 완료 -->
+
+    </div>
+    @@include('../inc/footer.inc',{
+      "webroot":".."
+    })
+  </div>
+</body>

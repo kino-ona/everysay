@@ -1,5 +1,4 @@
 
-
 <!-- 로그아웃 -->
 <div class="layer_body mypage_layer" id="logout_pop" aria-hidden="true" role="dialog">
   <div class="layer_wrap">

@@ -4,8 +4,8 @@
 
 		<div class="gnb">
 			<ul>
-				<li><a href="#">간편 유언장</a></li>
-				<li><a href="#">프리미엄 유언장</a></li>
+				<li><a href="/everysay/simple/simple_step01.html">간편 유언장</a></li>
+				<li><a href="/everysay/premium/premium_step01.html">프리미엄 유언장</a></li>
 				<li><a href="#">서비스 소개</a></li>
 				<li><a href="#">고객센터</a></li>
 			</ul>
@@ -14,8 +14,8 @@
 		<div class="util">
 			<!-- 로그인 전 -->
 			<div>
-				<a href="#" class="btn_join">회원가입</a>
-				<a href="#" class="btn_login">로그인</a>
+				<a href="/everysay/member/join01.html" class="btn_join">회원가입</a>
+				<a href="/everysay/member/login.html" class="btn_login">로그인</a>
 			</div>
 			<!-- 로그인 후 -->
 			<!-- <div class="user_info">

@@ -1,0 +1,125 @@
+@@include('../inc/pagehead.inc',{
+  "pagetitle":"- 프리미엄 유언장 - 작성완료",
+  "webroot":".."
+})
+<link rel="stylesheet" href="../assets/css/sub.css">
+</head>
+
+<body>
+  <div class="skipnavigation"><a href="#container">skip to container</a></div>
+  <div id="wrap">
+    @@include('../inc/header.inc',{
+      "webroot":"..",
+      "headertype":""
+    })
+
+    <div id="container" class="container">
+      <div class="sub_container premium_wrap">
+        <div class="aside">
+          <h2 class="aside_tit">프리미엄 유언장</h2>
+        </div>
+        <div class="content premium_end">
+          <div class="end_head">
+            <a href="#" class="btn_download"><span class="a11y">유언장다운로드</span></a>
+            <div class="end_title">
+              <p><span>김유민 님</span>의<br>이야기를 담은 유언장이<br>완료되었습니다.</p>
+              <ul>
+                <li>* 작성하신 유언장은 ‘마이페이지 - 내 유언장'을 통해서 확인하실 수 있습니다.</li>
+                <li>* 작성하신 유언장은 작성자님과 공유 대상자(이메일 수신)만 확인할 수 있습니다.</li>
+                <li>* 공증 신청 시, 담당 변호사가 열람 및 수정할 수 있습니다.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="end_push">
+            <p class="title">유언 집행인과 유언을 알리고 싶은 사람들에게 이메일을 보내세요.</p>
+            <div class="form_box">
+              <dl class="form_field">
+                <dt>디지털 자산 관리자 : <span>김성연</span></dt>
+                <dd>
+                  <input type="text" value="abc@gmail.com" />
+                  <select>
+                    <option>직접입력</option>
+                    <option>naver.com</option>
+                  </select>
+                </dd>
+              </dl>
+            </div>
+            <div class="form_box">
+              <dl class="form_field">
+                <dt>유언 집행인 : <span>김성연</span></dt>
+                <dd>
+                  <input type="text" value="abc@gmail.com" />
+                  <select>
+                    <option>직접입력</option>
+                    <option>naver.com</option>
+                  </select>
+                </dd>
+              </dl>
+            </div>
+            <div class="form_box">
+              <dl class="form_field">
+                <dt>유언 수신인</dt>
+                <dd>
+                  <input type="text" value="" />
+                  <select>
+                    <option>직접입력</option>
+                    <option>naver.com</option>
+                  </select>
+                  <a href="#" class="btn_add"><span class="a11y">수신인 필드 추가</span></a>
+                </dd>
+                <dd>
+                  <input type="text" value="" />
+                  <select>
+                    <option>직접입력</option>
+                    <option>naver.com</option>
+                  </select>
+                  <a href="#" class="btn_del"><span class="a11y">필드 삭제</span></a>
+                </dd>
+              </dl>
+            </div>
+            <div class="btn_wrap">
+              <a href="#" onclick="layerOpen('email_send');return false;" class="btn btn_round btn_sending">발송하기</a>
+            </div>
+
+            <div class="end_bottom">
+              <div class="ico"><img src="../assets/images/icons/ico_mark.png" alt="유언공증"></div>
+              <div class="end_title">
+                <p><span>공증을 통해서<br>법적 효력</span>을 만드시겠어요?</p>
+                <ul>
+                  <li>작성 완료된 유언장은 소유할 수 있지만,<br>법적 효력은 발생하지 않아요.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="btn_wrap">
+              <a href="#" class="btn btn_round btn_notarize">공증신청</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 이메일 발송 완료 -->
+      <div class="layer_body email_layer" id="email_send" aria-hidden="true" role="dialog">
+        <div class="layer_wrap">
+          <div class="layer_box">
+            <div class="layer_top">
+              <a href="#" onclick="layerClose('email_send');return false;" class="btn_close"><span class="a11y">close</span></a>
+            </div>
+
+            <p class="layer_head">이메일 발송 완료</p>
+            <div class="layer_desc">
+              이메일 발송이 완료되었습니다.
+            </div>
+            <div class="btnwrap">
+              <a href="#" onclick="layerClose('email_send');return false;" class="btn_submit">확인</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--// 이메일 발송 완료 -->
+
+    </div>
+    @@include('../inc/footer.inc',{
+      "webroot":".."
+    })
+  </div>
+</body>
