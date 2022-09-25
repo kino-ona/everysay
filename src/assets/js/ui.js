@@ -122,8 +122,8 @@ $('.tab_wrap').each(function(){
 	var $tabwrap = $(this);
 	var $tabcont = $(this).find('.tabs_list');
 
-	$(this).find('li').click(function(){
-		$tabcont.find('li').removeClass('active');
+	$(this).find('.tabs').click(function(){
+		$tabcont.find('.tabs').removeClass('active');
 		$(this).addClass('active');
 		$tabwrap.find('.tab_box').hide();
 		
@@ -132,4 +132,26 @@ $('.tab_wrap').each(function(){
 
 		return false;
 	});
+});
+
+//******
+// accordion
+//******
+$(function() {
+	$(".acco_toggle").on("click", function() {
+    if ($(this).hasClass("accordion-active")) {
+      $(this).removeClass("accordion-active");
+      $(this)
+        .siblings(".accordion__content")
+        .slideUp(200);
+    } else {
+      $(".acco_toggle").removeClass("accordion-active");
+      $(this).addClass("accordion-active");
+      $(".accordion__content").slideUp(200);
+      $(this)
+        .siblings(".accordion__content")
+        .slideDown(200);
+    }
+  });
+	
 });

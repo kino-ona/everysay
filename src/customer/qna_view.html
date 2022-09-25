@@ -1,0 +1,40 @@
+@@include('../inc/pagehead.inc',{
+  "pagetitle":"- 고객센터 - 1:1 문의",
+  "webroot":".."
+})
+<link rel="stylesheet" href="../assets/css/sub.css">
+</head>
+
+<body>
+  <div class="skipnavigation"><a href="#container">skip to container</a></div>
+  <div id="wrap">
+    @@include('../inc/header.inc',{
+      "webroot":"..",
+      "headertype":""
+    })
+
+    <div id="container" class="container">
+      <div class="sub_container simple_wrap">
+        <div class="aside">
+          <h2 class="aside_tit">고객센터</h2>
+          <ul class="aside_menu">
+            <li><a href="faq.html">자주 묻는 질문</a></li>
+            <li class="active"><a href="qna_list.html">1:1 문의</a></li>
+          </ul>
+        </div>
+        <div class="content">
+
+          <div class="btn_wrap _right">
+            <div>
+              <a href="#" class="btn btn_round">저장 후 나가기</a>
+              <a href="#" class="btn btn_round btn_point">다음 단계로 이동</a>
+            </diV>
+          </div>
+        </div>
+      </div>
+    </div>
+    @@include('../inc/footer.inc',{
+      "webroot":".."
+    })
+  </div>
+</body>

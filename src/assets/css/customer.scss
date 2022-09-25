@@ -1,0 +1,52 @@
+@use "mixins";
+@use "swiper";
+
+.custom_wrap {
+  .content {
+    max-width: 860px;
+  }
+  .cust_visual {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 170px;
+    background: {
+      size: cover;
+      position: center center;
+      repeat: no-repeat;
+    }
+    margin-bottom: 50px;
+    p {
+      padding-left: 90px;
+      font-size: 22px;
+      color:#ffffff;
+    }
+    .btn {
+      margin-right: 50px;
+      height: 35px;
+      border:1px solid #ffffff;
+      border-radius: 0;
+      font-size: 16px;
+    }
+  }
+  .tab_wrap {
+    .tabs_list {
+      margin-bottom: 20px;
+    }
+    .tab_box {
+      padding: 0;
+    }
+  }
+  .head_title {
+    margin-bottom: 20px;
+    font-size: 38px;
+    font-weight: 500;
+  }
+  .faq_wrap {
+    .cust_visual {
+      background-image: url('../images/common/faq_visual.jpg');
+    }
+  }
+}
