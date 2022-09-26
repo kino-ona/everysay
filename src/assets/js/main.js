@@ -23,7 +23,7 @@ var qnaSwiper = new Swiper('#qnaswipe', {
   keyboard: true,
   speed: 800,
   autoplay: {
-    delay: 2500,
+    delay: 3000,
     disableOnInteraction: false,
   },
   loop: true,
@@ -32,7 +32,7 @@ var qnaSwiper = new Swiper('#qnaswipe', {
     prevEl: ".sec_qna .swiper-button-prev",
   },
   pagination: {
-		el: '#qnaswipe .swiper-pagination',
+		el: '.sec_qna .swiper-pagination',
 		type: 'bullets',
 		clickable: true
 	},

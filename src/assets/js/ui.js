@@ -6,6 +6,12 @@ var lastScrollTop = 0;
 $(window).on('scroll',function() {
 	var st = $(this).scrollTop();
 
+  if(st > 10) {
+    $('.header').addClass('fixed');
+  } else {
+    $('.header').removeClass('fixed');
+  }
+
   if(st < 100) {
     $('.main_container').find('.section').removeClass('is-active')
   }
