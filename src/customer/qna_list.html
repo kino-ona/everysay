@@ -3,6 +3,7 @@
   "webroot":".."
 })
 <link rel="stylesheet" href="../assets/css/sub.css">
+<link rel="stylesheet" href="../assets/css/customer.css">
 </head>
 
 <body>
@@ -14,24 +15,135 @@
     })
 
     <div id="container" class="container">
-      <div class="sub_container simple_wrap">
+      <div class="sub_container custom_wrap">
         <div class="aside">
           <h2 class="aside_tit">고객센터</h2>
           <ul class="aside_menu">
-            <li><a href="faq.html">자주 묻는 질문</a></li>
-            <li class="active"><a href="qna_list.html">1:1 문의</a></li>
+            <li class="active"><a href="faq.html">자주 묻는 질문</a></li>
+            <li><a href="qna_list.html">1:1 문의</a></li>
           </ul>
         </div>
-        <div class="content">
+        <div class="content qna_wrap">
+          <div class="cust_visual">
+            <p>유언장 정리,<br>궁금한 점은 전문가에게 의논해보세요.</p>
+            <a href="#" class="btn">변호사와 상담하기</a>
+          </div>
+          <div class="head_title">1:1 문의</div>
+          <table class="myqna_list">
+            <thead>
+              <tr>
+                <th>문의 날짜</th>
+                <th>제목</th>
+                <th>답변 상태</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2022.03.31</td>
+                <td class="left"><a href="#">법적 효력을 갖기 위해서는 공증 신청을 해야 하나요?</a></td>
+                <td><span class="ready">답변 대기중</span></td>
+                <td class="last"></td>
+              </tr>
+              <tr>
+                <td>2022.03.31</td>
+                <td class="left"><a href="#">공증 비용은 얼마이며, 공증 시간은 얼마나 소요될까요?</a></td>
+                <td><span class="completed">답변 완료</span></td>
+                <td class="last">
+                  <a href="#" class="btn_detailvw">보기</a>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="4" class="nodata">등록하신 문의 내용이 없습니다.</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="qna_write">
+            <div class="form_box">
+              <dl class="form_field">
+                <dt>이름 <i class="essential"></i></dt>
+                <dd class="mid_size">
+                  <input type="text" value="홍길동" />
+                </dd>
+              </dl>
+            </div>
+            <div class="form_box">
+              <dl class="form_field">
+                <dt>이메일 <i class="essential"></i></dt>
+                <dd class="mid_size">
+                  <input type="text" value="everysay@everysay.com" />
+                </dd>
+              </dl>
+            </div>
+            <div class="form_box">
+              <dl class="form_field">
+                <dt>휴대폰번호 <i class="essential"></i></dt>
+                <dd class="mid_size">
+                  <input type="text" value="010-1234-5678" />
+                </dd>
+              </dl>
+            </div>
+            <div class="form_box">
+              <dl class="form_field">
+                <dt>제목 <i class="essential"></i></dt>
+                <dd>
+                  <input type="text" value="" placeholder="문의 제목을 입력해주세요. (예: 유언장 작성은 유료인가요?)" />
+                </dd>
+              </dl>
+            </div>
+            <div class="form_box">
+              <dl class="form_field">
+                <dt>문의 내용 <i class="essential"></i></dt>
+                <dd>
+                  <textarea placeholder="모두의 유언장에 문의하실 내용을 작성해주세요."></textarea>
+                </dd>
+              </dl>
+            </div>
+          </div>
+
+          <div class="agree_box">
+            <ul class="agree_list">
+              <li>
+                <p class="chkwrap type2">
+                  <label>
+                    <input type="checkbox">
+                    <span>개인정보 처리방침 필수 동의 <em>(필수)</em></span>
+                  </label>
+                </p>
+                <a href="#" class="btn_view">자세히 보기 &gt;</a>
+              </li>
+            </ul>
+          </div>
 
           <div class="btn_wrap _right">
             <div>
-              <a href="#" class="btn btn_round">저장 후 나가기</a>
-              <a href="#" class="btn btn_round btn_point">다음 단계로 이동</a>
+              <a href="#" onclick="layerOpen('qna_pop');return false;"  class="btn btn_round btn_point">문의하기</a>
             </diV>
           </div>
         </div>
       </div>
+
+      <!-- 문의신청완료 -->
+      <div class="layer_body qna_layer" id="qna_pop" aria-hidden="true" role="dialog">
+        <div class="layer_wrap">
+          <div class="layer_box">
+            <div class="layer_top">
+              <a href="#" onclick="layerClose('qna_pop');return false;" class="btn_close"><span class="a11y">close</span></a>
+            </div>
+
+            <p class="layer_head">문의 신청 완료</p>
+            <div class="layer_desc">
+              문의 신청이 완료되었습니다.<br />문의 내용이 확인되는대로 신속하게 답변드리겠습니다.
+            </div>
+            <div class="btnwrap">
+              <a href="#" onclick="layerClose('qna_pop');return false;" class="btn_submit">확인</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--// 문의신청완료 -->
+      
     </div>
     @@include('../inc/footer.inc',{
       "webroot":".."

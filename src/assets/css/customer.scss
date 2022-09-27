@@ -49,4 +49,138 @@
       background-image: url('../images/common/faq_visual.jpg');
     }
   }
+  .qna_wrap {
+    .cust_visual {
+      background-image: url('../images/common/faq_visual.jpg');
+    }
+    .agree_box {
+      margin-top: 40px;
+    }
+    .agree_list {
+      li {
+        display: flex;
+        align-items: center;
+      }
+      .btn_view {
+        font-size: 15px;
+        color:#888888;
+      }
+      .chkwrap {
+        label {
+          input[type=checkbox] {
+            margin-right: 20px;
+            &:before {
+              top: -10px;
+              width: 30px;
+              height: 30px;
+              background-size: cover;
+            }
+            & + span {
+              font-size: 16px;
+            }
+            &:checked {
+              & + span {
+                font-size: 16px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .btn_point {
+      width: 150px;
+      background-color: #c7613e;
+    }
+  }
+
+  .qna_write {
+    margin-top: 60px;
+    textarea {
+      height: 150px;
+    }
+  }
+
+  .myqna_list {
+    border-top: 1px solid #b9b9ba;
+    th, td {
+      border-left: 1px solid #b9b9ba;
+      line-height: 100%;
+      &:first-child {
+        border-left: 0;
+      }
+    }
+    th {
+      min-height: 20px;
+      padding: 15px 10px;
+      background-color: #eeeeee;
+    }
+    td {
+      min-height: 20px;
+      padding: 20px 10px;
+      border-bottom: 1px solid #b9b9ba;
+      background-color: #ffffff;
+      text-align: center;
+      vertical-align: middle;
+    }
+    .left {
+      width: 60%;
+      text-align: left;
+    }
+    .nodata {
+      padding-top: 30px;
+      padding-bottom: 30px;
+      color:#888888;
+      text-align: center;
+    }
+    .ready {
+      color:#888888;
+    }
+    .completed {
+      color:#016241;
+    }
+    .last {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+    .btn_detailvw {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 80px;
+      height: 40px;
+      border-radius: 5px;
+      background-color: #c7613e;
+      color:#ffffff;
+    }
+  }
+}
+.qna_layer {
+  .layer_wrap {
+    width: 540px;
+    border-radius: 25px;
+  }
+  .layer_box {
+    min-height: 155px;
+    padding: 50px 25px;
+    text-align: center;
+  }
+  .layer_head {
+    padding-bottom:20px;
+  }
+  .layer_desc {
+    padding-bottom:35px;
+    line-height: 1.5;
+  }
+	.btn_submit {
+		display: inline-flex;
+		width: 170px;
+		height: 50px;
+		align-items: center;
+		justify-content: center;
+		border-radius: 50px;
+		background-color: #000000;
+		color: #ffffff;
+		font-size: 20px;
+		font-weight: 500;
+	}
 }
