@@ -231,6 +231,9 @@ textarea {
 		background-color: #c7613e;
 		color:#ffffff;
 	}
+	&.btn_default {
+		min-width: 170px;
+	}
 }
 .btn_wrap {
 	display: flex;
@@ -501,7 +504,7 @@ textarea {
 	.layer_box {
 		position: relative;
 		background-color: #ffffff;
-		border-radius: 45px;
+		border-radius: 30px;
 		overflow: hidden;
 	}
 	.layer_top {
