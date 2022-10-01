@@ -39,6 +39,38 @@ var checkVisible = function(elm, eval){
 	if (eval == "above") return ((y < (viewportHeight + scrolltop)));
 }
 
+function headGnbMenu(){
+	$("#btn_mmenu").click(function(e) {
+		e.preventDefault();
+    var delay = setTimeout(function(){
+      $('.header').addClass('show');
+      clearTimeout(delay);
+    }, 30);
+		$('.mobile_menu').addClass('show');
+		$('body').addClass('noscroll');
+	});
+	$("#btn_mmenu_close").click(function(e) {
+		e.preventDefault();
+		$('.header').removeClass('show');
+		$('.mobile_menu').removeClass('show');
+		$('body').removeClass('noscroll');
+	});
+}
+if($('.header').length > 0) {
+  headGnbMenu();
+}
+
+function asideMenu() {
+  $('.aside').find('.aside_tit').click(function(e) {
+    $(this).toggleClass("open");
+    $(this).parent('.aside').find('.aside_menu').toggleClass("open hide");
+  });
+}
+if($(window).width() < 1024) {
+  if($('.aside').find('.aside_menu').length > 0) {
+    asideMenu();
+  }
+}
 
 //******
 // form, input

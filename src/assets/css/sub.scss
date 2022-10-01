@@ -82,6 +82,19 @@
         margin-top:13px;
         font-size: 26px;
       }
+
+			@include mixins.mobile() {
+				position: absolute;
+				top: 0;
+				left: 120px;
+				strong {
+					font-size: 30px;
+					font-weight: 700;
+				}
+				span {
+					font-size: 12px;
+				}
+			}
     }
 	}
 
@@ -325,6 +338,10 @@
 	width: 100%;
 	padding: 60px 0;
 	justify-content: center;
+
+	@include mixins.mobile() {
+		padding: 25px 0;
+	}
 }
 
 .form_result {
@@ -350,6 +367,17 @@
   .table_box {
     margin-bottom: 12px;
   }
+	@include mixins.mobile() {
+		.table_cnt {
+			font-size: 12px;
+			strong {
+
+			}
+		}
+		.btn_delete {
+			background-size: 18px;
+		}
+	}
 }
 .form_table {
 	width: 100%;
@@ -410,6 +438,21 @@
 	// 		border-top: 1px solid #b9b9ba;
 	// 	}
 	// }
+	@include mixins.mobile() {
+		tr {
+			th, td {
+				height: 25px;
+				padding:10px 5px;
+				font-size: 12px;
+			}
+			th {
+				min-width: auto;
+			}
+			.td_del {
+				width: 30px;
+			}
+		}
+	}
 }
 
 .btn_delete {
@@ -484,6 +527,34 @@
 		color: #666666;
 		font-size: 26px;
 	}
+
+	@include mixins.mobile() {
+		.step_cnt {
+			font-size: 14px;
+		}
+		.step_head {
+			width: calc(100% - 25px);
+			justify-content: space-between;
+			margin: 0 auto;
+			padding: 20px 0;
+			> div {
+				display: flex;
+				align-items: center;
+				margin-left: 0;
+			}
+		}
+		.step_bar {
+			width: 50%;
+		}
+		.btn_save {
+			padding: 10px;
+			font-size: 10px;
+		}
+		.btn_confirm {
+			height: 45px;
+			font-size: 14px;
+		}
+	}
 }
 
 .step_content {
@@ -542,6 +613,46 @@
 				display: flex;
 				flex: 1;
 				margin-top: 0;
+			}
+		}
+	}
+
+	@include mixins.mobile() {
+		padding: 20px 30px;
+		.step_q {
+			align-items: flex-start;
+			margin-bottom: 15px;
+			font-size: 19px;
+			strong {
+				font-size: 60px;
+			}
+			p {
+				margin-top: 3px;
+			}
+			i {
+				margin-top: 10px;
+				font-size: 14px;
+			}
+		}
+		.step_cont {
+			margin-left: 0;
+		}
+		.chk_list {
+			li {
+				margin-top: 0;
+			}
+			.chkwrap {
+				label {
+					font-size: 14px;
+					input {
+						& + span {
+							font-size: 14px;
+						}
+					}
+				}
+			}
+			&.multi_line {
+				margin-top: 10px;
 			}
 		}
 	}
@@ -1193,12 +1304,129 @@
 		width: calc(100% - 40px);
 		min-height: calc(100vh - 360px);
 		padding: 40px 20px 50px;
+		&.simple_wrap,
+		&.premium_wrap {
+			flex-direction: column;
+		}
+		.aside {
+			position: relative;
+			padding-right: 0;
+			.aside_tit {
+				padding-left: 7px;
+				padding-top: 3px;
+				margin-bottom: 20px;
+				font-size: 15px;
+				&::before {
+					width: 5px;
+					height: 5px;
+				}
+				&::after {
+					content: '';
+					position: absolute;
+					right: 6px;
+					top: 10px;
+					display: block;
+					width: 8px;
+					height: 7px;
+					border-top: 1px solid #000;
+					border-right: 1px solid #000;
+					transform: rotate(135deg);
+				}
+				&.open {
+					margin-bottom: 20px;
+					&::after {
+						transform: rotate(-45deg);
+					}
+				}
+			}
+			.aside_menu {
+				// display: none;
+				width: 100%;
+				height:40px;
+				overflow: hidden;
+				&.open {
+					display: block;
+					height: auto;
+				}
+				li {
+					display: inline-block;
+					margin-right: 5px;
+					margin-bottom: 12px;
+					&.checking {
+						a {
+							color:#888888;
+						}
+					}
+					&.active {
+						a {
+							border-color:#016241;
+						}
+					}
+				}
+				a {
+					border: 1px solid #d7d7d7;
+					font-size: 13px;
+				}
+			}
+		}
+
+		.content {
+			.cont_head {
+				margin-top: 20px;
+				font-size: 19px;
+				.desc {
+					margin-top: 10px;
+					font-size: 10px;
+				}
+			}
+		}
+
+		&.premium_wrap {
+			.content {
+				.cont_head {
+					margin-top: 30px;
+					margin-bottom: 15px;
+				}
+			}
+
+			.btn_wrap {
+				&._half {
+					> div {
+						&:first-child {
+							.btn_round {
+								width: 50px;
+							}
+						}
+						&:last-child {
+							text-align: right;
+						}
+					}
+					.btn_round {
+						width: 85px;
+					}
+				}
+			}
+		}
 	}
 
 	.form_box {
+		display: block;
+		margin-top: 20px;
 		.form_field {
 			dt {
+				min-height: 0;
 				font-size: 13px;
+				span {
+					display: block;
+					margin-top: 5px;
+					font-size: 11px;
+				}
+			}
+			dd {
+				margin-top: 10px;
+				&.mid_size {
+					width: 100%;
+				}
 			}
 
 			.infotxt {
@@ -1207,6 +1435,14 @@
 				p {
 					font-size: 10px;
 				}
+			}
+			& + .form_field {
+				margin-top: 20px;
+			}
+		}
+		&._auto {
+			.form_field {
+				width: 100% !important;
 			}
 		}
 	}

@@ -37,6 +37,15 @@
       size: cover;
     };
   }
+  .figure01 {
+    background-image: url('../images/main/visual01.png')
+  }
+  .figure02 {
+    background-image: url('../images/main/visual02.png')
+  }
+  .figure03 {
+    background-image: url('../images/main/visual03.png')
+  }
   .contents {
     position: absolute;
     left: 50%;
@@ -59,7 +68,7 @@
         background: {
           image: url('../images/icons/ico_visual.png');
           size: cover;
-          position: no-repeat;
+          repeat: no-repeat;
           position: center bottom;
         }
       }
@@ -113,6 +122,7 @@
       }
     }
   }
+  
 }
 // keyvisual
 
@@ -364,3 +374,156 @@
   }
 }
 // section
+
+@include mixins.mobile() {
+  .keyvisual {
+    height: 80vh;
+    padding-top: 0;
+    .swiper-wrapper {
+      &::before {
+        content: '';
+        position: absolute;
+        left:0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0, .3);
+        z-index: 1;
+      }
+    }
+    .contents {
+      h2 {
+        &:before {
+          background-size: 65px;
+        }
+      }
+    }
+  }
+  .section {
+    padding: 30px 0;
+    .sec_head {
+      padding-top: 15px;
+      p {
+        font-size: 16px;
+      }
+      span {
+        margin-top: 10px;
+        font-size: 12px;
+      }
+    }
+    .sec_banner {
+      padding: 40px 0;
+      > p {
+        position: relative;
+        width: calc(100% - 50px);
+        padding-top: 77vw;
+        margin: 0 auto;
+        overflow: hidden;
+        img {
+          position:absolute;
+          left:0;
+          top: 0;
+          top: 50%;
+          left: 0;
+          max-width: inherit;
+          width: auto;
+          height: 100%;
+          @include mixins.translate(0, -50%);
+
+        }
+      }
+      .bnr_list {
+        width: 100%;
+        gap: 10px;
+        li:first-child .contents {
+          bottom: 40%;
+        }
+        li:last-child .contents {
+          right: 10px;
+        }
+        .contents {
+          .btn_link {
+            margin-bottom: 0;
+            background-size: 35px;
+          }
+          span {
+            &:first-child {
+              display: none;
+            }
+          }
+          p {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+
+    .sec_infoIco {
+      flex-direction: column;
+      justify-content: center;
+      .item {
+        margin-bottom: 25px;
+        text-align: center;
+        &:last-child {
+          margin-bottom: 0;
+          img {
+            max-width: 35px;
+          }
+        }
+      }
+      p {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto;
+        img {
+          max-width: 50px;
+        }
+      }
+      span {
+        margin-top: 15px;
+        font-size: 13px;
+      }
+    }
+    &.sec_qna {
+      &:before {
+        display: none;
+      }
+      .swiper-pagination {
+        bottom: 8px;
+      }
+    }
+    .swipe_wrap {
+      padding-top: 70vw;
+      .swipe_navi {
+        display: none;
+      }
+    }
+    .faqswipe {
+      .swiper-slide {
+        height: 195px;
+        background-size: 100% 100%;
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+    &.sec_faq {
+      position: relative;
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 150%;
+        background: {
+          image: url("../images/main/faq_bg.png");
+          size: cover;
+          position: center bottom;
+          repeat: no-repeat;
+        }
+      }
+    }
+  }
+}

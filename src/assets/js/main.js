@@ -36,18 +36,23 @@ var qnaSwiper = new Swiper('#qnaswipe', {
 		type: 'bullets',
 		clickable: true
 	},
-  // breakpoints: {
-  //   768: {
-  //     slidesPerView: 2.45,
-  //   }
-  // }
 });
 
 var faqwiper = new Swiper('#faqswipe', {
-  slidesPerView: 3,
-  spaceBetween: 79,
+  slidesPerView: 1.9,
+  spaceBetween: 15,
   paginationClickable: true,
   keyboard: true,
   speed: 400,
+  centeredSlides: true,
+  loop: true,
+  breakpoints: {
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 79,
+      loop: false,
+      centeredSlides: false,
+    }
+  }
   
 });

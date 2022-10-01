@@ -255,6 +255,20 @@ textarea {
 	& + .btn_wrap {
 		padding-top: 0px;
 	}
+
+	@include mixins.mobile() {
+		padding: 40px 0;
+		&._right {
+			justify-content: center;
+			> div {
+				display: flex;
+				width: 100%;
+				a {
+					flex: 1;
+				}
+			}
+		}
+	}
 }
 
 .animate {
@@ -545,6 +559,16 @@ textarea {
 			display: flex;
 		}
 	}
+
+	@include mixins.mobile() {
+		.layer_box {
+			width: calc(100% - 25px);
+			margin: 0 auto;
+		}
+		.layer_foo {
+			height: 45px;
+		}
+	}
 }
 
 // checkbox, radio
@@ -597,6 +621,21 @@ textarea {
 				}
 			}
 		}
+
+		@include mixins.mobile() {
+			input[type=checkbox], input[type=radio] {
+				margin-right: 20px;
+				&:before {
+					top: -8px;
+					width: 30px;
+					height: 30px;
+					background-size: 20px;
+				}
+				&:checked:before {
+					background-size: cover;
+				}
+			}
+		}
 	}
 	&.type2 {
 		label {
@@ -617,6 +656,28 @@ textarea {
 					}
 					+ span {
 						font-size: 26px;
+					}
+				}
+			}
+		}
+		@include mixins.mobile() {
+			margin-right: 10px;
+			label {
+				input[type=checkbox], input[type=radio] {
+					margin-right: 20px;
+					&:before {
+						top: -8px;
+						width: 30px;
+						height: 30px;
+						background-size: 25px;
+					}
+					&:checked {
+						+ span {
+							font-size: 14px;
+						}
+						&:before {
+							background-size: 25px;
+						}
 					}
 				}
 			}
@@ -712,7 +773,23 @@ textarea {
 				color:#000000;
 			}
 		}
+
+		@include mixins.mobile() {
+			label {
+				font-size: 14px;
+				input[type=radio]{
+					margin-right: 10px;
+					&:before {
+						top: -5px;
+						width: 20px;
+						height: 20px;
+						background-size: 20px;
+					}
+				}
+			}
+		}
 	}
+
 }
 
 // tab
@@ -757,6 +834,17 @@ textarea {
 		letter-spacing: -1px;
 		color:#666666;
 		text-decoration: none;
+	}
+
+	@include mixins.mobile() {
+		overflow-x: scroll;
+		-webkit-overflow-scrolling: touch;
+		li {
+			white-space: nowrap;
+		}
+		a {
+			font-size: 15px;
+		}
 	}
 }
 
@@ -849,11 +937,32 @@ textarea {
 	}
 }
 
+.btn_mmenu,
+.mobile_menu {display: none;}
 @include mixins.mobile() {
 	input[type=text], input[type=password], input[type=number],
 	select {
 		height: 35px;
 	}
+	.btn { 
+		height: 35px;
+		padding: 0 12px;
+		font-size: 12px;
+		&.btn_add {
+			width: 100px;
+			font-size: 14px;
+		}
+	}
+	::-webkit-input-placeholder {
+		font-size:12px;
+	}
+	::-moz-placeholder {
+		font-size:12px;
+	}
+	::-moz-placeholder {
+		font-size:12px;
+	}
+
 
 	.header {
 		height: 60px;
@@ -870,6 +979,126 @@ textarea {
 		}
 		.util {
 			display: none;
+			z-index: -1;
+		}
+		&.show {
+			.util {
+				display: block;
+				position: absolute;
+				top: 15px;
+				right: 45px;
+				z-index: 11;
+				width: calc(80% - 80px);
+				a {
+					font-size: 12px;
+					justify-content: flex-start;
+				}
+				.user_info {
+					font-size: 15px;
+				}
+			}
+		}
+
+		.btn_mmenu {
+			position: absolute;
+			right: 15px;
+			top: 15px;
+			display: block;
+			width: 30px;
+			height: 30px;
+			background: {
+				image: url('../images/common/btn_mmenu.png');
+				size: 20px;
+				repeat: no-repeat;
+				position: center center;
+			};
+		}
+		.btn_mmenu_close {
+			position: absolute;
+			right: 15px;
+			top: 15px;
+			display: block;
+			width: 30px;
+			height: 30px;
+			background: {
+				image: url('../images/common/btn_mmenu_close.png');
+				size: 20px;
+				repeat: no-repeat;
+				position: center center;
+			};
+			z-index: 12;
+		}
+	}
+	.mobile_menu {
+		display: none;
+		// @include mixins.pushEasing(300);
+		&.show {
+			display: block;
+		}
+		position: absolute;
+		// right: -100%;
+		right: 0;
+		top:0;
+		width: 100%;
+		height: 100vh;
+		background-color: rgba(0,0,0, 0.3);
+		z-index: 10;
+		.m_inner {
+			position: absolute;
+			right:0;
+			top: 0;
+			width: 80%;
+			height: 100vh;
+			padding-top: 25px;
+			background-color: #ffffff;
+		}
+		.m_gnb {
+			margin-top: 40px;
+			margin-left: 40px;
+			li {
+				padding: 14px 0;
+				border-top: 1px solid #e6e2d9;
+			}
+			a {
+				font-size: 13px;
+			}
+		}
+		.m_sub_gnb {
+			margin-top: 8px;
+			p {
+				padding: 6px 0;
+			}
+			a {
+				font-size: 12px;
+				color:#666666;
+			}
+		}
+		.m_etc_link {
+			position: relative;
+			padding-left: 10px;
+			margin-bottom: 10px;
+			a {
+				font-size: 12px;
+			};
+			&::before {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 50%;
+				margin-top: -4px;
+				display: block;
+				width: 4px;
+				height: 4px;
+				background-color: #000000;
+				border-radius: 100%;
+			}
+		}
+		.btn_mlogut {
+			display: block;
+			margin-top: 25px;
+			margin-left: 10px;
+			color:#c7613e;
+			text-decoration: underline;
 		}
 	}
 	.footer {
@@ -910,9 +1139,6 @@ textarea {
 					display: block;
 					font-size: 10px;
 					line-height: 1.6;
-					p {
-
-					}
 				}
 			}
 			.copyr {
@@ -920,4 +1146,5 @@ textarea {
 			}
 		}
 	}
+
 }
