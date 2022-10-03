@@ -48,6 +48,7 @@
 							<p class="m_etc_link"><a href="#">개인정보 처리 방침</a></p>
 
 							<a href="#" class="btn_mlogut"><span>로그아웃</span></a>
+							<a href="#" class="btn_mlogut"><span>회원가입</span></a>
 						</li>
 					</ul>
 				</div>

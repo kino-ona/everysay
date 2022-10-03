@@ -1,7 +1,7 @@
 
 <!-- 로그아웃 -->
 <div class="layer_body mypage_layer" id="logout_pop" aria-hidden="true" role="dialog">
-  <div class="layer_wrap">
+  <div class="layer_wrap logout_layer">
     <div class="layer_box">
       <div class="layer_top">
         <a href="#" onclick="layerClose('logout_pop');return false;" class="btn_close"><span class="a11y">close</span></a>

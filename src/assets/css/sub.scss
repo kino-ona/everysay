@@ -1446,5 +1446,51 @@
 			}
 		}
 	}
+}
+.premium_step12 {
+	textarea {
+		width: 100%;
+		height: 500px;
+	}
+	@include mixins.mobile() {
+		textarea {
+			height: 250px;
+		}
+	}
 
+}
+
+@include mixins.mobile() {
+	.premium_step06 {
+		.form_box {
+			.form_field {
+				width: 100% !important;
+			}
+		}
+	}
+	.quest {
+		margin-top: 10px;
+		font-size: 13px;
+	}
+	.premium_step08 {
+		.chkwrap.radio_chk.type1 {
+			label {
+				min-height: 35px;
+				font-size: 12px;
+			}
+		}
+	}
+	.premium_step11 {
+		.chkwrap.type4 label {
+			font-size: 12px;
+			input[type=checkbox], 
+		  input[type=radio] {
+				margin-right: 15px;
+				&:before {
+					top: -8px;
+					background-size: 22px;
+				}
+			}
+		}
+	}
 }
