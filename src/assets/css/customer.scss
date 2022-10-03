@@ -30,6 +30,23 @@
       border-radius: 0;
       font-size: 16px;
     }
+
+    @include mixins.mobile() {
+      height: 85px;
+      border-radius: 25px;
+      margin-bottom: 25px;
+      margin-top: 10px;
+      p {
+        padding-left: 5%;
+        font-size: 12px;
+      }
+      .btn {
+        height: 25px;
+        padding: 0 6px;
+        margin-right: 5%;
+        font-size: 10px;
+      }
+    }
   }
   .tab_wrap {
     .tabs_list {
@@ -90,6 +107,28 @@
     .btn_point {
       width: 150px;
       background-color: #c7613e;
+    }
+
+    @include mixins.mobile() {
+      .agree_list {
+        .chkwrap {
+          label {
+            input[type=checkbox] {
+              margin-right: 15px;
+              &:before {
+                top: -8px;
+                background-size: 22px;
+              }
+              & + span {
+                font-size: 12px;
+              }
+            }
+          }
+        }
+        .btn_view {
+          font-size: 12px;
+        }
+      }
     }
   }
 
@@ -152,6 +191,18 @@
       background-color: #c7613e;
       color:#ffffff;
     }
+
+    @include mixins.mobile() {
+      th, td {
+        font-size: 12px;
+        &:last-child {
+          display: none;
+        }
+      }
+      .left {
+        width: 50%;
+      }
+    }
   }
 
   .myqna_view {
@@ -174,7 +225,36 @@
       width: 80%;
       line-height: 1.3;
     }
+    @include mixins.mobile() {
+      th, td {
+        font-size: 12px;
+      }
+    }
   }
+
+  @include mixins.mobile() {
+    flex-direction: column;
+    .aside {
+      .aside_tit {
+        &::after {
+          display: none;
+        }
+      }
+      .aside_menu {
+        height: auto;
+      }
+    }
+    .head_title {
+      font-size: 19px;
+    }
+    .tabs_list {
+      margin-bottom: 10px !important;
+      a {
+        font-size: 13px;
+      }
+    }
+  }
+  
 }
 .qna_layer {
   .layer_wrap {
@@ -229,7 +309,24 @@
       dt {
         margin-bottom: 5px;
       }
-      
+    }
+  }
+  @include mixins.mobile() {
+    .head_title {
+      font-size: 16px;
+      select {
+        font-size: 13px;
+      }
+    }
+    .text_cont {
+      dl {
+        dt {
+          font-size: 14px;
+        }
+        dd {
+          font-size: 13px;
+        }
+      }
     }
   }
 }

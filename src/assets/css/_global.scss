@@ -893,6 +893,28 @@ textarea {
 			display: block;
 		}
 	}
+
+	@include mixins.mobile() {
+		.acco_toggle {
+			min-height: 45px;
+			padding-left: 15px;
+			padding-right: 15px;
+			font-size: 12px;
+			&::after {
+				right: 15px;
+				width: 5px;
+				height: 5px;
+				border-width:1px;
+			}
+		}
+		.accordion__content {
+			padding: 20px 25px;
+			font-size: 12px;
+			p {
+				font-size: inherit;
+			}
+		}
+	}
 }
 .list_paging {
 	display: flex;
@@ -934,6 +956,17 @@ textarea {
 			image: url('../images/icons/ico_next.png');
 			position: center center;
 		};
+	}
+	@include mixins.mobile() {
+		margin: 20px 0;
+		[class^=btn] {
+			width: 22px;
+			height: 22px;
+			background-size: 5px;
+		}
+		p {
+			font-size: 12px;
+		}
 	}
 }
 
