@@ -19,7 +19,7 @@
 			</div> -->
 			<!-- 로그인 후 -->
 			<div class="user_info">
-				<i class="user" style="background-image: url('/assets/images/common/user_icon.png');"></i>
+				<i class="user" style="background-image: url('@@webroot/assets/images/common/user_icon.png');"></i>
 				김유민 <span>님</span>
 			</div>
 		</div>

@@ -1300,6 +1300,91 @@
 			}
 		}
 	}
+	@include mixins.mobile() {
+		.premium_end-aside {
+			display: none;
+		}
+		.premium_end {
+			.end_head {
+				position: relative;
+				align-items: flex-start;
+				justify-content: space-between;
+				flex-direction: column;
+				gap: 0;
+				margin-bottom: 40px;
+				.end_title {
+					p {
+						position: absolute;
+						right:0;
+						top: 45px;
+						font-size: 19px;
+						width: calc(50% - 20px);
+					}
+					ul {
+						margin-top: 20px;
+					}
+					li {
+						font-size: 10px;
+						letter-spacing: -0.05em;
+					}
+				}
+				.btn_download {
+					width: 50%;
+					padding-top: 60vw;
+					height: auto;
+				}
+			}
+			.end_push {
+				.title {
+					width: 80%;
+					font-size: 13px;
+				}
+				.form_box {
+					.form_field {
+						dt {
+							margin-bottom: 13px;
+							span {
+								display: inline-block;
+								margin-top: 0;
+							}
+						}
+						select {
+							width: 32%;
+						}
+						input, select {
+							font-size: 13px;
+						}
+					}
+				}
+				.btn_add, .btn_del {
+					width: 20px;
+					height: 20px;
+				}
+			}
+			.end_bottom {
+				gap : 20px;
+				justify-content: space-between;
+				.ico {
+					flex: 1;
+					display: block;
+					width: 100%;
+					img {
+						width: 100px;
+					}
+				}
+				.end_title {
+					flex: 1;
+				}
+				p {
+					font-size: 19px;
+				}
+				li {
+					font-size: 12px;
+					br {display: none;}
+				}
+			}
+		}
+	}	
 }
 .email_layer, .notarize_layer {
 	.layer_wrap {
@@ -1350,6 +1435,27 @@
 		color: #ffffff;
 		font-size: 20px;
 		font-weight: 500;
+	}
+
+	@include mixins.mobile() {
+		.layer_wrap {
+			width: calc(100% - 30px);
+		}
+		.layer_box {
+			padding: 40px 20px;
+			width: calc(100% - 40px);
+		}
+		.layer_head {
+			font-size: 14px;
+		}
+		.layer_desc {
+			font-size: 13px;
+		}
+		.btn_submit {
+			width: 140px;
+			height: 40px;
+			font-size: 14px;
+		}
 	}
 }
 
@@ -1455,6 +1561,50 @@
 		input[type=password] {
 			padding-right: 60px;
 		}
+	}
+}
+@include mixins.mobile() {
+	.sub_container.premium_wrap {
+		.notarize_wrap.content {
+			.cont_head {
+				margin-top: 0;
+			}
+			.btn_spreview {
+				width: 90px;
+				height: 35px;
+			}
+			.agree_box {
+				margin-top: 25px;
+				.chkwrap.type2 {
+					min-height: 35px;
+					label {
+						min-height: inherit;
+						input[type=checkbox] {
+							margin-right: 10px;
+							&:before {
+								top: -4px;
+								width: 22px;
+								height: 22px;
+								background-size: 22px;
+							}
+							& + span {
+								font-size: 13px;
+							}
+						}
+					}
+				}
+				.agree_list {
+					margin-top: 0;
+					.btn_view {
+						font-size: 12px;
+					}
+				}
+			}
+			.btn_wrap .btn {
+				width: 110px;
+			}
+		}
+
 	}
 }
 
