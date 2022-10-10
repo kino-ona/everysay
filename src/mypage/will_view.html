@@ -1,0 +1,483 @@
+@@include('../inc/pagehead.inc',{
+  "pagetitle":"- 마이페이지 - 유언장 상세",
+  "webroot":".."
+})
+<link rel="stylesheet" href="../assets/css/sub.css">
+<link rel="stylesheet" href="../assets/css/member.css">
+</head>
+
+<body>
+  <div class="skipnavigation"><a href="#container">skip to container</a></div>
+  <div id="wrap">
+    @@include('../inc/header.inc',{
+      "webroot":"..",
+      "headertype":""
+    })
+
+    <div id="container" class="container">
+      <div class="sub_container mypage_wrap">
+        <div class="content will_view">
+          <div class="cont_head">
+            <div class="view_info">
+              <p class="view_num">no.5</p>
+              <p class="view_txt">작성 완료 일시 : <span>2022년 4월 1일 13:30</span></p>
+              <div class="view_detail">
+                <p>유언장 형태 : 프리미엄 유언장</p>
+                <p>작성 상태 : <span>작성 완료</span></p>
+                <p>공증 : <span>공증 신청</span></p>
+              </div>
+            </div>
+            <div class="view_btn">
+              <div><a href="#" onclick="layerOpen('will_cancel_pop');return false;" class="btn btn_cancel">신청 취소</a></div>
+              <div>
+                <a href="#" onclick="layerOpen('will_apply_pop');return false;" class="btn btn_confirm">공증 신청</a>
+                <a href="#" class="btn btn_point">다운로드</a>
+                <a href="#" onclick="layerOpen('email_pop');return false;" class="btn btn_point">이메일 발송</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="will_view-cont">
+            <div class="paper_wrap">
+              <div id="page01">
+                <div class="paper_title">유 언 장</div>
+                <p>유언자 <span>홍길동</span>은 이 유언서에 의하여 다음과 같이 유언한다.</p>
+                <dl class="paper_cont">
+                  <dt>1. 유언자의 인적 사항</dt>
+                  <dd>
+                    <p>이름 : 홍길동</p>
+                    <p>주민등록번호 : 600101-1******</p>
+                    <p>성별 : 남자</p>
+                    <p>휴대폰 번호 : 010-1234-5678</p>
+                    <p>주소 : 경기도 성남시 판교역로 235, 3001호</p>
+                    <p>등록기준지 : 경기도 성남시 판교역로 235, 3001호</p>
+                    <p>결혼 상태 : 기혼</p>
+                    <p>혼인 상대자 : 김나영</p>
+                  </dd>
+                </dl>
+                <dl class="paper_cont">
+                  <dt>2. 자녀 정보</dt>
+                  <dd>
+                    <p>김나라 (2003년생, 20세)</p>
+                    <p>김나라 (2000년생, 23세)</p>
+                  </dd>
+                </dl>
+                <dl class="paper_cont">
+                  <dt>3. 재산목록</dt>
+                  <dd>
+                    <div class="paper_inn">
+                      <div class="list_p"><em>가. </em><p>예금/채권</p></div>
+                      <span>1. 채권 (한국 투자 증권, 123-456-789)</span>
+                      <span>2. 예금 (KB 국민은행, 134-456-788)</span>
+                    </div>
+                    <div class="paper_inn">
+                      <div class="list_p"><em>나. </em><p>현금</p></div>
+                      <span>50,000,000원</span>
+                    </div>
+                    <div class="paper_inn">
+                      <div class="list_p"><em>다. </em><p>암호 화폐</p></div>
+                      <span>1. 암호 화폐 지갑 A (지갑 위치 정보 : ABCDEFGHIJK, 핀 번호 : 123-456-789-012-345)</span>
+                      <span>2. 암호 화폐 지갑 B (지갑 위치 정보 : ABCDEFGHIJK, 핀 번호 : 123-456-789-012-345)</span>
+                    </div>
+                    <div class="paper_inn">
+                      <div class="list_p"><em>라. </em><p>보험금</p></div>
+                      <span>1. 현대해상 60세만기 종신보험 (증권번호 : 123456789-2576, 피보험자 : 이나래)</span>
+                      <span>2. 현대해상 60세만기 종신보험 (증권번호 : 123456789-2576, 피보험자 : 이나래)</span>
+                    </div>
+                    <div class="paper_inn">
+                      <div class="list_p"><em>마. </em><p>임대차 보증금</p></div>
+                      <span>1. 서울시 강남구 도곡동 345 레미안 3차 2022동 1305호 (임대인 : 김유민, 임차인 : 김나래, 보증금 : 50,000,000원)</span>
+                      <span>2. 서울시 강남구 도곡동 345 레미안 3차 2022동 1305호 (임대인 : 김유민, 임차인 : 김나래, 보증금 : 50,000,000원)</span>
+                    </div>
+                    <div class="paper_inn">
+                      <div class="list_p"><em>바. </em><p>부동산</p></div>
+                      <span>1. 서울시 강남구 신사동 000-000</span>
+                      <span>1. 서울시 강남구 신사동 000-000</span>
+                    </div>
+                  </dd>
+                </dl>
+              </div>
+              <!--// page01 -->
+              <!-- page02 -->
+              <div id="page02" class="displaynone">  
+                <dl class="paper_cont">
+                  <dd>
+                    <div class="paper_inn">
+                      <div class="list_p"><em>사. </em><p>자동차</p></div>
+                      <span>1. 테슬라 모델 X (123가1234)</span>
+                      <span>1. 테슬라 모델 X (123가1234)</span>
+                    </div>
+                  </dd>
+                </dl>
+                <dl class="paper_cont">
+                  <dd>
+                    <div class="paper_inn">
+                      <div class="list_p"><em>아. </em><p>기타 재산</p></div>
+                      <span>1. 재산명 A - 재산에 대한 설명입니다.</span>
+                      <span>1. 재산명 A - 재산에 대한 설명입니다.</span>
+                    </div>
+                  </dd>
+                </dl>
+                <dl class="paper_cont">
+                  <dd>
+                    <div class="paper_inn">
+                      <div class="list_p"><em>자. </em><p>기타</p></div>
+                      <span>이 외에 보유하고 있는 자산 일체</span>
+                    </div>
+                  </dd>
+                </dl>
+                <dl class="paper_cont">
+                  <dd>
+                    <div class="paper_inn">
+                      <div class="list_p"><em>바. </em><p>추가</p></div>
+                      <span>본 유언증서에 기재되어 있지는 아니하나, 유언증서 작성일 이후에 형성된 유언자 김유민 명의 혹은 김유민의 명의수탁자 명의의 모든 재산(부동산, 채권보험, 현금 등)도 재산목록에 추가되는 것으로 한다.</span>
+                    </div>
+                  </dd>
+                </dl>
+                <dl class="paper_cont">
+                  <dt>4. 반려 동물 정보</dt>
+                  <dd>
+                    <div class="paper_inn">
+                      <p>1. 말티즈 (2018년) - 반려동물의 설명</p>
+                      <span> 반려 동물에게 필요한 내용들</span>
+                    </div>
+                    <div class="paper_inn">
+                      <p>1. 말티즈 (2018년) - 반려동물의 설명</p>
+                      <span> 반려 동물에게 필요한 내용들</span>
+                    </div>
+                  </dd>
+                </dl>
+                <dl class="paper_cont">
+                  <dt>5. 기부 정보</dt>
+                  <dd>
+                    <p>1. 인도주의 - 그린피스 (1,000,000원)</p>
+                  </dd>
+                </dl>
+                <dl class="paper_cont">
+                  <dt>6. 재산처리방법</dt>
+                  <dd>
+                    <div class="paper_inn">
+                      <div class="list_p"><em>가. </em>
+                        <p>유언자는 위 재산 중 <span class="underline">10분의 6</span> 지분을 유언자의 <span class="underline">아내인 김나라</span>에게 상속한다. 단, <span class="underline">김나라</span>은(는) <span class="underline">상속 조건의 내용을 보여줍니다.</span></p>
+                      </div>
+                      <div class="list_p"><em>나. </em>
+                        <p>유언자는 위 재산 중 <span class="underline">10분의 4</span> 지분을 유언자의 <span class="underline">자녀인 이유민</span>에게 상속한다. 단, <span class="underline">이유민</span>은(는) 상속 조건의 내용을 보여줍니다.</p>
+                      </div>
+                    </div>
+                  </dd>
+                </dl>
+                <dl class="paper_cont">
+                  <dt>7. 디지털 자산</dt>
+                  <dd>
+                    <div class="paper_inn">
+                      <p>아래에 관련된 본인의 계정관리(디지털 자산)는 <span class="underline">김나래</span>에게 계정관리 권한을 위임한다.</p>
+                      <p>- Gmail 계정 (abc_123@email.com / 삭제)</p>
+                      <p>- Naver 계정 (abc2_123@email.com / 사후 상속인 운영)</p>
+                    </div>
+                  </dd>
+                </dl>
+                <dl class="paper_cont">
+                  <dt>8. 사전 의료 지침</dt>
+                  <dd>
+                    <div class="paper_inn">
+                      <div class="list_p"><em>가. </em>
+                        <p>유언자의 사전 의료 지침의 집행자는 <span class="underline">부인 김혜정</span>으로 한다.</p>
+                      </div>
+                      <div class="list_p"><em>나. 사전 의료 지침 : </em>
+                        <p>기계에 의존해야만 살 수 있는 상황이 아닐 때까지만 살고 싶음 의식 불명 상태 - 그 때 가족의 의견을 물어봐 주세요.</p>
+                      </div>
+                    </div>
+                  </dd>
+                </dl>
+              </div>
+              <!--// page02 -->
+              <!-- page03 -->
+              <div id="page03" class="page03 displaynone">
+                <dl class="paper_cont">
+                  <dt>9. 장례 방법</dt>
+                  <dd>
+                    <div class="paper_inn">
+                      <div class="list_p"><em>가. </em>
+                        <p>장례 방법은 <span class="underline">수목장</span>으로 하며 안식처는 <span class="underline">부모님 모신 선산</span>으로 한다.</p>
+                      </div>
+                      <div class="list_p"><em>나. </em>
+                        <p>장례는 <span class="underline">기독교 방식으로 작고 소소하게</span> 안식처에 대한 바람은 <span class="underline">가족이 거주하는 곳 근처에서 자주 찾아오도록</span></p>
+                      </div>
+                    </div>
+                  </dd>
+                </dl>
+                <dl class="paper_cont">
+                  <dt>10. 후견인</dt>
+                  <dd>
+                    <div class="paper_inn">
+                      <div class="list_p"><em>가. </em>
+                        <p>위 <span class="underline">김유민</span>의 후견인으로 <span class="underline">김성훈</span>으로 하고 <span class="underline">작은 아버지에게 어떠한 권한을 줍니다.</span></p>
+                      </div>
+                      <div class="list_p"><em>나. </em>
+                        <p>후견인은 위 재산을 관리함에 있어서 선량한 관리자의 주의의무를 다하여야 하고, 친족회의 동의를 얻었다 할지라도 투기적인 투자를 하여서는 아니된다.</p>
+                      </div>
+                      <div class="list_p"><em>다. </em>
+                        <p>후견인의 고의 또는 과실로 인하여 피후견인이 손해를 입은 경우에는 그 손해를 배상하여야 한다.</p>
+                      </div>
+                      <div class="list_p"><em>라. </em>
+                        <p>후견인의 임무에 관하여는 민법의 규정에 의한다.</p>
+                      </div>
+                    </div>
+                  </dd>
+                </dl>
+                <dl class="paper_cont">
+                  <dt>11. 기타 부탁할 일</dt>
+                  <dd>
+                    <div class="paper_inn">
+                      <div class="list_p"><em>가. </em>
+                        <p>유언자의 부탁할 일의 집행자는 <span class="underline">김혜정</span>으로 한다.</p>
+                      </div>
+                      <div class="paper_inn">
+                        <div class="list_p"><em>나. 내용:</em></div>
+                        <span>부탁의 내용입니다. 부탁의 내용입니다. 부탁의 내용입니다. 부탁의 내용입니다. 부탁의 내용입니다. 부탁의 내용입니다. 부탁의 내용입니다. 부탁의 내용입니다. 부탁의 내용입니다. 부탁의 내용입니다. 부탁의 내용입니다. 부탁의 내용입니다.</span>
+                      </div>
+                    </div>
+                  </dd>
+                </dl>
+                <dl class="paper_cont">
+                  <dt>12. 남기는 글</dt>
+                  <dd>
+                    <div class="paper_inn">
+                      <p>저는 그동안 이렇게 살아왔습니다. 저는 그동안 이렇게 살아왔습니다.저는 그동안 이렇게 살아왔습니다.저는 그동안 이렇게 살아왔습니다. 저는 그동안 이렇게 살아왔습니다. 저는 그동안 이렇게 살아왔습니다.저는 그동안 이렇게 살아왔습니다.저는 그동안 이렇게 살아왔습니다.</p>
+                    </div>
+                  </dd>
+                </dl>
+                <dl class="paper_cont">
+                  <dt>13. 유언 장소</dt>
+                  <dd>
+                    <div class="paper_inn">
+                      <p>경기도 성남시 분당구 판교역로 235, 3001호</p>
+                    </div>
+                  </dd>
+                </dl>
+                <dl class="paper_cont">
+                  <dt>14. 유언 집행인</dt>
+                  <dd>
+                    <div class="paper_inn">
+                      <p>변호사 - 김성연 (abc@gmail.com / 010-2349-1097)</p>
+                    </div>
+                  </dd>
+                </dl>
+              </div>
+              <!--// page03 -->
+            </div>
+            <div class="paper_paging">
+              <a href="#" class="btn_prev">이전</a>
+              <p>1 / 3</p>
+              <a href="#" class="btn_next">다음</a>
+            </div>
+          </div>
+
+          <div class="btn_wrap _right">
+            <a href="#" class="btn btn_round">수정</a>
+            <a href="#" onclick="layerOpen('will_delete_pop');return false;" class="btn btn_round btn_gray">삭제</a>
+            <a href="#" class="btn btn_round btn_point">목록</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 내 유언장 이메일 발송하기 -->
+      <div class="layer_body mypage_layer" id="email_pop" aria-hidden="true" role="dialog">
+        <div class="layer_wrap will_layer">
+          <div class="layer_box">
+            <div class="layer_top">
+              <a href="#" onclick="layerClose('email_pop');return false;" class="btn_close"><span class="a11y">close</span></a>
+            </div>
+
+            <p class="my_head">내 유언장 이메일 발송하기</p>
+            <div class="my_desc will_email">
+              <div class="form_box">
+                <dl class="form_field">
+                  <dt>이 유언장이 공유된 이메일 주소</dt>
+                  <dd class="mail_list">
+                    <p><span>01.</span>abc1234@gmail.com</p>
+                    <p><span>02.</span>abc1234defg5678@gmail.com</p>
+                    <p><span>03.</span>abc1234@gmail.com</p>
+                    <p><span>04.</span>abc12345678@gmail.com</p>
+                    <p><span>05.</span>abc1234@gmail.com</p>
+                  </dd>
+                </dl>
+              </div>
+              <div class="form_box">
+                <dl class="form_field">
+                  <dt>유언 수신인 <span>*최대 10명까지만 이메일을 발송 가능합니다.</span></dt>
+                  <dd>
+                    <input type="text" value="" />
+                    <select>
+                      <option>직접입력</option>
+                      <option>naver.com</option>
+                    </select>
+                    <a href="#" class="btn_add"><span class="a11y">수신인 필드 추가</span></a>
+                  </dd>
+                  <dd>
+                    <input type="text" value="" />
+                    <select>
+                      <option>직접입력</option>
+                      <option>naver.com</option>
+                    </select>
+                    <a href="#" class="btn_del"><span class="a11y">필드 삭제</span></a>
+                  </dd>
+                </dl>
+              </div>
+            </div>
+            <div class="btnwrap">
+              <a href="#" onclick="layerClose('email_pop');return false;" class="btn btn_round btn_sending">발송하기</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--// 내 유언장 이메일 발송하기 -->
+      <!-- 이메일 발송 완료 -->
+      <div class="layer_body mypage_layer" id="email_ok" aria-hidden="true" role="dialog">
+        <div class="layer_wrap will_layer">
+          <div class="layer_box">
+            <div class="layer_top">
+              <a href="#" onclick="layerClose('email_ok');return false;" class="btn_close"><span class="a11y">close</span></a>
+            </div>
+
+            <p class="my_head">이메일 발송 완료</p>
+            <div class="my_desc">
+              이메일 발송이 완료되었습니다.
+            </div>
+            <div class="btnwrap">
+              <a href="#" onclick="layerClose('email_ok');return false;" class="btn_submit">확인</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--// 이메일 발송 완료 -->
+
+
+      <!-- 공증신청하기 -->
+      <div class="layer_body mypage_layer" id="will_apply_pop" aria-hidden="true" role="dialog">
+        <div class="layer_wrap will_layer">
+          <div class="layer_box">
+            <div class="layer_top">
+              <a href="#" onclick="layerClose('will_apply_pop');return false;" class="btn_close"><span class="a11y">close</span></a>
+            </div>
+
+            <p class="my_head">공증 신청하기</p>
+            <div class="my_desc">
+              작성한 유언장의 공증을 신청하시겠습니까?
+            </div>
+            <div class="btnwrap">
+              <a href="#" onclick="layerClose('will_apply_pop');return false;" class="btn_cancel">취소</a>
+              <a href="#" onclick="layerClose('will_apply_pop');return false;" class="btn_submit">확인</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--// 공증신청하기 -->
+      <!-- 공증 신청 완료 -->
+      <div class="layer_body mypage_layer" id="will_apply_ok" aria-hidden="true" role="dialog">
+        <div class="layer_wrap will_layer">
+          <div class="layer_box">
+            <div class="layer_top">
+              <a href="#" onclick="layerClose('will_apply_ok');return false;" class="btn_close"><span class="a11y">close</span></a>
+            </div>
+
+            <p class="my_head">공증 신청 완료</p>
+            <div class="my_desc">
+              공증 신청이 완료되었습니다.<br>
+              영업일 기준 48시간 이내 담당자가 입력하신 전화번호로<br>
+              연락드리겠습니다.
+            </div>
+            <div class="btnwrap">
+              <a href="#" onclick="layerClose('will_apply_ok');return false;" class="btn_submit">확인</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--// 공증 신청 완료 -->
+      <!-- 공증 신청 취소하기 -->
+      <div class="layer_body mypage_layer" id="will_cancel_pop" aria-hidden="true" role="dialog">
+        <div class="layer_wrap will_layer">
+          <div class="layer_box">
+            <div class="layer_top">
+              <a href="#" onclick="layerClose('will_cancel_pop');return false;" class="btn_close"><span class="a11y">close</span></a>
+            </div>
+
+            <p class="my_head">공증 신청 취소하기</p>
+            <div class="my_desc">
+              신청하신 공증을 취소하겠습니까?
+            </div>
+            <div class="btnwrap">
+              <a href="#" onclick="layerClose('will_cancel_pop');return false;" class="btn_cancel">취소</a>
+              <a href="#" onclick="layerClose('will_cancel_pop');return false;" class="btn_submit">확인</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--// 공증 신청 취소하기 -->
+      <!-- 공증 취소완료 -->
+      <div class="layer_body mypage_layer" id="will_cancel_ok" aria-hidden="true" role="dialog">
+        <div class="layer_wrap will_layer">
+          <div class="layer_box">
+            <div class="layer_top">
+              <a href="#" onclick="layerClose('will_cancel_ok');return false;" class="btn_close"><span class="a11y">close</span></a>
+            </div>
+
+            <p class="my_head">취소완료</p>
+            <div class="my_desc">
+              공증 신청이 취소되었습니다.
+            </div>
+            <div class="btnwrap">
+              <a href="#" onclick="layerClose('will_cancel_ok');return false;" class="btn_submit">확인</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--// 공증 취소완료 -->
+
+
+      <!-- 삭제하기 -->
+      <div class="layer_body mypage_layer" id="will_delete_pop" aria-hidden="true" role="dialog">
+        <div class="layer_wrap will_layer">
+          <div class="layer_box">
+            <div class="layer_top">
+              <a href="#" onclick="layerClose('will_delete_pop');return false;" class="btn_close"><span class="a11y">close</span></a>
+            </div>
+
+            <p class="my_head">삭제하기</p>
+            <div class="my_desc">
+              작성한 유언장을 삭제하시겠습니까?
+            </div>
+            <div class="btnwrap">
+              <a href="#" onclick="layerClose('will_delete_pop');return false;" class="btn_cancel">취소</a>
+              <a href="#" onclick="layerClose('will_delete_pop');return false;" class="btn_submit">확인</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--// 삭제하기 -->
+      <!-- 삭제완료 -->
+      <div class="layer_body mypage_layer" id="will_delete_ok" aria-hidden="true" role="dialog">
+        <div class="layer_wrap will_layer">
+          <div class="layer_box">
+            <div class="layer_top">
+              <a href="#" onclick="layerClose('will_delete_ok');return false;" class="btn_close"><span class="a11y">close</span></a>
+            </div>
+
+            <p class="my_head">삭제완료</p>
+            <div class="my_desc">
+              유언장을 삭제했습니다.
+            </div>
+            <div class="btnwrap">
+              <a href="#" onclick="layerClose('will_delete_ok');return false;" class="btn_submit">확인</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--// 삭제완료 -->
+
+    </div>
+    @@include('../inc/footer.inc',{
+      "webroot":".."
+    })
+  </div>
+</body>

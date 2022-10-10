@@ -314,6 +314,7 @@
   @include mixins.mobile() {
     .head_title {
       font-size: 0;
+      color: #ffffff;
       select {
         font-size: 13px;
       }

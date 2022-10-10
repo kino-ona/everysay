@@ -989,7 +989,7 @@
 
 	.btn_submit {
 		display: inline-flex;
-		width: 170px;
+		width: 150px;
 		height: 50px;
 		align-items: center;
 		justify-content: center;
@@ -1002,7 +1002,7 @@
 
 	.btn_cancel {
 		display: inline-flex;
-		width: 170px;
+		width: 150px;
 		height: 50px;
 		align-items: center;
 		justify-content: center;
@@ -1012,6 +1012,122 @@
 		font-size: 20px;
 		font-weight: 500;
 	}
+
+	.will_layer {
+		max-width: 800px;
+		.will_email {
+			max-height: 360px;
+			text-align: left;
+			overflow-y: auto;
+			.form_box {
+				margin-top: 0;
+			}
+			dl {
+				margin-bottom: 25px;
+			}
+			dt {
+				margin-bottom: 20px;
+				span {
+					margin-left:10px;
+					font-size: 15px;
+					color:#666666;
+				}
+			}
+			dd {
+				margin-top: 10px;
+				input {
+					width: calc(100% - 350px);
+				}
+				select {
+					width: 250px;
+				}
+			}
+			.mail_list {
+				display: block;
+				&:after {
+					content: '';
+					display: block;
+					clear: both;
+				}
+				p {
+					display: inline-block;
+					// width: calc((100% / 3) - 10px);
+					padding-right: 15px;
+					margin-bottom: 15px;
+					font-size: 16px;
+					text-align: left;
+					&:nth-child(3n) {
+						padding-right: 0;
+					}
+					span {
+						color:#888888;
+					}
+				}
+			}
+		}
+
+		.btn_add {
+			display: block;
+			width: 30px;
+			height: 30px;
+			background: {
+				image: url('../images/icons/btn_fieldadd.png');
+				repeat: no-repeat;
+				size: cover;
+			};
+		}
+		.btn_del {
+			display: block;
+			width: 30px;
+			height: 30px;
+			background: {
+				image: url('../images/icons/btn_fieldremove.png');
+				repeat: no-repeat;
+				size: cover;
+			};
+		}
+		.btn_sending {
+			width: 150px;
+		}
+		@include mixins.mobile() {
+			.btnwrap {
+				margin-top: 30px;
+				.btn_cancel, .btn_submit {
+					width: auto;
+					min-width: 80px;
+					height:35px;
+					font-size: 12px;
+				}
+			}
+		}
+		.will_email {
+			dt {
+				span {
+					margin-left: 0;
+					font-size: 10px;
+				}
+			}
+			dd {
+				input {
+					width: calc(100% - 190px);
+				}
+				select {
+					width: 100px;
+				}
+			}
+			.mail_list {
+				p {
+					font-size: 13px;
+				}
+			}
+			.btn_add, .btn_del {
+				width: 20px;
+				height: 20px;
+			}
+		}
+
+	}
+
 	@include mixins.mobile() {
 		.layer_wrap {
 			max-width: calc(100% - 30px);
@@ -1019,6 +1135,7 @@
 			.layer_box {
 				padding: 25px;
 				width: calc(100% - 50px);
+				border-radius: 20px;
 			}
 		}
 		.my_head {
@@ -1154,6 +1271,123 @@
 					align-items: center;
 					margin-bottom: 0;
 					font-size: 10px;
+				}
+			}
+		}
+	}
+}
+
+.mypage_wrap {
+	.will_view {
+		max-width:100%;
+		.cont_head {
+			align-items: flex-end;
+			justify-content: space-between;
+			p {
+				font-size: 18px;
+			}
+		}
+		.view_info {
+			.view_num {
+				font-size: 30px;
+				font-weight: 500;
+				color:#888888;
+			}
+		}
+		.view_txt {
+			margin-top: 15px;
+		}
+		.view_detail {
+			display: flex;
+			margin-top: 15px;
+			p {
+				margin-left: 30px;
+				&:first-child {
+					margin-left: 0;
+				}
+			}
+		}
+		.view_btn {
+			padding-top:10px;
+			.btn {
+				width: 100px;
+				height: 40px;
+				padding: 0;
+				font-size: 18px;
+			}
+			.btn_cancel {
+				background-color: #929292;
+			}
+			.btn_confirm {
+				background-color: #c7613e;
+			}
+			.btn_point {
+				background-color: #000000;
+			}
+		}
+		.btn_wrap {
+			.btn {
+				min-width:80px;
+			}
+		}
+
+		@include mixins.mobile() {
+			.cont_head {
+				margin-top: 0;
+				flex-direction: column;
+				align-items: flex-start;
+				justify-content: flex-start;
+				p {
+					font-size: 14px;
+				}
+			}
+			.view_info {
+				.view_num {
+					font-size: 20px;
+				}
+			}
+			.view_detail {
+				display: block;
+				margin-top: 5px;
+				p {
+					margin-left: 0;
+					margin-top: 5px;
+				}
+			}
+			.view_btn {
+				> div {
+					display: inline;
+				}
+				.btn {
+					width: 75px;
+					height: 35px;
+					margin-bottom: 4px;
+					font-size: 12px;
+				}
+			}
+		}
+	}
+	.will_view-cont {
+		position: relative;
+		padding: 60px 60px 80px;
+		background-color: #ffffff;
+		background-image: url('../images/icons/ico_watermark.png');
+		background-repeat: no-repeat;
+		background-position: center top 50%;
+		background-size: 220px;
+		.paper_wrap {
+			border: 1px solid #cccccc;
+		}
+		@include mixins.mobile() {
+			padding: 0 0 60px;
+			.paper_wrap {
+				border: 0;
+				.paper_cont {
+					dd {
+						p {
+							font-size: 12px;
+						}
+					}
 				}
 			}
 		}

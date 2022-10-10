@@ -903,72 +903,6 @@
 				background-size: 30%;
 				background-position: center center;
 			}
-			.paper_wrap {
-				width: calc(100% - 40px);
-				padding: 50px 20px 20px;
-				.paper_title {
-					padding-bottom: 35px;
-					font-size: 20px;
-				}
-				p {
-					font-size: 12px;
-					line-height: 1.4;
-					span {
-						font-size: inherit;
-					}
-				}
-				.paper_cont {
-					margin-top: 25px;
-					dt {
-						font-size: 12px;
-					}
-					dd {
-						padding-left: 0;
-					}
-				}
-				.paper_inn {
-					.list_p {
-						em {
-							font-size: 12px;
-						}
-					}
-					span {
-						padding-left: 10px;
-						font-size: 12px;
-					}
-				}
-				.paper_sign {
-					margin-top: 0;
-					.sign_area {
-						width: 100%;
-						p {
-							margin-bottom: 30px;
-						}
-					}
-					.paper_info {
-						flex-direction: column;
-						gap: 10px;
-						img {
-							height: 40px;
-						}
-						> div p {
-							padding-bottom: 9px;
-						}
-					}
-				}
-			}
-			.paper_paging {
-				p {
-					width: 50px;
-					font-size: 12px;
-					text-align: center;
-				}
-				[class^=btn] {
-					width: 60px;
-					height: 35px;
-					font-size: 12px;
-				}
-			}
 			.layer_bottom {
 				padding-top: 25px;
 				.btn {
@@ -1806,6 +1740,78 @@
 					background-size: 22px;
 				}
 			}
+		}
+	}
+}
+
+
+
+
+@include mixins.mobile() {
+	.paper_wrap {
+		width: calc(100% - 40px);
+		padding: 50px 20px 20px;
+		.paper_title {
+			padding-bottom: 35px;
+			font-size: 20px;
+		}
+		p {
+			font-size: 12px;
+			line-height: 1.4;
+			span {
+				font-size: inherit;
+			}
+		}
+		.paper_cont {
+			margin-top: 25px;
+			dt {
+				font-size: 12px;
+			}
+			dd {
+				padding-left: 0;
+			}
+		}
+		.paper_inn {
+			.list_p {
+				em {
+					font-size: 12px;
+				}
+			}
+			span {
+				padding-left: 10px;
+				font-size: 12px;
+			}
+		}
+		.paper_sign {
+			margin-top: 0;
+			.sign_area {
+				width: 100%;
+				p {
+					margin-bottom: 30px;
+				}
+			}
+			.paper_info {
+				flex-direction: column;
+				gap: 10px;
+				img {
+					height: 40px;
+				}
+				> div p {
+					padding-bottom: 9px;
+				}
+			}
+		}
+	}
+	.paper_paging {
+		p {
+			width: 50px;
+			font-size: 12px;
+			text-align: center;
+		}
+		[class^=btn] {
+			width: 60px;
+			height: 35px;
+			font-size: 12px;
 		}
 	}
 }

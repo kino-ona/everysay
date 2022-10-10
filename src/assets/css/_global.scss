@@ -234,6 +234,10 @@ textarea {
 	&.btn_default {
 		min-width: 170px;
 	}
+	&.btn_gray {
+		background-color: #929292;
+		color:#ffffff;
+	}
 }
 .btn_wrap {
 	display: flex;
