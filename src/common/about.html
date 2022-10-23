@@ -39,14 +39,14 @@
                   당신의 기록을 남겨놓으세요.</p>
               </div>
             </div>
-            <div class="items">
-              <div class="text _left">
+            <div class="items _left">
+              <p class="imgs"><img src="../assets/images/common/about_img02.jpg" alt="남기고 싶은 말들과 상속을 정리해 놓으면 남겨진 사람들 간의 분쟁을 미연에 방지할 수 있습니다."></p>
+              <div class="text">
                 <p>남기고 싶은 말들과 상속을<br>
                   정리해 놓으면<br>
                   남겨진 사람들 간의 분쟁을 미연에<br>
                   방지할 수 있습니다.</p>
               </div>
-              <p class="imgs"><img src="../assets/images/common/about_img02.jpg" alt="남기고 싶은 말들과 상속을 정리해 놓으면 남겨진 사람들 간의 분쟁을 미연에 방지할 수 있습니다."></p>
             </div>
             <div class="items">
               <p class="imgs"><img src="../assets/images/common/about_img03.jpg" alt="삶을 되돌아 보며 하나하나 당신의 모든 것을 확인해보세요."></p>
@@ -56,6 +56,59 @@
                   확인해보세요.</p>
               </div>
             </div>
+
+            <div class="items items_type">
+              <div class="text">
+                <strong>간편 유언장</strong>
+                <p>9단계의 질문에 맞춰<br>
+                  쉽게 작성하고<br>
+                  유언장을 체험해보세요.</p>
+                <a href="#" class="btn">작성하기</a>
+              </div>
+              <div class="items_swipe items_swipe01">
+                <div id="itemswipe01" class="itemswipe swiper-container">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <p class="swipe_banner" style="background-image: url('../assets/images/common/about_slide01_01.jpg');"></p>
+                    </div>
+                    <div class="swiper-slide">
+                      <p class="swipe_banner" style="background-image: url('../assets/images/common/about_slide01_01.jpg');"></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+
+            <div class="items items_type">
+              <div class="text">
+                <strong>프리미엄 유언장</strong>
+                <p>유언을 집행할 수 있는<br>
+                  상세한 유언장을<br>
+                  만들어 보세요.</p>
+                <a href="#" class="btn">작성하기</a>
+              </div>
+              <div class="items_swipe items_swipe02">
+                <div id="itemswipe02" class="itemswipe swiper-container">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <p class="swipe_banner" style="background-image: url('../assets/images/common/about_slide02_01.jpg');"></p>
+                    </div>
+                    <div class="swiper-slide">
+                      <p class="swipe_banner" style="background-image: url('../assets/images/common/about_slide02_01.jpg');"></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+
+            <div class="item_desc">
+              <p>※ 법적 효력</p>
+              <span>
+                모두의 유언장을 통해 작성된 유언장 자체로는 법적 효력이 발생하지 않습니다.<br>
+                나만의 유언장을 만들고 ‘공증 신청' 선택을 통해 공증 받은 후 법적 효력을 가질 수 있습니다.</span>
+            </div>
           </div>
         </div>
       </div>
@@ -63,5 +116,41 @@
     @@include('../inc/footer.inc',{
       "webroot":".."
     })
+    <script>
+      var itemswipe01 = new Swiper('#itemswipe01', {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        paginationClickable: true,
+        keyboard: true,
+        speed: 800,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        loop: true,
+        pagination: {
+          el: '.items_swipe01 .swiper-pagination',
+          type: 'bullets',
+          clickable: true
+        },
+      });
+      var itemswipe02 = new Swiper('#itemswipe02', {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        paginationClickable: true,
+        keyboard: true,
+        speed: 800,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        loop: true,
+        pagination: {
+          el: '.items_swipe02 .swiper-pagination',
+          type: 'bullets',
+          clickable: true
+        },
+      });
+    </script>
   </div>
 </body>
