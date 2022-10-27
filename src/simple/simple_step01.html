@@ -93,8 +93,17 @@
         </div>
       </div>
     </div>
+
+    <div class="write_intro simple_intro">
+      <div onclick="fadeOut()">간편 유언장 시작하기</div>
+    </div>
     @@include('../inc/footer.inc',{
       "webroot":".."
     })
   </div>
+  <script>
+    function fadeOut() {
+      $('.write_intro').fadeOut();
+    }
+  </script>
 </body>
