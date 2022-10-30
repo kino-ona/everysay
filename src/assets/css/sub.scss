@@ -190,18 +190,18 @@
 			width: 165px;
 			li {
 				margin-bottom: 10px;
-				&:hover,
+				// &:hover,
 				&.active {
 					a {
 						border: 1px solid #888888;
 						color: #016241;
 					}
 				}
-				&.checking {
-					a {
-						color:#000000;
-					}
-				}
+				// &.checking {
+				// 	a {
+				// 		color:#000000;
+				// 	}
+				// }
 			}
 
 			a {

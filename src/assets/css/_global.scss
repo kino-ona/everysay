@@ -55,7 +55,7 @@ html, body {
 	-webkit-text-size-adjust: 100%;
 	font-family: 'NotoSans','Malgun Gothic',Dotum,'돋움',AppleGothicNeoSD,'Apple SD 산돌고딕 Neo','굴림',arial,sans-serif;
 	-ms-word-wrap:break-word;word-wrap:break-word;
-	font-size:16px;
+	font-size:16px; font-weight: 400;
 }
 ol, ul {list-style: none;}
 address,em {font-style: normal}
@@ -100,37 +100,37 @@ input::-ms-clear {
 	display: none;
 }
 input, textarea {
-	font-weight: 300;
+	font-weight: 400;
 	::-webkit-input-placeholder {
 		font-size:16px;
 		color: #999999;
-		font-weight: 300;
+		font-weight: 400;
 	}
 	::-moz-placeholder {
 		font-size:16px;
 		color: #999999;
-		font-weight: 300;
+		font-weight: 400;
 	}
 	::-moz-placeholder {
 		font-size:16px;
 		color: #999999;
-		font-weight: 300;
+		font-weight: 400;
 	}
 }
 ::-webkit-input-placeholder {
 	font-size:16px;
 	color: #999999;
-	font-weight: 300;
+	font-weight: 400;
 }
 ::-moz-placeholder {
 	font-size:16px;
 	color: #999999;
-	font-weight: 300;
+	font-weight: 400;
 }
 ::-moz-placeholder {
 	font-size:16px;
 	color: #999999;
-	font-weight: 300;
+	font-weight: 400;
 }
 .noscroll {
 	overflow: hidden!important;
@@ -704,6 +704,7 @@ textarea {
 					width: 47px;
 					background-image: url('../images/icons/ico_check2_off.png');
 					background-size: 47px;
+					background-color: #fafafa;
 				}
 				&:checked{
 					&:before {
@@ -752,6 +753,7 @@ textarea {
 					width: 22px;
 					background-image: url('../images/icons/ico_check3_off.jpg');
 					background-size: 22px;
+					background-color: #fafafa;
 				}
 				&:checked{
 					&:before {
@@ -780,12 +782,12 @@ textarea {
 					background-size: 30px;
 					border-radius: 50%;
 					overflow: hidden;
+					background-color: #fafafa;
 				}
 				&:checked{
 					&:before {
 						background-image: url('../images/icons/ico_radio_on.png');
 						background-size: 30px;
-						background-color: #ffffff;
 					}
 					+ span {
 						font-size: 16px;
@@ -816,7 +818,6 @@ textarea {
 					&:before {
 						background-image: url('../images/icons/ico_radio_on.png');
 						background-size: 30px;
-						background-color: #ffffff;
 					}
 					+ span {
 						font-size: 18px;
