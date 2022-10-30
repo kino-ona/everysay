@@ -4,7 +4,88 @@
 .displaynone {
 	display: none !important;
 }
+.help_box {
+	position: absolute;
+	right:30px;
+	top: 15%;
+	.btn_help {
+		display: block;
+		margin-left: auto;
+		width:180px;
+		height: 50px;
+		background: {
+			image: url('../images/common/btn_help_off.png');
+			size: cover;
+			position: center center;
+			repeat: no-repeat;
+		}
+		&._on {
+			background: {
+				image: url('../images/common/btn_help_on.png');
+			}
+		}
+	}
+	.bubble_box {
+		display: none;
+		position: relative;
+		width: 298px;
+		margin-top: 10px;
+		padding-top: 13px;
+		.bubble_top {	
+			position: absolute;
+			top: 0;
+			right: 30px;
+			width: 16px;
+			height:10px;
+			background: {
+				image: url('../images/common/bubble_top.png');
+				size: cover;
+				position: center center;
+				repeat: no-repeat;
+			}
+		}
+		.bubble_inn {
+			margin-top: -5px;
+			padding: 20px 15px;
+			background-color: #ffffff;
+			border: 1px solid #989898;
+			border-radius: 20px;
+			p {
+				font-size: 15px;
+				font-weight: 300;
+				color:#555555;
+			}
+		}
+		&.show {
+			display: block;
+		}
+	}
 
+	@include mixins.mobile() {
+		position: relative;
+		right: 0;
+		top: 0;
+		margin-top: 10px;
+		.btn_help {
+			width: 100px;
+			height: 30px;
+		}
+		.bubble_box {
+			position: absolute;
+			top: 30px;
+			right: 0;
+			width: 240px;
+			z-index: 10;
+			.bubble_inn {
+				padding: 15px;
+				border-radius: 15px;
+				p {
+					font-size: 12px;
+				}
+			}
+		}
+	}
+}
 .write_intro {
 	position: fixed;
 	top: 0;
@@ -23,7 +104,8 @@
 		display: block;
 		width: 100%;
 		height: 100%;
-		background-color: rgba(0,0,0, 0.7);
+		// background-color: rgba(0,0,0, 0.7);
+		background-color:#4b4b4b;
 	}
 	div {
 		position: relative;
@@ -33,30 +115,32 @@
 		justify-content: center;
 		width: 100%;
 		height: 100%;
-		max-width: 720px;
-		max-height: 420px;
+		max-width: 620px;
+		max-height: 400px;
 		cursor: pointer;
 		background: {
-			image: url('../images/common/intro01.png');
+			image: url('../images/common/intro01.gif');
 			size:cover;
 			position: center center;
 			repeat: no-repeat;
 		}
 		border-radius: 45px;
-		font-size: 40px;
-		color:#ffffff;
+		font-size: 0;
+		color:transparent;
 	}
 	&.simple_intro {
 		div {
 			background: {
-				image: url('../images/common/intro01.png');
+				// image: url('../images/common/intro01.png');
+				image: url('../images/common/intro01.gif');
 			}
 		}
 	}
 	&.premium_intro {
 		div {
 			background: {
-				image: url('../images/common/intro02.png');
+				// image: url('../images/common/intro02.png');
+				image: url('../images/common/intro02.gif');
 			}
 		}
 	}
@@ -2058,6 +2142,11 @@
 					}
 					.swipe_banner {
 						height: 100%;
+						background: {
+							position: center center;
+							size: cover;
+							repeat: no-repeat;
+						}
 					}
 					.swiper-pagination {
 						bottom: 0;
@@ -2097,6 +2186,7 @@
 		.about_wrap {
 			.quick_bnr {
 				flex-direction: column;
+				margin-bottom: 40px;
 				.bnr {
 					flex:auto;
 					height: 85px;
@@ -2174,7 +2264,7 @@
 					}
 					.items_swipe {
 						width: 100%;
-						height: 40vw;
+						height: 50vw;
 						margin-top: 15px;
 						.itemswipe {
 							height: 100%;

@@ -4,7 +4,7 @@
 
 /* font family */
 @font-face {
-	font-family:'NS DL';
+	font-family:'NotoSans';
 	src:url('../fonts/NotoSans-DemiLight.woff') format('woff'),
 		 url('../fonts/NotoSansKR-DemiLight.woff2') format('woff2'),
 		 url('../fonts/NotoSans-DemiLight.otf') format('opentype');
@@ -12,7 +12,7 @@
 	font-style:normal;
 }
 @font-face {
-	font-family:'NS RG';
+	font-family:'NotoSans';
 	src:url('../fonts/NotoSans-Regular.woff') format('woff'),
 		 url('../fonts/NotoSansKR-Regular.woff2') format('woff2'),
 		 url('../fonts/NotoSans-Regular.otf') format('opentype');
@@ -20,7 +20,7 @@
 	font-style:normal;
 }
 @font-face {
-	font-family:'NS MD';
+	font-family:'NotoSans';
 	src:url('../fonts/NotoSans-Medium.woff') format('woff'),
 		 url('../fonts/NotoSansKR-Medium.woff2') format('woff2'),
 		 url('../fonts/NotoSans-Medium.otf') format('opentype');
@@ -28,7 +28,7 @@
 	font-style:normal;
 }
 @font-face {
-	font-family:'NS BD';
+	font-family:'NotoSans';
 	src:url('../fonts/NotoSans-Bold.woff') format('woff'),
 		 url('../fonts/NotoSansKR-Bold.woff2') format('woff2'),
 		 url('../fonts/NotoSans-Bold.otf') format('opentype');
@@ -53,7 +53,7 @@ img {max-width:100%;}
 html, body {
 	-webkit-text-size-adjust:none;
 	-webkit-text-size-adjust: 100%;
-	font-family: 'NS DL','Malgun Gothic',Dotum,'돋움',AppleGothicNeoSD,'Apple SD 산돌고딕 Neo','굴림',arial,sans-serif;
+	font-family: 'NotoSans','Malgun Gothic',Dotum,'돋움',AppleGothicNeoSD,'Apple SD 산돌고딕 Neo','굴림',arial,sans-serif;
 	-ms-word-wrap:break-word;word-wrap:break-word;
 	font-size:16px;
 }
@@ -79,7 +79,7 @@ textarea {
 	font-size:16px;
 	resize: none;
 	color: #000;
-	font-family:'NS MD','Malgun Gothic',Dotum,'돋움',AppleGothicNeoSD,'Apple SD 산돌고딕 Neo','굴림',arial,sans-serif;
+	font-family:'NotoSans','Malgun Gothic',Dotum,'돋움',AppleGothicNeoSD,'Apple SD 산돌고딕 Neo','굴림',arial,sans-serif;
 	&:not([readonly]):not([disabled]):not([aria-invalid="true"]) {
 		&:focus {
 			border-color:#2CBBB6;
@@ -98,6 +98,24 @@ textarea {
 }
 input::-ms-clear {
 	display: none;
+}
+input, textarea {
+	font-weight: 300;
+	::-webkit-input-placeholder {
+		font-size:16px;
+		color: #999999;
+		font-weight: 300;
+	}
+	::-moz-placeholder {
+		font-size:16px;
+		color: #999999;
+		font-weight: 300;
+	}
+	::-moz-placeholder {
+		font-size:16px;
+		color: #999999;
+		font-weight: 300;
+	}
 }
 ::-webkit-input-placeholder {
 	font-size:16px;
@@ -178,6 +196,8 @@ select {
 	border: 1px solid #b9b9ba;
 	border-radius: 5px;
 	background-color: #ffffff;
+	font-size:16px; 
+	line-height: 1.4;
 	background: {
 		image: url(../images/common/btn_select.png);
 		repeat:no-repeat;
@@ -358,7 +378,31 @@ textarea {
 		transform: (translate3d(0, 0, 0));
 	}
 }
-
+.gototop {
+	display: none;
+	position: fixed;
+	bottom: 10%;
+	right: 30px;
+	width: 72px;
+	height: 72px;
+	background: {
+		image: url('../images/icons/ico_top.png');
+		size: cover;
+		position: center center;
+		repeat: no-repeat;
+	}
+	z-index: 10;
+	a {display: block;height: 100%;}
+	@include mixins.mobile() {
+		width: 36px;
+		height: 36px;
+		right: 15px;
+		bottom: 5%;
+	}
+	&.show {
+		display: block;
+	}
+}
 // layout
 .inner {
 	max-width: 1200px;

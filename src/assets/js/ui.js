@@ -13,7 +13,14 @@ $(window).on('scroll',function() {
   }
 
   if(st < 100) {
-    $('.main_container').find('.section').removeClass('is-active')
+    $('.main_container').find('.section').removeClass('is-active');
+    if($('.gototop').length > 0) {
+      $('.gototop').removeClass('show');
+    }
+  } else {
+    if($('.gototop').length > 0) {
+      $('.gototop').addClass('show');
+    }
   }
 
   if($('.main_container').find('.section').length > 0) {
@@ -38,6 +45,12 @@ var checkVisible = function(elm, eval){
 	if (eval == "object visible") return ((y < (viewportHeight + scrolltop)) && (y > (scrolltop - elementHeight)));
 	if (eval == "above") return ((y < (viewportHeight + scrolltop)));
 }
+
+// gototop
+$(".gototop a[href='#top']").click(function() {
+  $("html, body").animate({ scrollTop: 0 }, "slow");
+  return false;
+});
 
 function headGnbMenu(){
 	$("#btn_mmenu").click(function(e) {
@@ -191,5 +204,23 @@ $(function() {
         .slideDown(200);
     }
   });
-	
+});
+
+//******
+// 도움말보기
+//******
+$(function() {
+  if($('.help_box').length > 0) {
+    $(".help_box").find('.btn_help').on("click", function() {
+      if ($(this).hasClass("_off")) {
+        $(this).removeClass("_off");
+        $(this).addClass("_on");
+        $(this).siblings(".bubble_box").show();
+      } else {
+        $(this).removeClass("_on");
+        $(this).addClass("_off");
+        $(this).siblings(".bubble_box").hide();
+      }
+    });
+  }
 });

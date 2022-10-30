@@ -22,7 +22,9 @@
   </div>
 </div>
 <!--// 로그아웃 -->
-
+<div class="gototop">
+  <a href="#top"><span class="a11y">go to top</span></a>
+</div>
 <footer class="footer">
   <div class="foo_top">
     <div class="inner">
