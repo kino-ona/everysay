@@ -424,7 +424,7 @@ textarea {
 		height: 100%;
 		background: {
 			image: url('../images/common/logo.png');
-			size: 185px;
+			size: 175px;
 			repeat: no-repeat;
 			position: 0 center;
 		}
@@ -946,6 +946,12 @@ textarea {
 		display: none;
 		padding: 25px 50px;
 		background-color: #ebebeb;
+		font-size: 17px;
+		line-height: 1.7;
+		p {
+			font-size: inherit;
+			line-height: inherit;
+		}
 		&._show {
 			display: block;
 		}

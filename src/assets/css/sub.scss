@@ -302,6 +302,37 @@
         font-size: 15px;
         color:#666666;
       }
+			&.dt_flex {
+				display: flex;
+				align-items: center;
+				margin-bottom: 10px;
+				div {
+					margin-left: 15px;
+					.chkwrap.radio_chk {
+						label {
+							font-size: 16px;
+							input[type=radio]:before {
+								top: -17px;
+								background-size: 25px;
+							}
+						}
+						@include mixins.mobile() {
+							min-height: auto;
+							label {
+								font-size: 13px;
+								input[type=radio]:before {
+									top: -5px;
+									background-size: 20px;
+								}
+							}
+						}	
+					}
+				}
+
+				@include mixins.mobile() {
+					margin-bottom: 0;
+				}
+			}
     }
     dd {
       position: relative;
