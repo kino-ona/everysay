@@ -1833,6 +1833,7 @@
 			}
 		}
 
+		&.simple_wrap, 
 		&.premium_wrap {
 			.content {
 				.cont_head {
@@ -1853,9 +1854,6 @@
 							.btn_round {
 								width: 50px;
 							}
-						}
-						&:last-child {
-							// text-align: right;
 						}
 					}
 					.btn_round {
