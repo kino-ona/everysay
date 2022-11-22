@@ -2049,12 +2049,13 @@
 					margin-left: 60px;
 					color:#ffffff;
 					font-size: 22px;
-					background: {
-						image: url('../images/icons/ico_link.png');
-						size: auto 18px;
-						repeat: no-repeat;
-						position: right bottom 5px;
-					}
+					font-weight: 600;
+					// background: {
+					// 	image: url('../images/icons/ico_link.png');
+					// 	size: auto 18px;
+					// 	repeat: no-repeat;
+					// 	position: right bottom 5px;
+					// }
 				}
 			}
 			.bnr_01 {
@@ -2071,7 +2072,8 @@
 			margin: 0 auto 30px;
 			max-width: 505px;
 			padding-left: 60px;
-			padding-bottom:15px;
+			padding-top: 130px;
+			// padding-bottom:15px;
 			font-size: 38px;
 			font-weight: 500;
 			&:before {
@@ -2086,11 +2088,13 @@
 				background-color: #016241;
 			}
 			i {
+				position: absolute;
+				right: 15%;
+				top: 0;
 				display: inline-block;
 				width: 80px;
 				height: 130px;
-				margin-left: 10px;
-				margin-bottom: 5px;
+				// margin-left: 10px;
 				background: {
 					image: url('../images/icons/ico_pencil.png');
 					size: cover;
@@ -2140,6 +2144,9 @@
 					font-weight: 500;
 					letter-spacing: -0.05em;
 					line-height: 1.3;
+					span {
+						color:#016241;
+					}
 				}
 			}
 			.items_type {
