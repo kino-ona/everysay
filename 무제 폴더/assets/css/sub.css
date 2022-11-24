@@ -2280,17 +2280,17 @@ button.swiper-pagination-bullet {
 		margin-top: 10px;
 		font-size: 10px;
 	}
-	.sub_container.premium_wrap .content .cont_head {
+	.sub_container.simple_wrap .content .cont_head, .sub_container.premium_wrap .content .cont_head {
 		margin-top: 30px;
 		margin-bottom: 15px;
 	}
-	.sub_container.premium_wrap .content.testament_check .cont_head {
+	.sub_container.simple_wrap .content.testament_check .cont_head, .sub_container.premium_wrap .content.testament_check .cont_head {
 		margin-bottom: 30px;
 	}
-	.sub_container.premium_wrap .btn_wrap._half > div:first-child .btn_round {
+	.sub_container.simple_wrap .btn_wrap._half > div:first-child .btn_round, .sub_container.premium_wrap .btn_wrap._half > div:first-child .btn_round {
 		width: 50px;
 	}
-	.sub_container.premium_wrap .btn_wrap._half .btn_round {
+	.sub_container.simple_wrap .btn_wrap._half .btn_round, .sub_container.premium_wrap .btn_wrap._half .btn_round {
 		min-width: 80px;
 	}
 	.form_box {
@@ -2451,10 +2451,7 @@ button.swiper-pagination-bullet {
 	margin-left: 60px;
 	color: #ffffff;
 	font-size: 22px;
-	background-image: url("../images/icons/ico_link.png");
-	background-size: auto 18px;
-	background-repeat: no-repeat;
-	background-position: right bottom 5px;
+	font-weight: 600;
 }
 .about_container .about_wrap .quick_bnr .bnr_01 {
 	background-image: url("../images/common/about_bnr01.jpg");
@@ -2469,7 +2466,7 @@ button.swiper-pagination-bullet {
 	margin: 0 auto 30px;
 	max-width: 505px;
 	padding-left: 60px;
-	padding-bottom: 15px;
+	padding-top: 130px;
 	font-size: 38px;
 	font-weight: 500;
 }
@@ -2485,11 +2482,12 @@ button.swiper-pagination-bullet {
 	background-color: #016241;
 }
 .about_container .about_wrap .about_head i {
+	position: absolute;
+	right: 15%;
+	top: 0;
 	display: inline-block;
 	width: 80px;
 	height: 130px;
-	margin-left: 10px;
-	margin-bottom: 5px;
 	background-image: url("../images/icons/ico_pencil.png");
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -2533,6 +2531,9 @@ button.swiper-pagination-bullet {
 	font-weight: 500;
 	letter-spacing: -0.05em;
 	line-height: 1.3;
+}
+.about_container .about_wrap .about_detail .text p span {
+	color: #016241;
 }
 .about_container .about_wrap .about_detail .items_type {
 	margin-top: 70px;
