@@ -56,15 +56,20 @@
     h2 {
       position: relative;
       display: block;
+      max-width: 250px;
+      margin: 0 auto;
+      padding-top: 70px;
       font-weight: 700;
       font-size: 50px;
       color: #ffffff;
       &:before {
         content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
         display: block;
         width: 109px;
         height: 70px;
-        margin: 0 auto 2px;
         background: {
           image: url('../images/icons/ico_visual.png');
           size: cover;
@@ -97,7 +102,12 @@
   @include mixins.desksm() {
     .contents {
       h2 {
+        padding-top: 60px;
         font-size: 33px;
+        &:before { 
+          background-size: 80%;
+          background-position: left top;
+        }
       }
       p {
         margin-top: 25px;
@@ -127,7 +137,7 @@
 // keyvisual
 
 .section {
-  padding: 100px 0;
+  padding: 50px 0;
   .sec_head {
     position: relative;
     margin-bottom: 30px;
@@ -287,7 +297,6 @@
       height: 80.8%;
       overflow: hidden;
     }
-    .swiper-wrapper {}
     .swipe_banner {
       height: 100%;
       background: {
@@ -302,21 +311,23 @@
   &.sec_qna {
     position: relative;
     max-width: 100%;
-    &:before {
-      content: '';
-      position: absolute;
-      left:0;
-      display: block;
-      width: 100%;
-      height: 100%;
-      margin-top: 380px;
-      background: {
-        image: url('../images/main/faq_bg.png');
-        size: cover;
-        repeat: no-repeat;
-        position: center top;
-      }
-    } 
+    padding-top: 0;
+    margin-top: -45px;
+    // &:before {
+    //   content: '';
+    //   position: absolute;
+    //   left:0;
+    //   display: block;
+    //   width: 100%;
+    //   height: 100%;
+    //   margin-top: 380px;
+    //   background: {
+    //     image: url('../images/main/faq_bg.png');
+    //     size: cover;
+    //     repeat: no-repeat;
+    //     position: center top;
+    //   }
+    // } 
     .swiper-pagination {
       bottom: 38px;
     }
@@ -346,11 +357,72 @@
     .swiper-pagination-bullet-active {
       background-color: #016241;
     }
+    .pdf_download {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 480px;
+      margin: 30px auto;
+      > p {
+        margin-right: 10px;
+        font-size: 20px;
+        line-height: 1.4;
+        vertical-align: middle;
+        span {
+          font-weight: 700;
+          line-height: 1.4;
+          color: #016241;
+        }
+      }
+      .btn_download {
+        display: block;
+        width: 89px;
+        height: 110px;
+        background: {
+          image: url('../images/common/pdf_download.png');
+          size: cover;
+          position: center center;
+        };
+      }
+
+      @include mixins.mobile() {
+        max-width: 280px;
+        > p {
+          font-size: 12px;
+        }
+        .btn_download {
+          width: 44px;
+          height: 55px;
+        }
+      }
+    }
+  }
+  &.sec_point {
+    position: relative;
+    z-index: 1;
   }
 
   &.sec_faq {
+    position: relative;
     max-width: 100%;
     padding-top: 0;
+    padding: 100px 0;
+    &:before {
+      content: '';
+      position: absolute;
+      top: -40%;
+      left:0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      padding-bottom: 20%;
+      background: {
+        image: url('../images/main/faq_bg.png');
+        size: cover;
+        repeat: no-repeat;
+        position: center top;
+      }
+    } 
   }
   .faqswipe {
     position: relative;
@@ -394,7 +466,10 @@
     .contents {
       h2 {
         &:before {
+          left: 50%;
+          @include mixins.translate(-50%, 0);
           background-size: 65px;
+          background-position: center top;
         }
       }
     }
@@ -509,17 +584,20 @@
     }
     &.sec_faq {
       position: relative;
+      padding-top: 30px;
       &:before {
         content: '';
         display: block;
         position: absolute;
+        top: inherit;
         bottom: 0;
         left: 0;
         width: 100%;
-        height: 150%;
+        height: 100%;
+        padding-bottom: 0;
         background: {
           image: url("../images/main/faq_bg.png");
-          size: cover;
+          size: contain;
           position: center bottom;
           repeat: no-repeat;
         }
