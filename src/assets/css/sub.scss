@@ -1950,8 +1950,100 @@
 	}
 }
 
+.insurance_more {
+	display: flex;
+	max-width:220px;
+	margin-left: auto;
+	margin-bottom: 80px;
+	flex-direction: column;
+	text-align: center;
+	p {
+		margin-bottom: 10px;
+	}
+	.btn_goinsur {
+		padding: 15px 15px;
+		border: 1px solid #777777;
+		border-radius: 45px;
+	}
+	@include mixins.mobile() {
+		margin-bottom: 40px;
+		p {
+			font-size: 14px;
+		}
+		.btn_goinsur {
+			padding: 10px 10px;
+			font-size: 13px;
+		}
+		
+	}
+}
+.insurance_layer {
+	.layer_wrap {
+		width: 100%;
+		max-width: 670px;
+	}
 
+	.layer_box {
+		padding: 55px 25px 50px;
+		border-radius: 25px;
+		text-align: center;
+	}
+	.layer_head {
+		padding-bottom: 25px;
+		font-weight: 500;
+		font-size: 22px;
+		border-bottom: 1px solid #000;
+	}
 
+	.layer_desc {
+		max-height: 400px;
+		overflow-y: auto;
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 1.4;
+	}
+	.insurance_list {
+		padding: 30px;
+		.items {
+			display: flex;
+			gap: 40px;
+			p {
+				flex: 1;
+			}
+			a {
+				display: block;
+				border: 1px solid #d9d9d9;
+				border-radius: 5px;
+				text-align: center;
+				overflow: hidden;
+				&.checked {
+					border: 2px solid #016241;
+				}
+			}
+			span {
+				display: block;
+				padding: 10px 0 30px;
+				text-transform: uppercase;
+			}
+		}
+	}
+	@include mixins.mobile() {
+		.layer_box {
+			padding: 25px 15px;
+		}
+		.insurance_list {
+			padding: 15px 0;
+			.items {
+				display: flex;
+				gap: 15px;
+				span {
+					padding-bottom: 15px;
+					font-size: 13px;
+				}
+			}
+		}
+	}
+}
 
 @include mixins.mobile() {
 	.paper_wrap {

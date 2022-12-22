@@ -57,7 +57,7 @@
               <dt>보험 회사</dt>
               <dd>
                 <input type="text" placeholder="보험 회사 이름을 입력하세요." />
-                <a href="#" class="btn btn_grey">보험사 선택</a>
+                <a href="#" onclick="layerOpen('insurance_pop');return false;" class="btn btn_grey">보험사 선택</a>
               </dd>
             </dl>
           </div>
@@ -93,6 +93,10 @@
           </div>
           <div class="form_btn">
             <a href="#" class="btn btn_add">추가 하기</a>
+          </div>
+          <div class="insurance_more">
+            <p>※ 나의 보험금 정보를 찾아보세요.</p>
+            <a href="https://cont.insure.or.kr/cont_web/intro.do" target="_blank" class="btn_goinsur">내보험찾아줌 서비스 바로가기 &gt;</a>
           </div>
 
           <div class="form_result">
@@ -160,6 +164,74 @@
           </div>
         </div>
       </div>
+
+      <!-- 보험사선택 -->
+      <div class="layer_body insurance_layer" id="insurance_pop" aria-hidden="true" role="dialog">
+        <div class="layer_wrap">
+          <div class="layer_box">
+            <div class="layer_top">
+              <a href="#" onclick="layerClose('insurance_pop');return false;" class="btn_close"><span class="a11y">close</span></a>
+            </div>
+
+            <p class="layer_head">보험사 선택</p>
+            <div class="layer_desc">
+              <div class="insurance_list">
+                <div class="items">
+                  <p><a href="#" class="checked"><img src="../assets/images/logo/ins_logo01.jpg" alt="삼성생명"></a><span>삼성생명</span></p>
+                  <p><a href="#"><img src="../assets/images/logo/ins_logo02.jpg" alt="한화생명"></a><span>한화생명</span></p>
+                  <p><a href="#"><img src="../assets/images/logo/ins_logo03.jpg" alt="db손해보험"></a><span>db손해보험</span></p>
+                </div>
+                <div class="items">
+                  <p><a href="#"><img src="../assets/images/logo/ins_logo04.jpg" alt="삼성화재"></a><span>삼성화재</span></p>
+                  <p><a href="#"><img src="../assets/images/logo/ins_logo05.jpg" alt="교보생명"></a><span>교보생명</span></p>
+                  <p><a href="#"><img src="../assets/images/logo/ins_logo06.jpg" alt="현대해상"></a><span>현대해상</span></p>
+                </div>
+                <div class="items">
+                  <p><a href="#"><img src="../assets/images/logo/ins_logo07.jpg" alt="kb손해보험"></a><span>kb손해보험</span></p>
+                  <p><a href="#"><img src="../assets/images/logo/ins_logo08.jpg" alt="메리츠화재"></a><span>메리츠화재</span></p>
+                  <p><a href="#"><img src="../assets/images/logo/ins_logo09.jpg" alt="농협생명"></a><span>농협생명</span></p>
+                </div>
+                <div class="items">
+                  <p><a href="#"><img src="../assets/images/logo/ins_logo10.jpg" alt="흥국화재해상"></a><span>흥국화재해상</span></p>
+                  <p><a href="#"><img src="../assets/images/logo/ins_logo11.jpg" alt="한화손해보험"></a><span>한화손해보험</span></p>
+                  <p><a href="#"><img src="../assets/images/logo/ins_logo12.jpg" alt="신한생명"></a><span>신한생명</span></p>
+                </div>
+                <div class="items">
+                  <p><a href="#"><img src="../assets/images/logo/ins_logo13.jpg" alt="동양생명"></a><span>동양생명</span></p>
+                  <p><a href="#"><img src="../assets/images/logo/ins_logo14.jpg" alt="농협손해보험"></a><span>농협손해보험</span></p>
+                  <p><a href="#"><img src="../assets/images/logo/ins_logo15.jpg" alt="metlife"></a><span>metlife</span></p>
+                </div>
+                <div class="items">
+                  <p><a href="#"><img src="../assets/images/logo/ins_logo16.jpg" alt="롯데손해보험"></a><span>롯데손해보험</span></p>
+                  <p><a href="#"><img src="../assets/images/logo/ins_logo17.jpg" alt="미래에셋"></a><span>미래에셋</span></p>
+                  <p><a href="#"><img src="../assets/images/logo/ins_logo18.jpg" alt="푸본현대생명"></a><span>푸본현대생명</span></p>
+                </div>
+                <div class="items">
+                  <p><a href="#"><img src="../assets/images/logo/ins_logo19.jpg" alt="kdb생명"></a><span>kdb생명</span></p>
+                  <p><a href="#"><img src="../assets/images/logo/ins_logo20.jpg" alt="AIA"></a><span>AIA</span></p>
+                  <p><a href="#"><img src="../assets/images/logo/ins_logo21.jpg" alt="라이나생명"></a><span>라이나생명</span></p>
+                </div>
+                <div class="items">
+                  <p><a href="#"><img src="../assets/images/logo/ins_logo22.jpg" alt="ABL"></a><span>ABL</span></p>
+                  <p><a href="#"><img src="../assets/images/logo/ins_logo23.jpg" alt="서울보증"></a><span>서울보증</span></p>
+                  <p><a href="#"><img src="../assets/images/logo/ins_logo24.jpg" alt="db생명"></a><span>db생명</span></p>
+                </div>
+                <div class="items">
+                  <p><a href="#"><img src="../assets/images/logo/ins_logo25.jpg" alt="kb생명보험"></a><span>kb생명보험</span></p>
+                  <p><a href="#"><img src="../assets/images/logo/ins_logo26.jpg" alt="푸르덴셜생명"></a><span>푸르덴셜생명</span></p>
+                  <p><a href="#"><img src="../assets/images/logo/ins_logo27.jpg" alt="아이비케이연금"></a><span>아이비케이연금</span></p>
+                </div>
+                <div class="items">
+                  <p><a href="#"><img src="../assets/images/logo/ins_logo28.jpg" alt="엠지손해"></a><span>엠지손해</span></p>
+                  <p><a href="#"><img src="../assets/images/logo/ins_logo29.jpg" alt="악사손해"></a><span>악사손해</span></p>
+                  <p></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--// 보험사선택 -->
     </div>
     @@include('../inc/footer.inc',{
       "webroot":".."
