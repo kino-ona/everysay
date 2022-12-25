@@ -799,6 +799,29 @@
 				margin-top: 0;
 			}
 		}
+		&.multi_type {
+			li {
+				display: flex;
+				flex: 1;
+				.chkwrap.type2 {
+					width: 30%;
+				}
+				.chkwrap.type3 {
+					margin-top: -2px;
+				}
+				div {
+					display: flex;
+				}
+			}
+
+			@include mixins.mobile() { 
+				li {
+					.chkwrap.type2 {
+						width: 40%;
+					}
+				}
+			}
+		}
 	}
 
 	@include mixins.mobile() {
