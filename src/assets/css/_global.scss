@@ -655,7 +655,7 @@ textarea {
 				height:46px;
 				border-radius: 100%;
 				background: {
-					color:#fafafa;
+					color:#ffffff;
 					image: url('../images/icons/ico_check_off.png');
 					repeat: no-repeat;
 					size:26px;
@@ -705,7 +705,7 @@ textarea {
 					width: 47px;
 					background-image: url('../images/icons/ico_check2_off.png');
 					background-size: 47px;
-					background-color: #fafafa;
+					background-color: #ffffff;
 				}
 				&:checked{
 					&:before {
@@ -750,11 +750,13 @@ textarea {
 					color:#000000;
 				}
 				&:before {
-					top: -16px;
+					top: -4px;
 					width: 22px;
+					height: 22px;
+					border-radius: 0;
 					background-image: url('../images/icons/ico_check3_off.jpg');
 					background-size: 22px;
-					background-color: #fafafa;
+					background-color: #ffffff;
 				}
 				&:checked{
 					&:before {
@@ -774,13 +776,17 @@ textarea {
 				input[type=checkbox], input[type=radio] {
 					margin-right: 6px;
 					&:before {
-						background-size: 15px;
-						background-position: center bottom 2px;
+						top: -2px;
+						width: 18px;
+						height: 18px;
+						background-size: 18px;
+						background-position: center bottom;
 					}
 					&:checked{
 						&:before {
-							background-size: 15px;
-							background-position: center bottom 2px;
+							top: -2px;
+							background-size: 18px;
+							background-position: center bottom;
 						}
 						& + span {
 							font-size: 14px;
@@ -799,8 +805,9 @@ textarea {
 					color:#000000;
 				}
 				&:before {
-					top: -16px;
+					top: -9px;
 					width: 30px;
+					height: 30px;
 					background-image: url('../images/icons/ico_radio_off.png');
 					background-size: 30px;
 					border-radius: 50%;
@@ -830,8 +837,9 @@ textarea {
 					color:#000000;
 				}
 				&:before {
-					top: -18px;
+					top: -9px;
 					width: 30px;
+					height: 30px;
 					background-image: url('../images/icons/ico_radio_off.png');
 					background-size: 30px;
 					border-radius: 50%;

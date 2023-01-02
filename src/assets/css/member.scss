@@ -122,6 +122,10 @@
       input[type=checkbox]{
         margin-right: 30px;
         &:before {
+					top:-8px;
+					left: -3px;
+					width: 30px;
+					height: 30px;
           background-size: 30px;
           &:checked::before {
             background-size: 30px;
@@ -142,6 +146,10 @@
 				input[type=checkbox] {
 					margin-right: 15px;
 					&:before {
+						top: -3px;
+						left: -3px;
+						width: 22px;
+						height: 22px;
 						background-size: 22px;
 						&:checked::before {
 							background-size: 22px;
@@ -852,14 +860,12 @@
 		.chkwrap.type3 {
 			label {
 				input[type=checkbox] {
-					&:before {
-						top: -9px;
-						width: 24px;
-					}
+					// &:before {
+					// 	top: -9px;
+					// 	width: 24px;
+					// }
 					& + span {
 						font-size: 13px;
-					}
-					&:checked {
 					}
 				}
 			}
@@ -902,18 +908,18 @@
 				margin-bottom: 10px;
 				font-size: 14px;
 			}
-			.chkwrap.type2 {
-				label {
-					input[type=checkbox] {
-						&::before {
-							background-size: 22px;
-						}
-						& + span {
-							font-size: 12px;
-						}
-					}
-				}
-			}
+			// .chkwrap.type2 {
+			// 	label {
+			// 		input[type=checkbox] {
+			// 			&::before {
+			// 				background-size: 22px;
+			// 			}
+			// 			& + span {
+			// 				font-size: 12px;
+			// 			}
+			// 		}
+			// 	}
+			// }
 		}
 		.mypage_btn-foo {
 			padding: 20px 0;
