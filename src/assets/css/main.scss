@@ -157,6 +157,7 @@
 
   .sec_banner {
     position: relative;
+    min-height: 358px;
     padding: 155px 0;
     .bnr_list {
       position: absolute;
@@ -183,7 +184,10 @@
         }
         &:first-child {
           .contents {
-            bottom: 27%;
+            top: 3%;
+            right: inherit;
+            left: 30px;
+            text-align: left;
           }
         }
         &:last-child {
@@ -194,6 +198,10 @@
             position: absolute;
             bottom:0;
             top: inherit;
+          }
+          .btn_link {
+            margin-right: 0;
+            margin-left: auto;
           }
         }
       }
@@ -207,9 +215,12 @@
           display: block;
           font-size: 18px;
           line-height: 1.4;
+          color: #000000;
         }
         p {
-          font-size: 40px;
+          padding-bottom: 8px;
+          font-size: 36px;
+          color:#016241;
         }
         .btn_link {
           display: block;
@@ -217,11 +228,11 @@
           height: 21px;
           margin-top: 20px;
           margin-bottom: 2px;
-          margin-left: auto;
+          margin-right: auto;
           background: {
-            image: url('../images/icons/ico_link.png');
+            image: url('../images/icons/ico_link_bk.png');
             repeat: no-repeat;
-            position: right 0;
+            position: 0 0;
             size: cover;
           };
         }
@@ -244,9 +255,10 @@
       width: 200px;
       height: 200px;
       border-radius: 100%;
-      img {
-        max-width: 96px;
-      }
+      overflow: hidden;
+      // img {
+      //   max-width: 96px;
+      // }
     }
     span {
       display: block;
@@ -255,22 +267,34 @@
       font-weight: 300;
       text-align: center;
     }
-    .item {
-      &:last-child {
-        img {
-          max-width: 72px;
-        }
-      }
-    }
   }
   // sec_infoIco
 
   .swipe_wrap {
+    // position: relative;
+    // max-width: 1053px;
+    // width: 100%;
+    // padding-top: 638px;
+    // margin: 0 auto;
+    // z-index: 1;
+    // .figure {
+    //   position: absolute;
+    //   left: 0;
+    //   top: 0;
+    //   width: 100%;
+    //   height: 100%;
+    //   background: {
+    //     color: transparent;
+    //     image: url('../images/main/book_bg.png');
+    //     repeat: no-repeat;
+    //     position: 0 0;
+    //     size: 100% 100%;
+    //   };
+    // }
     position: relative;
-    max-width: 1053px;
+    max-width: 560px;
     width: 100%;
-    // padding-top: 52%;
-    padding-top: 638px;
+    padding-top: 774px;
     margin: 0 auto;
     z-index: 1;
     .figure {
@@ -281,11 +305,26 @@
       height: 100%;
       background: {
         color: transparent;
-        image: url('../images/main/book_bg.png');
+        image: url('../images/main/book_bg2.png');
         repeat: no-repeat;
         position: 0 0;
         size: 100% 100%;
       };
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -50px;
+        display: block;
+        width: 100%;
+        height: 50px;
+        background: {
+          color: transparent;
+          image: url('../images/main/book_shadow.png');
+          repeat: no-repeat;
+          position: center 0;
+          size: cover;
+        };
+      }
     }
 
     .swiper-container {
@@ -295,7 +334,7 @@
       @include mixins.translate(-50%, 0);
       width: calc(100% - 140px);
       width: 87%;
-      height: 80.8%;
+      height: 85%;
       overflow: hidden;
     }
     .swipe_banner {
@@ -303,7 +342,7 @@
       background: {
         repeat: no-repeat;
         position: center center;
-        size: cover;
+        size: auto 100%;
       }
     }
   }
@@ -311,7 +350,7 @@
 
   &.sec_qna {
     position: relative;
-    max-width: 100%;
+    max-width: 860px;
     padding-top: 0;
     margin-top: -115px;
     // &:before {
@@ -329,8 +368,9 @@
     //     position: center top;
     //   }
     // } 
+    // display: flex;
     .swiper-pagination {
-      bottom: 38px;
+      bottom: 6px;
     }
     .swiper-button-next,
     .swiper-button-prev {
@@ -346,12 +386,16 @@
       }
     }
     .swiper-button-next {
+      right: -25px;
       background-image: url('../images/icons/swipe_next.png');
     }
     .swiper-button-prev {
+      left: -27px;
       background-image: url('../images/icons/swipe_prev.png');
     }
     .swiper-pagination-bullet {
+      width: 10px;
+      height: 10px;
       background-color: #626262;
       opacity: 1;
     }
@@ -359,13 +403,19 @@
       background-color: #016241;
     }
     .pdf_download {
+      position: absolute;
+      right: -13%;
+      bottom: 8%;
+      z-index: 1;
       display: flex;
+      flex-direction: column;
       justify-content: center;
-      align-items: center;
+      // align-items: center;
       max-width: 480px;
       margin: 30px auto;
       > p {
         margin-right: 10px;
+        margin-bottom: 30px;
         font-size: 20px;
         line-height: 1.4;
         vertical-align: middle;
@@ -387,13 +437,19 @@
       }
 
       @include mixins.mobile() {
-        max-width: 280px;
+        position: relative;
+        flex-direction: row;
+        right: inherit;
+        max-width: 220px;
+        // text-align: center;
         > p {
+          margin-right: 0;
           font-size: 12px;
         }
         .btn_download {
           width: 44px;
           height: 55px;
+          margin: 0 auto;
         }
       }
     }
@@ -517,6 +573,9 @@
         }
         li:last-child .contents {
           right: 10px;
+          .btn_link {
+            background-position: right center;
+          }
         }
         .contents {
           .btn_link {
@@ -524,12 +583,11 @@
             background-size: 35px;
           }
           span {
-            &:first-child {
-              display: none;
-            }
+            display: none;
           }
           p {
             font-size: 20px;
+            color: #000000;
           }
         }
       }
@@ -543,9 +601,6 @@
         text-align: center;
         &:last-child {
           margin-bottom: 0;
-          img {
-            max-width: 35px;
-          }
         }
       }
       p {
@@ -553,7 +608,7 @@
         height: 100px;
         margin: 0 auto;
         img {
-          max-width: 50px;
+          max-width: 100%;
         }
       }
       span {
@@ -570,9 +625,16 @@
       }
     }
     .swipe_wrap {
-      padding-top: 70vw;
+      width: calc(100% - 120px);
+      padding-top: 90vw;
       .swipe_navi {
         display: none;
+      }
+      .figure {
+        &:after {
+          height: 25px;
+          bottom: -25px;
+        }
       }
     }
     .faqswipe {
@@ -595,12 +657,12 @@
         bottom: 0;
         left: 0;
         width: 100%;
-        height: 100%;
+        height: 120%;
         padding-bottom: 0;
         background: {
           image: url("../images/main/faq_bg.png");
           size: cover;
-          position: center bottom;
+          position: right 15% bottom -90px;
           repeat: no-repeat;
         }
       }
